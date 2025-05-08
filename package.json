@@ -4,16 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "generate:assets": "pwa-assets-generator",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@solidjs/router": "^0.15.3",
     "@tailwindcss/vite": "^4.1.5",
     "lodash": "^4.17.21",
     "solid-js": "^1.9.4",
-    "tailwindcss": "^4.1.5"
+    "solid-transition-group": "^0.3.0",
+    "tailwindcss": "^4.1.5",
+    "valibot": "^1.1.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.16",

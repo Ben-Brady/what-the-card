@@ -13,6 +13,7 @@ export default function DragOverlay({
     onSwipe: () => void;
     side: "left" | "right";
     className: string;
+    icon?: string;
 }) {
     const isRight = side === "right";
     const [stretch, setStretch] = createSignal(0);
@@ -26,6 +27,7 @@ export default function DragOverlay({
         },
         onFrame(delta) {
             const rate = Math.max(stretch() * 20, 10);
+
             const reduction = rate * delta;
             setStretch(Math.max(stretch() - reduction, 0));
         },
@@ -50,14 +52,30 @@ export default function DragOverlay({
     });
 
     return (
-        <div
-            class={classNames(
-                "w-32 absolute top-0 rounded-[100%] h-[120vh] -translate-y-[10vh] z-40",
-                className,
-                side === "right" && "right-0 translate-x-full",
-                side === "left" && "left-0 -translate-x-full",
-            )}
-            style={{ transform: `scaleX(${stretch() * 2}%)` }}
-        />
+        <>
+            <div
+                class={classNames(
+                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] z-40 ",
+                    className,
+                    side === "right" && "right-0 translate-x-full",
+                    side === "left" && "left-0 -translate-x-full",
+                )}
+                style={{ transform: `scaleX(${stretch() ** 1.15}%)` }}
+            />
+            {/* <img
+                class={classNames(
+                    " text-white absolute top-1/2 -translate-y-1/2 z-40",
+                    side === "right" && "-right-20",
+                    side === "left" && "-left-20",
+                )}
+                style={{
+                    transform:
+                        side === "right"
+                            ? `translateX(${stretch() * -1}px)`
+                            : `translateX(${stretch()}px)`,
+                }}
+                src={icon}
+            /> */}
+        </>
     );
 }

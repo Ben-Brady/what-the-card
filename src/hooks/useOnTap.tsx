@@ -1,17 +1,16 @@
-import { onCleanup } from "solid-js";
 import "../styles/tap.css";
+import { useAbortSignal } from "./useAbortSignal";
 
 const THRESHOLD_FOR_MOVEMENT = 50;
 
-export const onTap = (callback: (_: { x: number; y: number }) => void) => {
-    const controller = new AbortController();
-    const signal = controller.signal;
+export const useOnTap = (callback: (_: { x: number; y: number }) => void) => {
+    const signal = useAbortSignal();
 
     let startingPos: [number, number] | undefined;
     document.addEventListener(
         "pointerdown",
         (e) => {
-            startingPos = [e.clientX, e.clientY];
+            startingPos = [e.screenX, e.screenY];
         },
         { signal },
     );
@@ -21,7 +20,7 @@ export const onTap = (callback: (_: { x: number; y: number }) => void) => {
         (e) => {
             if (!startingPos) return;
             const [startX, startY] = startingPos;
-            const [endX, endY] = [e.clientX, e.clientY];
+            const [endX, endY] = [e.screenX, e.screenY];
             const xMovement = Math.abs(startX - endX);
             const YMovement = Math.abs(startY - endY);
             const distance = Math.sqrt(xMovement ** 2 + YMovement ** 2);
@@ -45,8 +44,4 @@ export const onTap = (callback: (_: { x: number; y: number }) => void) => {
         div.onanimationend = () => div.remove();
         document.body.appendChild(div);
     };
-
-    onCleanup(() => controller.abort());
-
-    return <></>;
 };

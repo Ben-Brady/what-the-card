@@ -4,8 +4,10 @@ import { useRegisterSW } from "virtual:pwa-register/solid";
 
 import styles from "./PWABadge.module.css";
 
+const MINUTE = 60 * 1000;
+
 const PWABadge: Component = () => {
-    const period = 60 * 60 * 1000;
+    const period = 1 * MINUTE;
 
     const {
         needRefresh: [needRefresh, setNeedRefresh],

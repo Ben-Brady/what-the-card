@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 500;
   line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #99dfff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,13 +20,17 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  overscroll-behavior-x: none;
   margin: 0;
   padding: 0;
 }
 
 #root {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   place-items: center;
+
+  overflow: hidden;
+  overscroll-behavior-x: none;
 }

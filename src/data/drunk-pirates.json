@@ -1,0 +1,1071 @@
+{
+    "id": "drunk-pirates",
+    "title": "Drunk Pirates",
+    "type": "normal",
+    "cards": [
+        {
+            "title": "Staring competition",
+            "description": "Have a staring competition with the person in front of you, the loser must drink"
+        },
+        {
+            "title": "Dance or Drink",
+            "description": "Do a dance or take a drink"
+        },
+        {
+            "title": "Youngest player drinks",
+            "description": "Youngest player drinks"
+        },
+        {
+            "title": "Skinniest jeans",
+            "description": "Whoever is wearing the skinniest jeans must drink"
+        },
+        {
+            "title": "Male longest hair",
+            "description": "The male with the longest hair must drink"
+        },
+        {
+            "title": "Tallest player",
+            "description": "The tallest player must stand up for one round"
+        },
+        {
+            "title": "Blue eyed players",
+            "description": "Blue eyed players drink"
+        },
+        {
+            "title": "Joke",
+            "description": "Tell a joke, if no one laughs then you must drink"
+        },
+        {
+            "title": "Waht",
+            "description": "If yuo cna raed tihs tehn dinrk"
+        },
+        {
+            "title": "How many countries",
+            "description": "Drink for how many countries you've been to"
+        },
+        {
+            "title": "Last Text",
+            "description": "Every player must read their last text out loud or drink"
+        },
+        {
+            "title": "Sex with more than 10 people",
+            "description": "Anyone who has had sex with more than 10 people must drink"
+        },
+        {
+            "title": "How many inches?",
+            "description": "Men drink for a second for every inch they have"
+        },
+        {
+            "title": "Biggest shoes",
+            "description": "The person with the biggest shoe size must drink"
+        },
+        {
+            "title": "Dyed hair",
+            "description": "Anyone with dyed hair must drink"
+        },
+        {
+            "title": "Redheads drink",
+            "description": "Redheads drink"
+        },
+        {
+            "title": "Nex eye contact",
+            "description": "The next person to make eye contact with you must drink"
+        },
+        {
+            "title": "Stoners drink",
+            "description": "Stoners drink"
+        },
+        {
+            "title": "No truths",
+            "description": "You can't tell the truth for a whole round, Drink if anyone catches you telling the truth"
+        },
+        {
+            "title": "You drink double",
+            "description": "You have to drink double for one round"
+        },
+        {
+            "title": "You choose - best dressed",
+            "description": "You choose which player is best dressed, they must drink"
+        },
+        {
+            "title": "Favourite book",
+            "description": "Tell everyone your favourite book and then drink"
+        },
+        {
+            "title": "Single people",
+            "description": "Single people drink"
+        },
+        {
+            "title": "KING",
+            "description": "command each player to do anything you want, if they cannot they must drink"
+        },
+        {
+            "title": "Choose a Theme",
+            "description": "Choose a theme. Everyone must go round and name something from that theme until someone can't, the loser must drink. For example: You choose colours and the group must go round naming colours"
+        },
+        {
+            "title": "Selfie and drink",
+            "description": "Take a selfie with the player on your right and then both drink"
+        },
+        {
+            "title": "If you can",
+            "description": "Drink if you can read this"
+        },
+        {
+            "title": "Player to Your Right",
+            "description": "Player to your right must drinks"
+        },
+        {
+            "title": "Pick 3",
+            "description": "Pick three players to drink"
+        },
+        {
+            "title": "DOB",
+            "description": "You must say the date of birth of the player ahead of you, if correct they drink, if incorrect you drink"
+        },
+        {
+            "title": "Slap bum",
+            "description": "Slap the bum of the player on your right"
+        },
+        {
+            "title": "You choose -nicest smile",
+            "description": "You choose which player has the nicest smile, they must drink"
+        },
+        {
+            "title": "Where and how met",
+            "description": "Tell everyone where and how you met the player on your left"
+        },
+        {
+            "title": "Bra size",
+            "description": "Girls drink for their bra cup size, aa=0, a=1, b=2, c=3 and so on"
+        },
+        {
+            "title": "Smokers drink",
+            "description": "Smokers drink"
+        },
+        {
+            "title": "Kiss right",
+            "description": "Kiss the player on your right or both take a drink"
+        },
+        {
+            "title": "Drink",
+            "description": "Drink"
+        },
+        {
+            "title": "Tilt head",
+            "description": "Tilt your head all the way back and take a drink"
+        },
+        {
+            "title": "Clockwise Dog Breeds",
+            "description": "Starting with you go round clockwise naming Dog Breeds, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Hand on crotch",
+            "description": "You must keep one hand on your crotch for a round"
+        },
+        {
+            "title": "Smartest player",
+            "description": "Everyone vote who the smartest player is, they must down their drink"
+        },
+        {
+            "title": "Spin a bottle",
+            "description": "Spin a bottle and whoever it lands on must drink"
+        },
+        {
+            "title": "Shake hands",
+            "description": "Shake hands with every player"
+        },
+        {
+            "title": "Clockwise US presidents",
+            "description": "Starting with you go round clockwise naming US Presidents, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Thumb war",
+            "description": "Have a thumb war with the player closest"
+        },
+        {
+            "title": "Fill it up",
+            "description": "Fill your drink up"
+        },
+        {
+            "title": "Spilt Drinks",
+            "description": "Any player who has spilt a drink tonight must drink"
+        },
+        {
+            "title": "Oldest player drinks",
+            "description": "Oldest player drinks"
+        },
+        {
+            "title": "21",
+            "description": "Starting with you goiung clockwise from 1, you can either say one, two or three numbers. for example: one, two three, four. The person who says 21 must down their drink"
+        },
+        {
+            "title": "Science Question",
+            "description": "Ask the player to the left of you a science question, if they are correct you drink, if not they drink"
+        },
+        {
+            "title": "Pizza or Burger",
+            "description": "Everyone choose which side they prefer, pizza or burgers, the smallest side must all drink"
+        },
+        {
+            "title": "On their phone",
+            "description": "Anyone on their phone right now must drink"
+        },
+        {
+            "title": "10 Push ups",
+            "description": "Do 10 push ups, if you can't then drink"
+        },
+        {
+            "title": "Truth or dare",
+            "description": "Play Truth or Dare"
+        },
+        {
+            "title": "Last to raise their drink",
+            "description": "The last person to raise their drink must take a drink"
+        },
+        {
+            "title": "Look mum no hands!",
+            "description": "Take a drink without using your hands"
+        },
+        {
+            "title": "Drink Twice",
+            "description": "Drink twice"
+        },
+        {
+            "title": "Lie and drink",
+            "description": "Lie on your back and drink"
+        },
+        {
+            "title": "Touch the ceiling",
+            "description": "Try touch the ceiling without jumping, if you can't then you must drink"
+        },
+        {
+            "title": "One legged drink",
+            "description": "Stand on one leg and drink"
+        },
+        {
+            "title": "Biggest nose",
+            "description": "The player with the biggest nose must drink"
+        },
+        {
+            "title": "Bearded",
+            "description": "Bearded players drink"
+        },
+        {
+            "title": "Walk in a straight line",
+            "description": "Try walk in a straight line, if you fail then you must drink"
+        },
+        {
+            "title": "Riddles",
+            "description": "Tell the player on your right a riddle, if you can't think of one or they guess correctly then you must drink, if they can't figure it out they must drink"
+        },
+        {
+            "title": "Not drunk",
+            "description": "Anyone who claims they are not drunk must drink"
+        },
+        {
+            "title": "Favourite colour match",
+            "description": "Everyone say their favourite colour, any players that say the same colour must drink"
+        },
+        {
+            "title": "Touch your toes",
+            "description": "Touch your toes without bending your legs or take a drink"
+        },
+        {
+            "title": "Shoulder massage",
+            "description": "Give the player on your right a shoulder massage or drink"
+        },
+        {
+            "title": "Everyone drink",
+            "description": "Everyone drink"
+        },
+        {
+            "title": "Kiss Every Player",
+            "description": "Kiss Every Player"
+        },
+        {
+            "title": "Swapsies",
+            "description": "Swap phones with the player on your right, and then both send one text to anyone you want"
+        },
+        {
+            "title": "Unemployed",
+            "description": "Unemployed Drink"
+        },
+        {
+            "title": "Car brands",
+            "description": "Go round clockwise naming car brands, the first person not able to think of a new one must drink"
+        },
+        {
+            "title": "Met Today",
+            "description": "Any players that met today must drink"
+        },
+        {
+            "title": "Cats or Dogs",
+            "description": "Everyone vote if they prefer dogs or cats, the side with the least votes must drink"
+        },
+        {
+            "title": "Wearing glasses",
+            "description": "Everyone wearing glasses must drink"
+        },
+        {
+            "title": "Rock paper Scissors",
+            "description": "Play rock paper scissors with the player on your left, loser drinks"
+        },
+        {
+            "title": "90s kids",
+            "description": "90s kids drink"
+        },
+        {
+            "title": "Best smelling",
+            "description": "You must smell every player, the best smelling player must drink"
+        },
+        {
+            "title": "Largest ears",
+            "description": "The player with the largest ears must drink"
+        },
+        {
+            "title": "no nativo",
+            "description": "Drink if English isn't your native language"
+        },
+        {
+            "title": "Eaten during this game",
+            "description": "Anyone who has eaten during this game must drink"
+        },
+        {
+            "title": "Check your phone",
+            "description": "For one round if anyone checks their phone they must drink"
+        },
+        {
+            "title": "Most skin",
+            "description": "The player showing the most skin must drink"
+        },
+        {
+            "title": "Heads or Tails",
+            "description": "Choose heads or tails and then flip a coin, if correct then everyone except you drinks, if incorrect then you drink"
+        },
+        {
+            "title": "Past midnight",
+            "description": "Drink if it's past midnight"
+        },
+        {
+            "title": "Take a drink from left and right",
+            "description": "Take a drink from the player on your right and left"
+        },
+        {
+            "title": "Left right kiss",
+            "description": "The players on your right and left must kiss eachother or drink"
+        },
+        {
+            "title": "Draw on a player",
+            "description": "Draw something on a player of your choice"
+        },
+        {
+            "title": "Mountain",
+            "description": "Do something to the player on your left (for example flick them or push them) they must do that plus one more thing to the player on their left, keep going round clockwise adding steps until someone forgets one, the player who loses must drink"
+        },
+        {
+            "title": "Biggest fear",
+            "description": "Tell everyone your biggest fear and then drink"
+        },
+        {
+            "title": "Clockwise names",
+            "description": "Go round clockwise pointing at every player and saying their full names, if you can't do it then you must drink"
+        },
+        {
+            "title": "Formally dressed",
+            "description": "The most formally dressed person must drink"
+        },
+        {
+            "title": "Clockwise Europe Countries",
+            "description": "Starting with you go round clockwise naming Countries in Europe, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Put ya hands up",
+            "description": "Everyone put their hands in the air, the last to do so must drink"
+        },
+        {
+            "title": "Tebahpla",
+            "description": "Say the alphabet backwards or drink"
+        },
+        {
+            "title": "Beat",
+            "description": "Drum a beat on the table, if the player on your right cannot repeat it they must drink"
+        },
+        {
+            "title": "Strange face",
+            "description": "Everyone make a strange face and then drink"
+        },
+        {
+            "title": "Most kinky",
+            "description": "The most kinky player must drink"
+        },
+        {
+            "title": "Vodka",
+            "description": "Anyone drinking vodka must drink"
+        },
+        {
+            "title": "look down look up",
+            "description": "Everyone look at the ground and on the count of three look up and  look at another players eyes. any players making eye ontact with eachother must drink"
+        },
+        {
+            "title": "left or right",
+            "description": "Kiss either the player on your left or right, you choose..."
+        },
+        {
+            "title": "Only Whisper",
+            "description": "You must only whisper until your next turn"
+        },
+        {
+            "title": "Push left",
+            "description": "Push the player on your left"
+        },
+        {
+            "title": "Forehead kiss",
+            "description": "Kiss the closest player to you on the forehead"
+        },
+        {
+            "title": "Card of Death",
+            "description": "Down your drink and then take a shot"
+        },
+        {
+            "title": "Beer drinkers",
+            "description": "Anyone drinking beer must drink"
+        },
+        {
+            "title": "The floor is lava",
+            "description": "Anyone who touches the floor for one round must drink"
+        },
+        {
+            "title": "Vegetarians",
+            "description": "Vegetarians drink"
+        },
+        {
+            "title": "Good or bad joke",
+            "description": "The player on your right must tell you a joke, you must decide if it's good enough, if it's not they must drink"
+        },
+        {
+            "title": "2 truths 1 lie",
+            "description": "Tell everyone two truths and one lie Every player must guess which one is a lie Every player that gets it wrong must drink"
+        },
+        {
+            "title": "Arm Wrestle",
+            "description": "Have an arm wrestle with the player on your right, the loser must down their drink"
+        },
+        {
+            "title": "Biggest...",
+            "description": "The player with the biggest hands must take a drink"
+        },
+        {
+            "title": "Eyes closed",
+            "description": "Play this round with your eyes closed"
+        },
+        {
+            "title": "Fists of five",
+            "description": "On the count of three, all players must show a number on their hand from one to five, any players with the same number must drink"
+        },
+        {
+            "title": "Clockwise US States",
+            "description": "Starting with you go round clockwise naming US States, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Isn't straight",
+            "description": "Anyone who isn't straight must drink"
+        },
+        {
+            "title": "Fingers pointing",
+            "description": "Everyone point at a player, the player with the most fingers pointed at them must drink"
+        },
+        {
+            "title": "Dance Dance Dance",
+            "description": "Dance until your next round or down your drink"
+        },
+        {
+            "title": "Same drink",
+            "description": "All players with the same drink as you must drink"
+        },
+        {
+            "title": "Green eyed players",
+            "description": "Green eyed players drink"
+        },
+        {
+            "title": "Drink Something New",
+            "description": "Drink something you haven't drunk today"
+        },
+        {
+            "title": "Take a drink",
+            "description": "Take a drink"
+        },
+        {
+            "title": "Favourite movies",
+            "description": "You and the player on your right say your favourite movies, the rest of the players vote which movie is worst, the player with the most votes must drink"
+        },
+        {
+            "title": "Kiss as many players as you want",
+            "description": "Kiss as many players as you want, drink for the number of players you don't kiss"
+        },
+        {
+            "title": "Clockwise countries in Asia",
+            "description": "Starting with you go round clockwise naming Countries in Asia, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Lipstick kiss",
+            "description": "Anyone wearing lipstick must drink, and kiss someone on the cheek"
+        },
+        {
+            "title": "Compliment me!",
+            "description": "Everyone must compliment you or drink"
+        },
+        {
+            "title": "Down your drink",
+            "description": "Down your drink"
+        },
+        {
+            "title": "Mexican Wave",
+            "description": "Take a drink and then the player on your left must take a drink and then the player on their right and then so on until it is back to you"
+        },
+        {
+            "title": "Closed eyes guess",
+            "description": "Close your eyes and the player on your left must give you a secret drink, if you can guess the drink correctly then they must drink if not then you must drink"
+        },
+        {
+            "title": "Clockwise Fruit",
+            "description": "Starting with you go round clockwise naming Fruit, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Weakest drink",
+            "description": "The player with the weakest drink must take a drink"
+        },
+        {
+            "title": "Clockwise Beatles Songs",
+            "description": "Starting with you go round clockwise naming Beatels Songs, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Swap Clothes",
+            "description": "Swap a piece of clothing with the player in front of you"
+        },
+        {
+            "title": "Compliment Left",
+            "description": "Compliment the person on your left"
+        },
+        {
+            "title": "Whoever left last",
+            "description": "Whoever left the room last must take a drink"
+        },
+        {
+            "title": "Mixed drink",
+            "description": "If your drink is mixed then take a drink"
+        },
+        {
+            "title": "Take of ya clothes",
+            "description": "Choose a player to remove a piece of clothing"
+        },
+        {
+            "title": "Anyone with a job",
+            "description": "Anyone with a job must drink"
+        },
+        {
+            "title": "Players with tattoos drink",
+            "description": "Players with tattoos drink"
+        },
+        {
+            "title": "General knowledge question",
+            "description": "Ask the player on your right a general knowledge question, if they are correct then you drink, but if they are wrong they must drink"
+        },
+        {
+            "title": "Everyone down!",
+            "description": "Everyone down their drinks"
+        },
+        {
+            "title": "Can't stop until you stop",
+            "description": "All players start drinking and can't stop until you stop"
+        },
+        {
+            "title": "Player you've known the longest",
+            "description": "The player you have known the longest must drink"
+        },
+        {
+            "title": "Left only",
+            "description": "Use only your left hand for one round"
+        },
+        {
+            "title": "Never have I ever",
+            "description": "Play one round of never have I ever"
+        },
+        {
+            "title": "Ignore me",
+            "description": "Everyone ignore this player for one round"
+        },
+        {
+            "title": "Piercing",
+            "description": "Drink if you have a piercing"
+        },
+        {
+            "title": "Another player's drink",
+            "description": "Pick another player's drink and take a drink from it"
+        },
+        {
+            "title": "Touch the floor",
+            "description": "Everyone must touch the floor, the last to do so must drink"
+        },
+        {
+            "title": "If you would...",
+            "description": "If you would have sex with another player take a drink"
+        },
+        {
+            "title": "Say cheers",
+            "description": "Everyone raise their drinks and say cheers"
+        },
+        {
+            "title": "Capital cities",
+            "description": "Starting with you go round clockwise naming capital cities, the first to repeat one of not be able to think of one must drink"
+        },
+        {
+            "title": "Quote a movie",
+            "description": "Quote a movie, if the player on your left cannot guess the move they must drink"
+        },
+        {
+            "title": "Clockwise natural disasters",
+            "description": "Starting with you go round clockwise naming types of natural disaster, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Most sober vote",
+            "description": "Everyone vote who the most sober player is, they must down their drink"
+        },
+        {
+            "title": "Single people",
+            "description": "All single people must drink"
+        },
+        {
+            "title": "Choose someone to down",
+            "description": "Choose someone to down their drink"
+        },
+        {
+            "title": "Everyone phone me!",
+            "description": "Everyone must try to phone this player, the first to succeed can choose someone to drink"
+        },
+        {
+            "title": "The next player who wants to leave",
+            "description": "The next player who wants to leave the room must finish their drink"
+        },
+        {
+            "title": "One syllable name",
+            "description": "Anyone with a one syllable name must drink"
+        },
+        {
+            "title": "Drink with me",
+            "description": "Pick a payer to drink with you"
+        },
+        {
+            "title": "Picture taken",
+            "description": "Everyone who has taken a picture tonight must take a drink"
+        },
+        {
+            "title": "You choose - Nicest eyes",
+            "description": "You choose which player has the nicest eyes, they must drink"
+        },
+        {
+            "title": "Rhyme",
+            "description": "Choose a word and then everyone must go round clockwise saying words that rhyme with that word, the first one to fail must drink"
+        },
+        {
+            "title": "Insult infront",
+            "description": "Insult the player in front of you"
+        },
+        {
+            "title": "Take player right drink",
+            "description": "Take some of the drink from the player on your right and pour it into your drink"
+        },
+        {
+            "title": "Apple owners",
+            "description": "Anyone who owns an apple product must drink"
+        },
+        {
+            "title": "Last card memory",
+            "description": "Drink if you can't remember your last card"
+        },
+        {
+            "title": "Clothes off or drink",
+            "description": "Take off a piece of clothing or drink"
+        },
+        {
+            "title": "Pick a side: tea or coffee",
+            "description": "Everyone choose which side they prefer, tea or coffee, the smallest side must all drink"
+        },
+        {
+            "title": "I love you, passionately",
+            "description": "Tell the player on your left that you love them, passionately"
+        },
+        {
+            "title": "One leg",
+            "description": "Everyone stand on one leg, the first to fall must drink"
+        },
+        {
+            "title": "Hold hands with your left",
+            "description": "You must hold hands with the player on your left for one round"
+        },
+        {
+            "title": "Would you rather",
+            "description": "Play would you rather"
+        },
+        {
+            "title": "Animal noise",
+            "description": "Every player must make an animal noise and then take a drink"
+        },
+        {
+            "title": "3 adjectives",
+            "description": "Pick 3 adjectives to describe the person on your left and then both drink"
+        },
+        {
+            "title": "Religious",
+            "description": "Anyone religious drink"
+        },
+        {
+            "title": "6 months single",
+            "description": "Drink if you have been single for 6 months or more"
+        },
+        {
+            "title": "more Females or males",
+            "description": "If there are more females and males then females must drink, if there are more males than females then males must drink"
+        },
+        {
+            "title": "Go find something",
+            "description": "The player on your right must find something and bring it to you as a gift"
+        },
+        {
+            "title": "Drunkest player",
+            "description": "The drunkest player must take another drink"
+        },
+        {
+            "title": "Player with the most cash",
+            "description": "The player with the most cash on them must drink"
+        },
+        {
+            "title": "Someone elses drink",
+            "description": "If you are drinking someone elses drink, or someone paid for your drink, Thank them and take a drink"
+        },
+        {
+            "title": "Just drink",
+            "description": "just drink"
+        },
+        {
+            "title": "Hug",
+            "description": "Hug any player"
+        },
+        {
+            "title": "Vegans drink",
+            "description": "Vegans drink"
+        },
+        {
+            "title": "Drink Race",
+            "description": "Race the player across from you to finish a drink, the loser must take another drink"
+        },
+        {
+            "title": "Most countries",
+            "description": "Whoever has travelled to the most countries must drink"
+        },
+        {
+            "title": "Clockwise movie genres",
+            "description": "Starting with you go round clockwise naming movie genres, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Born in summer",
+            "description": "Anyone born in summer drink"
+        },
+        {
+            "title": "Banned Word",
+            "description": "You can pick a word that is banned for two rounds, if anyone says this word they must drink"
+        },
+        {
+            "title": "12345678910",
+            "description": "Think of a number from 1-10, the other players must go clockwise guessing the number, whoever gets ir correct can choose someone to drink"
+        },
+        {
+            "title": "Take off ya clothes",
+            "description": "Take off a piece of clothing or drink"
+        },
+        {
+            "title": "Athiests",
+            "description": "Athiests drink"
+        },
+        {
+            "title": "High five",
+            "description": "High five the player to your right and then both take a drink"
+        },
+        {
+            "title": "Name the Song",
+            "description": "If you can name the song playing right now choose someone to drink, if there is no music then you must drink"
+        },
+        {
+            "title": "2 player kiss",
+            "description": "Pick two players, they have to kiss eachother or both take a drink"
+        },
+        {
+            "title": "Truth or lie",
+            "description": "Say a statement about yourself, it can be a truth or lie, the other players must colectively decide if it's a truth or a lie. If they are incorrect they must drink, but if they are correct you must drink"
+        },
+        {
+            "title": "Dog owners drink",
+            "description": "Dog owners drink"
+        },
+        {
+            "title": "Straightest teeth",
+            "description": "The player with the straightest teeth must drink"
+        },
+        {
+            "title": "Brunettes Drink",
+            "description": "Brunettes drink"
+        },
+        {
+            "title": "Player to your left",
+            "description": "The player left of you must drink"
+        },
+        {
+            "title": "Looking at this card",
+            "description": "Everyone looking at this card must drink"
+        },
+        {
+            "title": "Opposite sex swap",
+            "description": "Swap a piece of clothing with the closest player of the opposite sex"
+        },
+        {
+            "title": "Fill and Down",
+            "description": "Fill up your cup and then down it"
+        },
+        {
+            "title": "Opposite Player",
+            "description": "The player opposite you must drink"
+        },
+        {
+            "title": "Born in winter",
+            "description": "Anyone born in winter drink"
+        },
+        {
+            "title": "10 seconds",
+            "description": "Finish your drink in under 10 seconds, if you fail then finish that drink and one more"
+        },
+        {
+            "title": "All players must touch you",
+            "description": "All players must touch you, the last to do so must drink"
+        },
+        {
+            "title": "Every letter drink",
+            "description": "Drink for every letter in your name"
+        },
+        {
+            "title": "Favourite Hobby",
+            "description": "Tell everyone your favourite hobby then drink"
+        },
+        {
+            "title": "judge",
+            "description": "Everyone must dance for you, you can choose who does the worst dance and they must drink"
+        },
+        {
+            "title": "Brown eyed players",
+            "description": "Brown eyed players drink"
+        },
+        {
+            "title": "Gestures",
+            "description": "Make a gesture, the player to the left of you must make that gesture and make another one, keep going round clockwise adding gestures until someone forgets one, the player who forgets one must drink"
+        },
+        {
+            "title": "Best haircut",
+            "description": "Everyone vote who has the best haircut, the player with the most votes must take a drink"
+        },
+        {
+            "title": "make out",
+            "description": "Pick a player and make out with them"
+        },
+        {
+            "title": "Makeup",
+            "description": "Any players wearing makeup must drink"
+        },
+        {
+            "title": "Blondes Drink",
+            "description": "Blondes drink"
+        },
+        {
+            "title": "Everyone but you and me",
+            "description": "Choose a player, everyone but you and that player must drink"
+        },
+        {
+            "title": "Clockwise music genres",
+            "description": "Starting with you go round clockwise naming music genres, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Ever kissed??",
+            "description": "If you've ever kissed one of the other players then you must drink"
+        },
+        {
+            "title": "Look alike",
+            "description": "Choose which two players look the most alike, they  must both drink"
+        },
+        {
+            "title": "Shortest player",
+            "description": "The shortest player must sit on the floor for one round"
+        },
+        {
+            "title": "Fuck",
+            "description": "You cannot swear for 3 rounds. If you swear then you must drink"
+        },
+        {
+            "title": "Hairiest",
+            "description": "hairiest player drinks"
+        },
+        {
+            "title": "Tell them",
+            "description": "Call someone and tell them you love them"
+        },
+        {
+            "title": "Touch a wall",
+            "description": "Everyone must touch a wall, the last person to do so must drink"
+        },
+        {
+            "title": "Pale ",
+            "description": "The most pale player must drink"
+        },
+        {
+            "title": "Cat owners drink",
+            "description": "Cat owners drink"
+        },
+        {
+            "title": "Guilty pleasure",
+            "description": "say your guilty pleasure"
+        },
+        {
+            "title": "Boulder",
+            "description": "you must drink once, and then the player to your left must drink twice, and then the player to their left three times and so on until it comes back to you"
+        },
+        {
+            "title": "Wine drinkers drink",
+            "description": "Wine drinkers drink"
+        },
+        {
+            "title": "Seeing double",
+            "description": "Everyone must drink double for one round"
+        },
+        {
+            "title": "Still as a statue",
+            "description": "Stay completely still like a statue for one round"
+        },
+        {
+            "title": "Cried this month",
+            "description": "Anyone who has cried in the last month must drink in sorrow"
+        },
+        {
+            "title": "Question Master",
+            "description": "For one round if anyone answers a question asked by you they must drink"
+        },
+        {
+            "title": "Best looking player",
+            "description": "Everyone vote who the best looking player is, they must down their drink"
+        },
+        {
+            "title": "Girl shortest hair",
+            "description": "The girl with the shortest hair must drink"
+        },
+        {
+            "title": "Every sibling",
+            "description": "Drink for every sibling you have"
+        },
+        {
+            "title": "Me no english",
+            "description": "You must not speak English for one round"
+        },
+        {
+            "title": "First drunk pirate",
+            "description": "If this is your first time playing drunk pirate you must drink"
+        },
+        {
+            "title": "Been in a fight",
+            "description": "Drink if you've ever been in a fight"
+        },
+        {
+            "title": "Sill walk",
+            "description": "Everyone must do a silly walk and then drink"
+        },
+        {
+            "title": "Females drink",
+            "description": "Females drink"
+        },
+        {
+            "title": "Longest hair",
+            "description": "The player with the longest hair must drink"
+        },
+        {
+            "title": "Pick a side: red or blue",
+            "description": "Everyone choose which side they prefer, Red or Blue, the smallest side must all drink"
+        },
+        {
+            "title": "Clockwise Currencies",
+            "description": "Starting with you go round clockwise naming different currencies, the first to repeat one or not be able to think of one must drink"
+        },
+        {
+            "title": "Everyone stand up",
+            "description": "Everyone stand up, the last person standing must drink"
+        },
+        {
+            "title": "Do it",
+            "description": "Do whatever the player on your left wants, if you can't then drink"
+        },
+        {
+            "title": "Offer me a drink",
+            "description": "Everyone must offer you a drink, you can choose one and take a drink from it"
+        },
+        {
+            "title": "Hum a song",
+            "description": "Hum a song, the first player to guess the song can choose someone to drink"
+        },
+        {
+            "title": "Drink Three Times",
+            "description": "Drink three times"
+        },
+        {
+            "title": "Most buff",
+            "description": "Most buff player must drink"
+        },
+        {
+            "title": "Males drink",
+            "description": "Males drink"
+        },
+        {
+            "title": "Flex and drink",
+            "description": "Flex and drink"
+        },
+        {
+            "title": "Enjoy the taste",
+            "description": "If you enjoy the taste of your drink, then take a drink"
+        },
+        {
+            "title": "Clockwise Compliment",
+            "description": "Starting with you, go round clockwise complimenting eachother"
+        },
+        {
+            "title": "Been sick while drinking",
+            "description": "Anyone who has been sick while drinking must drink"
+        },
+        {
+            "title": "Can play an instrument",
+            "description": "Anyone who can play an instrument drink"
+        },
+        {
+            "title": "Drink from every player",
+            "description": "Take a drink form every players drink"
+        },
+        {
+            "title": "Best Friend",
+            "description": "If your best friend is playing then you must both drink"
+        },
+        {
+            "title": "Silent",
+            "description": "Stay silent for one round or drink"
+        },
+        {
+            "title": "Turn away and touch shoulder",
+            "description": "Turn away from the other players and then one player has to tap your shoulder, if you guess who it was correctly everyone else drinks but if you are wrong you must drink"
+        },
+        {
+            "title": "Pass to the left",
+            "description": "Everyone pass their drink to their left and let them take a drink"
+        }
+    ]
+}

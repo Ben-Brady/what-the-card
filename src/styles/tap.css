@@ -1,11 +1,11 @@
 .animate-tap-circle {
-    animation: tap-circle .3s ease-in-out forwards;
+    animation: tap-circle .3s ease-out forwards;
 }
 
 @keyframes tap-circle {
     0% {
         transform: scale(0);
-        opacity: 0.8;
+        opacity: 1;
     }
 
     100% {
