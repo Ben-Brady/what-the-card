@@ -10,9 +10,9 @@ export default function HomePage() {
     const packs = listPacks();
 
     return (
-        <div class="w-full h-screen pt-24 px-16 flex justify-center">
-            <div class="flex flex-col items-center gap-8 w-full">
-                <img class="w-[50vw] max-w-96 h-auto xl:size-48 pb-12" src={LogoSvg} />
+        <div class="w-full h-screen py-8 px-8 flex justify-center overflow-y-auto">
+            <div class="flex flex-col items-center h-fit gap-8">
+                <img class="flex-1 w-auto" src={LogoSvg} />
                 <div class="flex flex-col items-center gap-4 w-full">
                     <For each={packs}>
                         {(pack) => (
@@ -27,8 +27,9 @@ export default function HomePage() {
                         )}
                     </For>
                 </div>
-                <div class="flex flex-col items-center gap-4 w-full">
-                    <Show when={canInstall()}>
+
+                <Show when={canInstall()}>
+                    <div class="flex flex-col items-center gap-4 w-full">
                         <Button
                             class="w-full max-w-80 min-h-14 h-fit"
                             variant="primary"
@@ -36,16 +37,16 @@ export default function HomePage() {
                         >
                             Install
                         </Button>
-                    </Show>
-                    <LinkButton
+                        {/* <LinkButton
                         variant="secondary"
                         href="/create"
                         class="w-full max-w-80 min-h-14 h-fit"
                         preload
-                    >
+                        >
                         Create New Pack
-                    </LinkButton>
-                </div>
+                        </LinkButton> */}
+                    </div>
+                </Show>
             </div>
         </div>
     );
