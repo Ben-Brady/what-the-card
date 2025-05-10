@@ -1,6 +1,6 @@
 import { Accessor, createSignal } from "solid-js";
 import shuffle from "lodash/shuffle";
-import {  Pack } from "../lib/pack";
+import { Pack } from "../lib/pack";
 import { clamp } from "../lib/utils";
 
 export type ColoredCard = {
