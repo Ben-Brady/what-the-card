@@ -9,16 +9,16 @@ export default function ProgressBar({ progress }: { progress: Accessor<number> }
                 "flex justify-center items-center text-nowrap select-none",
             )}
             style={{
-                transition: "width 300ms ease-out, height 200ms ease-out 200ms",
+                transition: "width 300ms ease-out, height 200ms ease-out 300ms",
                 width: `${progress() * 100}%`,
                 height: progress() === 1 ? "2rem" : undefined,
             }}
         >
             <Show when={progress() === 1}>
-                <span class="starting:opacity-0 opacity-100 delay-350 duration-500">
+                <span class="starting:opacity-0 opacity-100 delay-400 duration-500">
                     You've seen every card!
                 </span>
             </Show>
         </div>
     );
-};
+}

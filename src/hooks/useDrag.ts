@@ -47,7 +47,7 @@ const onDragDesktop = (
     document.addEventListener("mousedown", onClickStart, { signal });
     document.addEventListener("mousemove", onClickMove, { signal });
     document.addEventListener("mouseup", onClickStop, { signal });
-    document.addEventListener("mouseout", onClickStop, { signal });
+    // document.addEventListener("mouseout", onClickStop, { signal });
 };
 
 const onDragMobile = (

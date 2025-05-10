@@ -1,28 +1,22 @@
 import { createResource, Show, Suspense } from "solid-js";
 import { useParams } from "@solidjs/router";
-import { doesPackExist, getPack } from "../lib/pack.ts";
-import { firstCardColor, Game } from "../components/Game/Game.tsx";
+import { getPackListing } from "../lib/pack.ts";
+import { Game } from "../components/Game/Game.tsx";
 import { useCaptureInstallPrompt } from "../hooks/usePromptInstall.ts";
+import { defaultCardColor } from "../hooks/useGame.ts";
 
 export default function GamePage() {
     useCaptureInstallPrompt();
 
     const params = useParams();
     const id = params.id;
-    const exists = doesPackExist(id);
-    if (!exists) {
+    const listing = getPackListing(id);
+    if (!listing) {
         location.replace("/");
         return null;
     }
 
-    const [pack] = createResource(async () => {
-        try {
-            return await getPack(id);
-        } catch (e) {
-            location.replace("/");
-            throw e;
-        }
-    });
+    const [pack] = createResource(listing.getData);
 
     return (
         <Suspense fallback={Loading}>
@@ -33,4 +27,4 @@ export default function GamePage() {
     );
 }
 
-const Loading = <div class="absolute inset-0" style={{ background: firstCardColor }} />;
+const Loading = <div class="absolute inset-0" style={{ background: defaultCardColor }} />;

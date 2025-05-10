@@ -12,12 +12,18 @@ importers:
 
   .:
     dependencies:
+      '@formkit/auto-animate':
+        specifier: ^0.8.2
+        version: 0.8.2
       '@solidjs/router':
         specifier: ^0.15.3
         version: 0.15.3(solid-js@1.9.6)
       '@tailwindcss/vite':
         specifier: ^4.1.5
         version: 4.1.5(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
+      '@tw-classed/solid':
+        specifier: ^1.7.1
+        version: 1.7.1(solid-js@1.9.6)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -719,6 +725,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@formkit/auto-animate@0.8.2':
+    resolution: {integrity: sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ==}
+
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
     engines: {node: '>=6.0.0'}
@@ -1001,6 +1010,14 @@ packages:
     resolution: {integrity: sha512-FE1stRoqdHSb7RxesMfCXE8icwI1W6zGE/512ae3ZDrpkQYTTYeSyUJPRCjZd8CwVAhpDUbi1YR8pcZioFJQ/w==}
     peerDependencies:
       vite: ^5.2.0 || ^6
+
+  '@tw-classed/core@1.7.0':
+    resolution: {integrity: sha512-D57pNSN3JY2pRB6iPzZKB0m0hWfNGZ6MkxavYxgTDp+YIosi9VwDn6Cc87qcOM3ogu2CFvIAi2XXoAREnz0UFQ==}
+
+  '@tw-classed/solid@1.7.1':
+    resolution: {integrity: sha512-P9uI+u52yT99VQ3xk0cnQ948Wg1wVOE+rdg6ZCJZqls0iES9txGvnlJl+kvkgMrdW+ZJOqwdB6TYCnzmFBu53A==}
+    peerDependencies:
+      solid-js: '>=1.0.0'
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -3075,6 +3092,8 @@ snapshots:
   '@esbuild/win32-x64@0.25.4':
     optional: true
 
+  '@formkit/auto-animate@0.8.2': {}
+
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
       '@jridgewell/set-array': 1.2.1
@@ -3295,6 +3314,13 @@ snapshots:
       '@tailwindcss/oxide': 4.1.5
       tailwindcss: 4.1.5
       vite: 6.3.5(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
+
+  '@tw-classed/core@1.7.0': {}
+
+  '@tw-classed/solid@1.7.1(solid-js@1.9.6)':
+    dependencies:
+      '@tw-classed/core': 1.7.0
+      solid-js: 1.9.6
 
   '@types/babel__core@7.20.5':
     dependencies:

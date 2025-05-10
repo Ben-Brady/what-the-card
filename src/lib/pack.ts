@@ -1,14 +1,16 @@
-import BrutalHangoverUrl from "../data/brutal-hangover.json?url";
-import DrunkPiratesJson from "../data/drunk-pirates.json?url";
-import NeverendingTrashJson from "../data/neverending-trash.json?url";
 import { string, object, literal, lazy, array, InferOutput, parse } from "valibot";
+import WhatTheCardURL from "../assets/packs/what-the-card.json?url";
+import BrutalHandoverURL from "../assets/packs/brutal-hangover.json?url";
+import DrunkPirateURL from "../assets/packs/drunk-pirates.json?url";
+import NeverendingTrashURL from "../assets/packs/neverending-trash.json?url";
+import { listCustomPacks } from "./custom-packs";
 
 export type Pack = InferOutput<typeof Pack>;
 export const Pack = object({
     id: string(),
     title: string(),
     type: literal("normal"),
-    cards: lazy(() => array(CardSchema)),
+    cards: lazy(() => array(Card)),
 });
 
 export type PackInfo = InferOutput<typeof PackInfo>;
@@ -17,26 +19,55 @@ export const PackInfo = object({
     title: string(),
 });
 
-export type CardSchema = InferOutput<typeof CardSchema>;
-export const CardSchema = object({
+export type Card = InferOutput<typeof Card>;
+export const Card = object({
     title: string(),
     description: string(),
 });
 
-export const packs = [
-    { id: "brutal-hangover", title: "Brutal Hangover", url: BrutalHangoverUrl },
-    { id: "drunk-pirates", title: "Drunk Pirates", url: DrunkPiratesJson },
-    { id: "neverending-trash", title: "Neverending Trash", url: NeverendingTrashJson },
-];
+export type PackListing = {
+    id: string;
+    title: string;
+    getData: () => Promise<Pack>;
+};
 
-export function doesPackExist(id: string): boolean {
-    return !!packs.find((v) => v.id === id);
-}
-
-export async function getPack(id: string): Promise<Pack> {
-    const pack = packs.find((v) => v.id === id);
-    if (!pack) throw new Error("invalid pack");
-    const r = await fetch(pack.url);
+const createDownloadFunc = (url: string) => async (): Promise<Pack> => {
+    const r = await fetch(url);
     const json = await r.json();
     return parse(Pack, json);
+};
+
+const BUILTIN_PACKS: PackListing[] = [
+    {
+        id: "what-the-cards",
+        title: "What The Card",
+        getData: createDownloadFunc(WhatTheCardURL),
+    },
+    {
+        id: "brutal-hangover",
+        title: "Brutal Hangover",
+        getData: createDownloadFunc(BrutalHandoverURL),
+    },
+    {
+        id: "drunk-pirates",
+        title: "Drunk Pirates",
+        getData: createDownloadFunc(DrunkPirateURL),
+    },
+    {
+        id: "neverending-trash",
+        title: "Neverending Trash",
+        getData: createDownloadFunc(NeverendingTrashURL),
+    },
+];
+
+export const CUSTOM_PACK_ID = "custom";
+
+export function listPacks(): PackListing[] {
+    const customPacks = listCustomPacks();
+    return BUILTIN_PACKS.concat(customPacks);
+}
+
+export function getPackListing(id: string): PackListing | undefined {
+    const packs = listPacks();
+    return packs.find((v) => v.id === id);
 }
