@@ -11,22 +11,8 @@ export default function HomePage() {
 
     return (
         <div class="w-full h-screen py-8 px-8 flex justify-center overflow-y-auto">
-            <div class="flex flex-col items-center h-fit gap-8">
-                <img class="flex-1 w-auto" src={LogoSvg} />
-                <div class="flex flex-col items-center gap-4 w-full">
-                    <For each={packs}>
-                        {(pack) => (
-                            <LinkButton
-                                variant="primary"
-                                class="w-full max-w-80 min-h-14 h-fit"
-                                href={`/pack/${pack.id}`}
-                                preload
-                            >
-                                {pack.title}
-                            </LinkButton>
-                        )}
-                    </For>
-                </div>
+            <div class="w-full h-fit flex flex-col items-center gap-8">
+                <img class="flex-1 w-full max-w-80" src={LogoSvg} />
 
                 <Show when={canInstall()}>
                     <div class="flex flex-col items-center gap-4 w-full">
@@ -47,6 +33,21 @@ export default function HomePage() {
                         </LinkButton> */}
                     </div>
                 </Show>
+                
+                <div class="flex flex-col items-center gap-4 w-full">
+                    <For each={packs}>
+                        {(pack) => (
+                            <LinkButton
+                                variant="primary"
+                                class="w-full max-w-80 min-h-14 h-fit"
+                                href={`/pack/${pack.id}`}
+                                preload
+                            >
+                                {pack.title}
+                            </LinkButton>
+                        )}
+                    </For>
+                </div>
             </div>
         </div>
     );
