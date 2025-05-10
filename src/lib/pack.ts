@@ -3,7 +3,6 @@ import WhatTheCardURL from "../assets/packs/what-the-card.json?url";
 import BrutalHandoverURL from "../assets/packs/brutal-hangover.json?url";
 import DrunkPirateURL from "../assets/packs/drunk-pirates.json?url";
 import NeverendingTrashURL from "../assets/packs/neverending-trash.json?url";
-import { listCustomPacks } from "./custom-packs";
 
 export type Pack = InferOutput<typeof Pack>;
 export const Pack = object({
@@ -60,11 +59,9 @@ const BUILTIN_PACKS: PackListing[] = [
     },
 ];
 
-export const CUSTOM_PACK_ID = "custom";
-
 export function listPacks(): PackListing[] {
-    const customPacks = listCustomPacks();
-    return BUILTIN_PACKS.concat(customPacks);
+    // const customPacks = listCustomPacks();
+    return BUILTIN_PACKS;
 }
 
 export function getPackListing(id: string): PackListing | undefined {
