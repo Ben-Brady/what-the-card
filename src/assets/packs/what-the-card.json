@@ -4,7 +4,7 @@
     "type": "normal",
     "cards": [
         {
-            "title": "Staring competition",
+            "title": "Staring Competition",
             "description": "Have a staring competition with the person in front of you, the loser must drink"
         },
         {
@@ -45,7 +45,7 @@
         },
         {
             "title": "Dress to Impress",
-            "description": "Whoever is dressed best, they they must drink"
+            "description": "Whoever is dressed best, they must drink"
         },
         {
             "title": "BFFs forever",
@@ -53,7 +53,7 @@
         },
         {
             "title": "How many colours?",
-            "description": "Go round clockwise a circle and name a colour.\nIf you can't think of a colour or repeat one, you must drink"
+            "description": "Go round clockwise a circle and name a colour.\nIf you can't think of a colour or repeat one: you must drink"
         },
         {
             "title": "Upside Down",
@@ -122,6 +122,22 @@
         {
             "title": "Hungry?",
             "description": "The person who has gone the longest without eating must drink"
+        },
+        {
+            "title": "Take your Pick",
+            "description": "Your can take a sip from any player's drink"
+        },
+        {
+            "title": "Queens",
+            "description": "Anyone who isn't straight must drink"
+        },
+        {
+            "title": "Try Not to Blush",
+            "description": "Go round clockwise starting with you\nName a porn catagory, if you don't say one in 5 seconds: you must drink"
+        },
+        {
+            "title": "My Honour",
+            "description": "Your accused of a crime! The person on your left must defend you and the person on the right convince everyone you did it. Whoever fails to convince the rest of the group must drink three times."
         }
     ]
 }
