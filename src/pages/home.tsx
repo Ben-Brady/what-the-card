@@ -4,9 +4,11 @@ import { listPacks } from "../lib/pack";
 
 import LogoSvg from "../assets/logo.svg?inline";
 import { Button, LinkButton } from "../components/Elements";
+import { useStandalone } from "../hooks/useStandalone";
 
 export default function HomePage() {
     const { canInstall, install } = usePromptInstall();
+    const isStandalone = useStandalone();
     const packs = listPacks();
 
     return (
@@ -14,7 +16,7 @@ export default function HomePage() {
             <div class="w-full h-fit flex flex-col items-center gap-8">
                 <img class="flex-1 w-full max-w-80" src={LogoSvg} />
 
-                <Show when={canInstall()}>
+                <Show when={canInstall() && !isStandalone()}>
                     <div class="flex flex-col items-center gap-4 w-full">
                         <Button
                             class="w-full max-w-80 min-h-14 h-fit"
@@ -33,7 +35,7 @@ export default function HomePage() {
                         </LinkButton> */}
                     </div>
                 </Show>
-                
+
                 <div class="flex flex-col items-center gap-4 w-full">
                     <For each={packs}>
                         {(pack) => (
