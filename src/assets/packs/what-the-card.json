@@ -33,7 +33,7 @@
         },
         {
             "title": "2 Turths, 1 Lie",
-            "description": "You have to tell 2 truths and one lie.\nYou don't have to say which ones the lie"
+            "description": "You must tell 2 truths and 1 lie.\nYou don't have to say which one's the lie"
         },
         {
             "title": "Double Up",
@@ -69,7 +69,7 @@
         },
         {
             "title": "Our Drink",
-            "description": "Everyone is allow to contribute to a bit to your drink"
+            "description": "Everyone is allow to contribute something to your drink"
         },
         {
             "title": "No Smoking!",
@@ -81,7 +81,7 @@
         },
         {
             "title": "Pizza or Burger",
-            "description": "Everyone choose which side they prefer, pizza or burgers, the smallest side must all drink"
+            "description": "Everyone choose which side they prefer, pizza or burgers\nAll players on the losing side must drink"
         },
         {
             "title": "Truth or Dare",
@@ -101,15 +101,15 @@
         },
         {
             "title": "Cats or Dogs",
-            "description": "Everyone vote if they prefer dogs or cats, the side with the least votes must drink"
+            "description": "Everyone vote if they prefer dogs or cats.\nThe side with the least votes must drink"
         },
         {
-            "title": "You know my name right?",
-            "description": "Go round clockwise pointing at every player and saying their name.\nDrink for every name you don't know"
+            "title": "What's my name?",
+            "description": "Try to remember the name of every other player.\nDrink for every name you can't remember"
         },
         {
             "title": "Most Kinky",
-            "description": "Everyone votes for the player whos is the most kinky, they have to drink"
+            "description": "Whoever is voted most kinky has to drink"
         },
         {
             "title": "Alcoholics",
@@ -117,7 +117,7 @@
         },
         {
             "title": "The Floor is Lava",
-            "description": "You cannot touch for floor for the until the next round"
+            "description": "You cannot touch the floor for the until the next round"
         },
         {
             "title": "Hungry?",
@@ -125,7 +125,7 @@
         },
         {
             "title": "Take your Pick",
-            "description": "Your can take a sip from any player's drink"
+            "description": "Your can take 1 sip from any player's drink"
         },
         {
             "title": "Queens",
@@ -133,11 +133,11 @@
         },
         {
             "title": "Try Not to Blush",
-            "description": "Go round clockwise starting with you\nName a porn catagory, if you don't say one in 5 seconds: you must drink"
+            "description": "Go round clockwise nameing porn catagory\nIf you don't say one in 5 seconds say one said before, you must drink"
         },
         {
-            "title": "My Honour",
-            "description": "Your accused of a crime! The person on your left must defend you and the person on the right convince everyone you did it. Whoever fails to convince the rest of the group must drink three times."
+            "title": "I Demand a Trial",
+            "description": "Your accused of a crime!\nThe person on your left must defend you.\nThe person on the right convince everyone you did it.\nWhoever fails to convince the rest of the group must drink three times."
         }
     ]
 }
