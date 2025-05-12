@@ -1,0 +1,219 @@
+import type { CustomCard } from "../lib/pack";
+
+export const cards: CustomCard[] = [
+    {
+        title: "Only the Good Die Young",
+        description: "The youngest player must drink",
+    },
+    {
+        title: "Waht?",
+        description: "If yuo cna raed tihs tehn dinrk",
+    },
+    {
+        title: "Rich Kid",
+        description: "The person who's been to the most countries must drink twice",
+    },
+    {
+        title: "Group Joker",
+        description: "Tell a joke and if anybody laughs, everyone must drink",
+    },
+    {
+        title: "Rockstars",
+        description: "Anyone who has ever dyed their hair must drink",
+    },
+    {
+        title: "Turning a Blind Eye",
+        description: "The next person who makes eye contact with you must drink",
+    },
+    {
+        title: "2 Turths, 1 Lie",
+        description: "You must tell 2 truths and 1 lie.\nYou don't have to say which one's the lie",
+    },
+    {
+        title: "Double Up",
+        description: "Anyone who drinks without being forced to has to drink again",
+    },
+    {
+        title: "Generous Lovers",
+        description: 'Anybody who has ever "given head" must drink',
+    },
+    {
+        title: "Dress to Impress",
+        description: "Whoever is dressed best, they must drink",
+    },
+    {
+        title: "BFFs forever",
+        description: "High five the player to your right, take a selfie, then both drink",
+    },
+    {
+        title: "How many colours?",
+        description:
+            "Go round clockwise a circle and name a colour.\nIf you can't think of a colour or repeat one: you must drink",
+    },
+    {
+        title: "Upside Down",
+        description:
+            "Turn upside down on your seat and try your best to take a sip.\nIf you can't you have to drink twice",
+    },
+    {
+        title: "Drink",
+        description: "Just drink, it's as simple as that",
+    },
+    {
+        title: "Job Interview",
+        description: "Pick a person and pretend to interview for a job with them",
+    },
+    {
+        title: "Our Drink",
+        description: "Everyone is allow to contribute something to your drink",
+    },
+    {
+        title: "No Smoking!",
+        description: "If someone has already gone for a smoke break, they must drink",
+    },
+    {
+        title: "Blackjack",
+        description: "Starting with you going clockwise, every player must count up the previous?",
+    },
+    {
+        title: "Pizza or Burger",
+        description:
+            "Everyone choose which side they prefer, pizza or burgers\nAll players on the losing side must drink",
+    },
+    {
+        title: "Truth or Dare",
+        description: "Play one round of Truth or Dare",
+    },
+    {
+        title: "Hands Free",
+        description: "Take a tip without using your hands",
+    },
+    {
+        title: "Swapsies",
+        description: "Choose a player to phones with 30 seconds",
+    },
+    {
+        title: "no nativo",
+        description: "You can't speak your native language for the next round",
+    },
+    {
+        title: "Cats or Dogs",
+        description:
+            "Everyone vote if they prefer dogs or cats.\nThe side with the least votes must drink",
+    },
+    {
+        title: "What's my name?",
+        description:
+            "Try to remember the name of every other player.\nDrink for every name you can't remember",
+    },
+    {
+        title: "Most Kinky",
+        description: "Whoever is voted most kinky has to drink",
+    },
+    {
+        title: "Alcoholics",
+        description: "Anyone drinking something stronger than 10% must drink",
+    },
+    {
+        title: "The Floor is Lava",
+        description: "You cannot touch the floor for the until the next round",
+    },
+    {
+        title: "Hungry?",
+        description: "The person who has gone the longest without eating must drink",
+    },
+    {
+        title: "Take your Pick",
+        description: "Your can take 1 sip from any player's drink",
+    },
+    {
+        title: "Queens",
+        description: "Anyone who isn't straight must drink",
+    },
+    {
+        title: "Try Not to Blush",
+        description:
+            "Go round clockwise naming porn catagory.\nIf you don't say one in 5 seconds say one said before, you must drink",
+    },
+    {
+        title: "I Demand a Trial",
+        description:
+            "You've been accused of murder!\nThe person on your left must defend you.\nThe person on the right convince everyone you did it.\nWhoever fails to convince the rest of the group must drink 3 times",
+        tags: ["competition"],
+    },
+    {
+        title: "Oooo",
+        description:
+            "Everyone vote on the person most likely to have a crush on someone else playing, they have to drink twice",
+    },
+    {
+        title: "Getting Around",
+        description: "The person that has sex most frequently must drink",
+    },
+    {
+        title: "Shots!",
+        description: "Pick a player to take a shot with you",
+    },
+    {
+        title: "To Lost Love",
+        description: "Everyone who would get back with their ex, take a shot together",
+    },
+    {
+        title: "A tasting",
+        description: "Take a drink from every player's drink",
+    },
+    {
+        title: "Rekindling an Old Freindship",
+        description: "Send a message to someone you haven't talked to in over a year",
+    },
+    {
+        title: "Fuck fuck fuck",
+        description: "Drink if you have ever sent a sexual message to the wrong person",
+    },
+
+    {
+        title: "I declare to the court",
+        description:
+            "Everyone takes turns tell a story and then vote on what as the most insane statement",
+        tags: ["competition"],
+    },
+    {
+        title: "Secret Santa",
+        description:
+            "The players on your left and right have one round to bring you a gift, winner is allowed to make someone drink",
+        tags: ["competition"],
+    },
+    {
+        title: "Staring Competition",
+        description:
+            "Have a staring competition with the person in front of you, the loser must drink",
+        tags: ["competition"],
+    },
+
+    {
+        title: "Your Darkest Desires",
+        description: "What is your dream sexual encounter?",
+        tags: ["horny"],
+    },
+    {
+        title: "Where do you stand?",
+        description: "Are you a top, bottom or something inbetween?",
+        tags: ["horny"],
+    },
+    {
+        title: "Professional Seductress",
+        description: "Attempt to suduce another player",
+        tags: ["horny"],
+    },
+    {
+        title: "Kiss me like you love me",
+        description: "Make out with an inanimate object",
+        tags: ["horny"],
+    },
+
+    {
+        title: "Trust Me Bro",
+        description: "Close your eyes and kiss the object put in front of you by another player",
+        tags: ["horny", "extreme"],
+    },
+];
