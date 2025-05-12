@@ -9,7 +9,6 @@ export default function DragOverlay(props: {
     onSwipe: () => void;
     side: "left" | "right";
     class: string;
-    icon?: string;
 }) {
     const [stretch, setStretch] = createSignal(0);
     const [isDragging, setIsDragging] = createSignal<boolean>(false);
@@ -81,20 +80,6 @@ export default function DragOverlay(props: {
                     filter: "brightness(0.85)  blur(.25rem)",
                 }}
             />
-            {/* <img
-                class={classNames(
-                    " text-white absolute top-1/2 -translate-y-1/2 z-40",
-                    side === "right" && "-right-20",
-                    side === "left" && "-left-20",
-                )}
-                style={{
-                    transform:
-                        side === "right"
-                            ? `translateX(${stretch() * -1}px)`
-                            : `translateX(${stretch()}px)`,
-                }}
-                src={icon}
-            /> */}
         </div>
     );
 }
