@@ -1,6 +1,6 @@
 import { Accessor, createSignal } from "solid-js";
 import shuffle from "lodash/shuffle";
-import { Pack } from "../lib/pack";
+import { Card } from "../lib/pack";
 import { clamp } from "../lib/utils";
 
 export type ColoredCard = {
@@ -28,11 +28,11 @@ export type GameHook = {
     goNext: () => void;
 };
 
-export const useGame = (pack: Pack) => {
+export const useGame = (cards: Card[]) => {
     const nextColor = createColorGenerator();
     const generateShuffledDeck = (): ColoredCard[] => {
         // Prevent error on no cards
-        if (pack.cards.length === 0) {
+        if (cards.length === 0) {
             return [
                 {
                     title: "Empty Pack",
@@ -42,7 +42,7 @@ export const useGame = (pack: Pack) => {
             ];
         }
 
-        const shuffledCards = shuffle(pack.cards);
+        const shuffledCards = shuffle(cards);
         return shuffledCards.map(({ title, description }) => ({
             title,
             description,
@@ -51,23 +51,23 @@ export const useGame = (pack: Pack) => {
     };
 
     const [index, setIndex] = createSignal<number>(0);
-    const [cards, setCards] = createSignal<ColoredCard[]>(generateShuffledDeck());
+    const [deck, setCards] = createSignal<ColoredCard[]>(generateShuffledDeck());
 
-    const card = () => cards()[index()];
-    const progress = () => clamp((1 / pack.cards.length) * index(), 0, 1);
-
-    const goBack = () => {
-        if (index() <= 0) return;
-        setIndex((v) => v - 1);
-    };
+    const card = () => deck()[index()];
+    const progress = () => clamp((1 / cards.length) * index(), 0, 1);
 
     const goNext = () => {
         const newIndex = index() + 1;
-        if (newIndex >= cards().length - 1) {
+        if (newIndex >= deck().length - 1) {
             setCards((cards) => [...cards, ...generateShuffledDeck()]);
         }
 
         setIndex(newIndex);
+    };
+
+    const goBack = () => {
+        if (index() <= 0) return;
+        setIndex((v) => v - 1);
     };
 
     return { card, progress, goBack, goNext };

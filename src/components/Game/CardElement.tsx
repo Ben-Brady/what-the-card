@@ -2,13 +2,16 @@ import { Accessor, ComponentProps, Show } from "solid-js";
 import classNames from "@/lib/classnames";
 import { ColoredCard } from "@/hooks/useGame";
 
-export const Card = (props: { card: Accessor<ColoredCard> } & ComponentProps<"div">) => {
-    const card = () => props.card()
+export default function CardElement(
+    props: { card: Accessor<ColoredCard> } & ComponentProps<"div">,
+) {
+    const card = () => props.card();
+
     return (
         <div
             {...props}
             class={classNames(
-                "size-full select-none text-black px-4",
+                "size-full text-black px-4",
                 "flex items-center justify-center",
                 props.class,
             )}
@@ -31,4 +34,4 @@ export const Card = (props: { card: Accessor<ColoredCard> } & ComponentProps<"di
             </div>
         </div>
     );
-};
+}
