@@ -1,11 +1,10 @@
-import { Show } from "solid-js/web";
 import DragOverlay from "../DragOverlay/DragOverlay";
-import BackImage from "../../assets/back.svg";
-import { useOnTap } from "../../hooks/useOnTap";
-import { Pack } from "../../lib/pack";
+import BackImage from "@/assets/back.svg";
+import { useOnTap } from "@/hooks/useOnTap";
+import { Pack } from "@/lib/pack";
 import { Card } from "./Card";
 import ProgressBar from "./ProgressBar";
-import { useGame } from "../../hooks/useGame";
+import { useGame } from "@/hooks/useGame";
 
 export const Game = ({ pack }: { pack: Pack }) => {
     const { card, progress, goBack, goNext } = useGame(pack);

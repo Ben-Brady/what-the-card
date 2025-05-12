@@ -1,7 +1,7 @@
 import { createResource, Show, Suspense } from "solid-js";
 import { useParams } from "@solidjs/router";
 import { getPackListing } from "../lib/pack.ts";
-import { Game } from "../components/Game/Game.tsx";
+import { Game } from "@/components/Game/Game.tsx";
 import { defaultCardColor } from "../hooks/useGame.ts";
 
 export default function GamePage() {

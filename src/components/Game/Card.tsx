@@ -1,6 +1,6 @@
 import { Accessor, ComponentProps, Show } from "solid-js";
-import classNames from "../../lib/classnames";
-import { ColoredCard } from "../../hooks/useGame";
+import classNames from "@/lib/classnames";
+import { ColoredCard } from "@/hooks/useGame";
 
 export const Card = ({
     card,

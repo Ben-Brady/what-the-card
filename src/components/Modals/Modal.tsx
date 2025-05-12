@@ -1,6 +1,6 @@
 import { createSignal, JSX, Show } from "solid-js";
 import { Portal } from "solid-js/web";
-import classNames from "../../lib/classnames";
+import classNames from "@/lib/classnames";
 
 type ModalControls = {
     open: () => void;

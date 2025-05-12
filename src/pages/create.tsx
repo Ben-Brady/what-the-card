@@ -1,9 +1,9 @@
 import { createSignal } from "solid-js";
 import { Card } from "../lib/pack";
-import { Button, Input } from "../components/Elements";
+import { Button, Input } from "@/components/Elements";
 import { createAutoAnimate } from "@formkit/auto-animate/solid";
-import { createEditModal } from "../components/Modals/EditCardModal";
-import { createConfirmationModal } from "../components/Modals/ConfirmModal";
+import { createEditModal } from "@/components/Modals/EditCardModal";
+import { createConfirmationModal } from "@/components/Modals/ConfirmModal";
 import { setCustomPack } from "../lib/custom-packs";
 import { createStore } from "solid-js/store";
 import { For } from "solid-js";

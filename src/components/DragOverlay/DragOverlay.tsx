@@ -1,9 +1,9 @@
 import { createSignal } from "solid-js";
-import { useDrag } from "../../hooks/useDrag.ts";
-import { clamp } from "../../lib/utils.ts";
-import { useAnimate } from "../../hooks/useAnimate.ts";
-import { useScreenSize } from "../../hooks/useScreenSize.ts";
-import classNames from "../../lib/classnames.ts";
+import { useDrag } from "@/hooks/useDrag.ts";
+import { clamp } from "@/lib/utils.ts";
+import { useAnimate } from "@/hooks/useAnimate.ts";
+import { useScreenSize } from "@/hooks/useScreenSize.ts";
+import classNames from "@/lib/classnames.ts";
 
 export default function DragOverlay({
     onSwipe,

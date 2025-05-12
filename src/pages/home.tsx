@@ -3,7 +3,7 @@ import { usePromptInstall } from "../hooks/usePromptInstall";
 import { listPacks } from "../lib/pack";
 
 import LogoSvg from "../assets/logo.svg?inline";
-import { Button, LinkButton } from "../components/Elements";
+import { Button, LinkButton } from "@/components/Elements";
 import { useStandalone } from "../hooks/useStandalone";
 
 export default function HomePage() {

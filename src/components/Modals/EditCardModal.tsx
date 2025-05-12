@@ -1,5 +1,5 @@
 import { Accessor, batch, Component, createSignal } from "solid-js";
-import { Card } from "../../lib/pack";
+import { Card } from "@/lib/pack";
 import { Button, Input, Textarea } from "../Elements";
 import { createModal } from "./Modal";
 

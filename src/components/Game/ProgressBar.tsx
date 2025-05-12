@@ -1,5 +1,5 @@
 import { Accessor, Show } from "solid-js";
-import classNames from "../../lib/classnames";
+import classNames from "@/lib/classnames";
 
 export default function ProgressBar({ progress }: { progress: Accessor<number> }) {
     return (
