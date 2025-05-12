@@ -56,7 +56,7 @@ export function createModal(
                             elementRef = element;
                         }}
                         class={classNames(
-                            "fixed left-0 top-0 z-40",
+                            "fixed left-0 top-0 z-40 p-4",
                             "h-full w-full bg-black/80",
                             "flex justify-center items-center",
                             "starting:opacity-0 opacity-100 transition-opacity duration-300",
@@ -73,7 +73,7 @@ export function createModal(
                     >
                         <div
                             class={classNames(
-                                "bg-blue-400 w-4/5 h-4/5 max-w-192 max-h-128 rounded-lg py-4 px-8",
+                                "size-full max-w-192 max-h-128 p-4 bg-blue-500 rounded-lg",
                                 componentProps.class,
                             )}
                         >
