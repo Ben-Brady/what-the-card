@@ -13,19 +13,19 @@ export default function HomePage() {
     return (
         <div
             class={classNames(
-                "w-full h-screen p-8 overflow-y-auto",
+                "size-full p-8 overflow-y-auto",
                 "flex flex-col items-center justify-between gap-6",
             )}
         >
             <img class="w-full max-w-80" src={LogoSvg} />
 
             <div class="flex flex-col items-center gap-4 w-full h-full">
-                <LinkButton variant="primary" href="/packs" preload>
+                <LinkButton variant="primary" href="/play" preload>
                     Play
                 </LinkButton>
-                {/* <LinkButton variant="primary" href="/packs" preload>
+                <LinkButton variant="primary" href="/packs" preload>
                     Packs
-                </LinkButton> */}
+                </LinkButton>
                 {/*
                 <LinkButton variant="primary" href="/create" preload>
                     Custom Cards

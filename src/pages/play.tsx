@@ -6,10 +6,7 @@ import classNames from "@/lib/classnames";
 export default function PlayPage() {
     return (
         <div
-            class={classNames(
-                "w-full h-screen p-8 overflow-y-auto",
-                "flex flex-col items-center gap-6",
-            )}
+            class={classNames("size-full p-8 overflow-y-auto", "flex flex-col items-center gap-6")}
         >
             <h3 class="text-3xl text-neutral-900">Select Your Packs</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
@@ -40,9 +37,7 @@ export default function PlayPage() {
             </div>
 
             <div class="w-full flex flex-col items-center gap-4">
-                <Button variant="primary">
-                    Start
-                </Button>
+                <Button variant="primary">Start</Button>
                 <LinkButton variant="primary" href="/" preload>
                     Back
                 </LinkButton>

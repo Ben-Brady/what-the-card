@@ -5,7 +5,7 @@ export default function AboutPage() {
     return (
         <div
             class={classNames(
-                "w-full h-screen p-8 overflow-y-auto",
+                "size-full p-8 overflow-y-auto",
                 "flex flex-col items-center justify-between gap-4",
             )}
         >
