@@ -52,10 +52,10 @@ export default function DragOverlay({
     });
 
     return (
-        <>
+        <div class="fixed inset-0 overflow-hidden z-40">
             <div
                 class={classNames(
-                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] z-40 ",
+                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh]",
                     className,
                     side === "right" && "right-0 translate-x-full",
                     side === "left" && "left-0 -translate-x-full",
@@ -76,6 +76,6 @@ export default function DragOverlay({
                 }}
                 src={icon}
             /> */}
-        </>
+        </div>
     );
 }
