@@ -1,4 +1,5 @@
 import { useOnTap } from "../../hooks/useOnTap";
+import "./TapDisplay.css";
 
 const createTapElement = (props: { x: number; y: number }) => {
     const element = (

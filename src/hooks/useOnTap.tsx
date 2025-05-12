@@ -1,4 +1,3 @@
-import "../styles/tap.css";
 import { useAbortSignal } from "./useAbortSignal";
 
 const THRESHOLD_FOR_MOVEMENT = 50;
