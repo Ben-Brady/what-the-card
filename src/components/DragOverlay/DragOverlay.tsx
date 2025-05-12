@@ -21,7 +21,7 @@ export default function DragOverlay(props: {
             return !isDragging() && stretch() > 0;
         },
         onFrame(delta) {
-            const rate = Math.max(stretch() * 20, 10);
+            const rate = Math.max((stretch() - stretch() / 2) * 10, 10);
 
             const reduction = rate * delta;
             setStretch(Math.max(stretch() - reduction, 0));
@@ -50,12 +50,36 @@ export default function DragOverlay(props: {
         <div class="fixed inset-0 overflow-hidden z-40">
             <div
                 class={classNames(
-                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh]",
+                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] opacity-80",
                     props.class,
                     props.side === "right" && "right-0 translate-x-full",
                     props.side === "left" && "left-0 -translate-x-full",
                 )}
-                style={{ transform: `scaleX(${stretch() ** 1.15}%)` }}
+                style={{ transform: `scaleX(${stretch() ** 1.15}%)  blur(1px) ` }}
+            />
+            <div
+                class={classNames(
+                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] opacity-80",
+                    props.class,
+                    props.side === "right" && "right-0 translate-x-full",
+                    props.side === "left" && "left-0 -translate-x-full",
+                )}
+                style={{
+                    transform: `scaleX(${stretch() ** 1.1}%)`,
+                    filter: "brightness(0.90) blur(.25rem)",
+                }}
+            />
+            <div
+                class={classNames(
+                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] opacity-80",
+                    props.class,
+                    props.side === "right" && "right-0 translate-x-full",
+                    props.side === "left" && "left-0 -translate-x-full",
+                )}
+                style={{
+                    transform: `scaleX(${stretch() ** 1.05}%)`,
+                    filter: "brightness(0.85)  blur(.25rem)",
+                }}
             />
             {/* <img
                 class={classNames(
