@@ -1,0 +1,84 @@
+import { Checkbox } from "@/components/Checkbox";
+import { Button, LinkButton } from "@/components/Elements";
+import { createModal } from "@/components/Modals/Modal";
+import classNames from "@/lib/classnames";
+
+export default function PlayPage() {
+    return (
+        <div
+            class={classNames(
+                "w-full h-screen p-8 overflow-y-auto",
+                "flex flex-col items-center gap-6",
+            )}
+        >
+            <h3 class="text-3xl text-neutral-900">Select Your Packs</h3>
+            <div class="size-full flex flex-col items-center gap-2 max-w-80">
+                <CheckboxRow
+                    text="Competition Cards"
+                    description={`
+                        These cards involve comeptitions between two or more players, usually arguing and high energy.
+
+                        Recommended for most groups, but optional.
+                    `}
+                />
+                <CheckboxRow
+                    text="Horny Cards"
+                    description={`
+                    These cards involve shipping relationships, talking about fantasies, and mild sex acts (like making out with a fruit).
+
+                    Great for parties, but not recommended for friend groups where relationships would be awkward.
+                    `}
+                />
+                <CheckboxRow
+                    text="Extreme Cards"
+                    description={`
+                    These cards include more
+
+                    Not recommend for most groups,
+                    `}
+                />
+            </div>
+
+            <div class="w-full flex flex-col items-center gap-4">
+                <Button variant="primary">
+                    Start
+                </Button>
+                <LinkButton variant="primary" href="/" preload>
+                    Back
+                </LinkButton>
+            </div>
+        </div>
+    );
+}
+
+type CheckboxRowProps = {
+    text: string;
+    description: string;
+};
+
+const CheckboxRow = (props: CheckboxRowProps) => {
+    const [Modal, controls] = createModal();
+
+    return (
+        <div class="w-full flex items-center justify-between gap-2">
+            <Checkbox />
+            <span class="text-neutral-900 text-xl flex-1">{props.text}</span>
+            <button onClick={() => controls.open()}>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="text-neutral-900 size-6"
+                >
+                    <path
+                        fill="currentColor"
+                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+                    />
+                </svg>
+            </button>
+            <Modal class="h-fit text-center flex flex-col gap-2">
+                <h2 class="text-3xl">{props.text}</h2>
+                <p class="whitespace-pre-line">{props.description.trim()}</p>
+            </Modal>
+        </div>
+    );
+};

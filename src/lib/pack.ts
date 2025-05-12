@@ -1,4 +1,4 @@
-import { string, object, literal, lazy, array, InferOutput, parse } from "valibot";
+import { string, object, literal, union, lazy, array, InferOutput, optional } from "valibot";
 import WhatTheCardURL from "../assets/packs/what-the-card.json?url";
 import BrutalHandoverURL from "../assets/packs/brutal-hangover.json?url";
 import DrunkPirateURL from "../assets/packs/drunk-pirates.json?url";
@@ -24,6 +24,16 @@ export const Card = object({
     description: string(),
 });
 
+export type CardTag = InferOutput<typeof CardTag>;
+export const CardTag = union([literal("competition"), literal("horny"), literal("extreme")]);
+
+export type CustomCard = InferOutput<typeof CustomCard>;
+export const CustomCard = object({
+    title: string(),
+    description: string(),
+    tags: optional(array(CardTag)),
+});
+
 export type PackListing = {
     id: string;
     title: string;
@@ -33,7 +43,7 @@ export type PackListing = {
 const createDownloadFunc = (url: string) => async (): Promise<Pack> => {
     const r = await fetch(url);
     const json = await r.json();
-    return parse(Pack, json);
+    return json as Pack;
 };
 
 const BUILTIN_PACKS: PackListing[] = [
@@ -60,7 +70,6 @@ const BUILTIN_PACKS: PackListing[] = [
 ];
 
 export function listPacks(): PackListing[] {
-    // const customPacks = listCustomPacks();
     return BUILTIN_PACKS;
 }
 

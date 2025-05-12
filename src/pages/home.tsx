@@ -1,55 +1,47 @@
-import { Show, For } from "solid-js";
+import { Show } from "solid-js";
 import { usePromptInstall } from "../hooks/usePromptInstall";
-import { listPacks } from "../lib/pack";
 
 import LogoSvg from "../assets/logo.svg?inline";
 import { Button, LinkButton } from "@/components/Elements";
 import { useStandalone } from "../hooks/useStandalone";
+import classNames from "@/lib/classnames";
 
 export default function HomePage() {
     const { canInstall, install } = usePromptInstall();
     const isStandalone = useStandalone();
-    const packs = listPacks();
 
     return (
-        <div class="w-full h-screen py-8 px-8 flex justify-center overflow-y-auto">
-            <div class="w-full h-fit flex flex-col items-center gap-8">
-                <img class="flex-1 w-full max-w-80" src={LogoSvg} />
+        <div
+            class={classNames(
+                "w-full h-screen p-8 overflow-y-auto",
+                "flex flex-col items-center justify-between gap-6",
+            )}
+        >
+            <img class="w-full max-w-80" src={LogoSvg} />
 
+            <div class="flex flex-col items-center gap-4 w-full h-full">
+                <LinkButton variant="primary" href="/packs" preload>
+                    Play
+                </LinkButton>
+                {/* <LinkButton variant="primary" href="/packs" preload>
+                    Packs
+                </LinkButton> */}
+                {/*
+                <LinkButton variant="primary" href="/create" preload>
+                    Custom Cards
+                </LinkButton>
+                */}
+            </div>
+            <div class="flex flex-col items-center gap-4 w-full">
                 <Show when={canInstall() && !isStandalone()}>
-                    <div class="flex flex-col items-center gap-4 w-full">
-                        <Button
-                            class="w-full max-w-80 min-h-14 h-fit"
-                            variant="primary"
-                            onClick={() => install()}
-                        >
-                            Install
-                        </Button>
-                        {/* <LinkButton
-                        variant="secondary"
-                        href="/create"
-                        class="w-full max-w-80 min-h-14 h-fit"
-                        preload
-                        >
-                        Create New Pack
-                        </LinkButton> */}
-                    </div>
+                    <Button variant="primary" onClick={() => install()}>
+                        Install
+                    </Button>
                 </Show>
 
-                <div class="flex flex-col items-center gap-4 w-full">
-                    <For each={packs}>
-                        {(pack) => (
-                            <LinkButton
-                                variant="primary"
-                                class="w-full max-w-80 min-h-14 h-fit"
-                                href={`/pack/${pack.id}`}
-                                preload
-                            >
-                                {pack.title}
-                            </LinkButton>
-                        )}
-                    </For>
-                </div>
+                <LinkButton variant="primary" href="/about" preload>
+                    About
+                </LinkButton>
             </div>
         </div>
     );
