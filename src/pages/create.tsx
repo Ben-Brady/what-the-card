@@ -222,10 +222,10 @@ export default function CreatePage() {
                             role="button"
                             onClick={() => openCardModal(index())}
                         >
-                            <p class="select-none w-full text-2xl text-center underline">
+                            <p class="w-full text-2xl text-center underline">
                                 {card.title}
                             </p>
-                            <p class="select-none w-full text-xl text-center whitespace-pre-line">
+                            <p class="w-full text-xl text-center whitespace-pre-line">
                                 {card.description}
                             </p>
                         </div>
