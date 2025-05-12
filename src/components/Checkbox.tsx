@@ -22,7 +22,7 @@ export const Checkbox = (props: CheckboxProps) => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"
                 class={classNames("size-6 text-neutral-900", value() ? "opacity-0" : "opacity-100")}
-                style={{ transition: "opacity ease-in 100ms" }}
+                style={{ transition: "opacity ease-in 50ms" }}
             >
                 <path
                     fill="currentColor"
