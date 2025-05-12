@@ -13,7 +13,7 @@ export default function HomePage() {
     return (
         <div
             class={classNames(
-                "size-full p-8 overflow-y-auto",
+                "w-full h-svh p-8 overflow-y-auto",
                 "flex flex-col items-center justify-between gap-6",
             )}
         >
@@ -26,11 +26,6 @@ export default function HomePage() {
                 <LinkButton variant="primary" href="/packs" preload>
                     Packs
                 </LinkButton>
-                {/*
-                <LinkButton variant="primary" href="/create" preload>
-                    Custom Cards
-                </LinkButton>
-                */}
             </div>
             <div class="flex flex-col items-center gap-4 w-full">
                 <Show when={canInstall() && !isStandalone()}>

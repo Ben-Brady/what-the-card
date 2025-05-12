@@ -2,12 +2,12 @@ import classNames from "@/lib/classnames";
 import { createSignal } from "solid-js";
 
 type CheckboxProps = {
-    initialValue?: boolean;
+    defaultValue?: boolean;
     onChange?: (value: boolean) => void;
 };
 
 export const Checkbox = (props: CheckboxProps) => {
-    const [value, setValue] = createSignal(props.initialValue ?? false);
+    const [value, setValue] = createSignal(props.defaultValue ?? false);
 
     return (
         <button
@@ -21,7 +21,10 @@ export const Checkbox = (props: CheckboxProps) => {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"
-                class={classNames("size-6 text-neutral-900", value() ? "opacity-0" : "opacity-100")}
+                class={classNames(
+                    "size-6 text-neutral-900",
+                    !value() ? "opacity-0" : "opacity-100",
+                )}
                 style={{ transition: "opacity ease-in 50ms" }}
             >
                 <path

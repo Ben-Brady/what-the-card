@@ -49,7 +49,7 @@ export default function DragOverlay(props: {
         <div class="fixed inset-0 overflow-hidden z-40">
             <div
                 class={classNames(
-                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] opacity-80",
+                    "w-32 rounded-[100%] absolute top-0 bottom-0 opacity-80",
                     props.class,
                     props.side === "right" && "right-0 translate-x-full",
                     props.side === "left" && "left-0 -translate-x-full",
@@ -58,7 +58,7 @@ export default function DragOverlay(props: {
             />
             <div
                 class={classNames(
-                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] opacity-80",
+                    "w-32 rounded-[100%] absolute top-0 bottom-0 opacity-80",
                     props.class,
                     props.side === "right" && "right-0 translate-x-full",
                     props.side === "left" && "left-0 -translate-x-full",
@@ -70,7 +70,7 @@ export default function DragOverlay(props: {
             />
             <div
                 class={classNames(
-                    "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh] opacity-80",
+                    "w-32 rounded-[100%] absolute top-0 bottom-0 opacity-80",
                     props.class,
                     props.side === "right" && "right-0 translate-x-full",
                     props.side === "left" && "left-0 -translate-x-full",

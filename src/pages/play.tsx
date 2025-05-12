@@ -1,14 +1,31 @@
 import { Checkbox } from "@/components/Checkbox";
-import { Button, LinkButton } from "@/components/Elements";
+import { LinkButton } from "@/components/Elements";
 import { createModal } from "@/components/Modals/Modal";
 import classNames from "@/lib/classnames";
+import { Accessor, createSignal } from "solid-js";
 
 export default function PlayPage() {
+    const competitionValue = useSessionValue("tag-competition", true);
+    const hornyValue = useSessionValue("tag-horny", true);
+    const extremeValue = useSessionValue("tag-extreme", false);
+
+    const url = () => {
+        const tags = [];
+        if (competitionValue.value()) tags.push("competition");
+        if (hornyValue.value()) tags.push("horny");
+        if (extremeValue.value()) tags.push("extreme");
+
+        if (tags.length === 0) {
+            return `/game/play`;
+        } else {
+            return `/game/play?${tags.join(",")}`;
+        }
+    };
     return (
         <div
             class={classNames("size-full p-8 overflow-y-auto", "flex flex-col items-center gap-6")}
         >
-            <h3 class="text-3xl text-neutral-900">Select Your Packs</h3>
+            <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
                 <CheckboxRow
                     text="Competition Cards"
@@ -17,6 +34,8 @@ export default function PlayPage() {
 
                         Recommended for most groups, but optional.
                     `}
+                    defaultValue={competitionValue.value()}
+                    onSet={(v) => competitionValue.set(v)}
                 />
                 <CheckboxRow
                     text="Horny Cards"
@@ -25,19 +44,25 @@ export default function PlayPage() {
 
                     Great for parties, but not recommended for friend groups where relationships would be awkward.
                     `}
+                    defaultValue={hornyValue.value()}
+                    onSet={(v) => hornyValue.set(v)}
                 />
                 <CheckboxRow
-                    text="Extreme Cards"
+                    text="Horny Extreme Cards"
                     description={`
-                    These cards include more
+                    These cards include sex act cards, such as kissing other players.
 
-                    Not recommend for most groups,
+                    Not recommend for most groups.
                     `}
+                    defaultValue={extremeValue.value()}
+                    onSet={(v) => extremeValue.set(v)}
                 />
             </div>
 
             <div class="w-full flex flex-col items-center gap-4">
-                <Button variant="primary">Start</Button>
+                <LinkButton variant="primary" href={url()}>
+                    Start
+                </LinkButton>
                 <LinkButton variant="primary" href="/" preload>
                     Back
                 </LinkButton>
@@ -49,6 +74,8 @@ export default function PlayPage() {
 type CheckboxRowProps = {
     text: string;
     description: string;
+    defaultValue: boolean;
+    onSet: (value: boolean) => void;
 };
 
 const CheckboxRow = (props: CheckboxRowProps) => {
@@ -56,7 +83,7 @@ const CheckboxRow = (props: CheckboxRowProps) => {
 
     return (
         <div class="w-full flex items-center justify-between gap-2">
-            <Checkbox />
+            <Checkbox defaultValue={props.defaultValue} onChange={(value) => props.onSet(value)} />
             <span class="text-neutral-900 text-xl flex-1">{props.text}</span>
             <button onClick={() => controls.open()}>
                 <svg
@@ -77,3 +104,25 @@ const CheckboxRow = (props: CheckboxRowProps) => {
         </div>
     );
 };
+
+type SessionValueHook<T> = {
+    value: Accessor<T>;
+    set: (value: T) => void;
+};
+
+function useSessionValue<T>(key: string, defaultValue: T): SessionValueHook<T> {
+    const KEY = `sv:${key}`;
+
+    const intialValue = !sessionStorage.getItem(KEY)
+        ? defaultValue
+        : JSON.parse(sessionStorage.getItem(KEY)!);
+
+    const [value, setValue] = createSignal<T>(intialValue);
+
+    const set = (newValue: T) => {
+        sessionStorage.setItem(KEY, JSON.stringify(newValue));
+        setValue(() => newValue);
+    };
+
+    return { set, value };
+}

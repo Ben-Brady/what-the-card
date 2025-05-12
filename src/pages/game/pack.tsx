@@ -1,10 +1,10 @@
 import { createResource, Show, Suspense } from "solid-js";
 import { useParams } from "@solidjs/router";
-import { getPackListing } from "../lib/pack.ts";
+import { getPackListing } from "@/lib/pack.ts";
 import { Game } from "@/components/Game/Game.tsx";
-import { defaultCardColor } from "../hooks/useGame.ts";
+import { defaultCardColor } from "@/hooks/useGame.ts";
 
-export default function GamePage() {
+export default function PackPage() {
     const params = useParams();
     const id = params.id;
     const listing = getPackListing(id);
