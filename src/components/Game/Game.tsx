@@ -14,20 +14,8 @@ export const Game = ({ pack }: { pack: Pack }) => {
 
     return (
         <>
-            <Show when={progress() !== 0}>
-                <DragOverlay
-                    side="left"
-                    icon={BackImage}
-                    className="bg-rose-400"
-                    onSwipe={goBack}
-                />
-                <DragOverlay
-                    side="right"
-                    icon={BackImage}
-                    className="bg-red-400"
-                    onSwipe={goBack}
-                />
-            </Show>
+            <DragOverlay side="left" icon={BackImage} className="bg-rose-400" onSwipe={goBack} />
+            <DragOverlay side="right" icon={BackImage} className="bg-red-400" onSwipe={goBack} />
             <ProgressBar progress={progress} />
 
             <div class="absolute inset-0 bg-blue-300 contain-strict">
