@@ -8,7 +8,7 @@ export default function ProgressBar(props: { progress: Accessor<number> }) {
         <div
             class={classNames(
                 "h-2 bg-blue-400 absolute top-0 left-0 z-20",
-                "flex justify-center items-center text-nowrap select-none",
+                "flex justify-center items-center text-nowrap",
             )}
             style={{
                 transition: "width 300ms ease-out, height 200ms ease-out 300ms",
