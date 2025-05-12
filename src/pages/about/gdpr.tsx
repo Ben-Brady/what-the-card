@@ -1,0 +1,16 @@
+import classNames from "@/lib/classnames.ts";
+import { gdprPolicy } from "@/assets/about/gdpr";
+
+export default function GDPRPage() {
+    return (
+        <div
+            class={classNames(
+                "w-full h-screen p-8 overflow-y-auto",
+                "flex flex-col items-center gap-4",
+            )}
+        >
+            {/* eslint-disable-next-line solid/no-innerhtml */}
+            <p class="text-neutral-900" innerHTML={gdprPolicy} />
+        </div>
+    );
+}
