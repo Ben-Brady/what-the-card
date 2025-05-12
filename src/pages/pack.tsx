@@ -19,7 +19,7 @@ export default function GamePage() {
     return (
         <Suspense fallback={Loading}>
             <Show when={pack()}>
-                <Game pack={pack()!} />
+                <Game cards={pack()!.cards} />
             </Show>
         </Suspense>
     );
