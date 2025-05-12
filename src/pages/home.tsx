@@ -21,7 +21,7 @@ export default function HomePage() {
                         <Button
                             class="w-full max-w-80 min-h-14 h-fit"
                             variant="primary"
-                            on:click={() => install()}
+                            onClick={() => install()}
                         >
                             Install
                         </Button>

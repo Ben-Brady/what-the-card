@@ -59,7 +59,7 @@ type EditModalProps = {
     onDelete: Accessor<() => void>;
 };
 
-const EditCardModal = ({ title, text, onCancel, onDelete, onEdit }: EditModalProps) => {
+const EditCardModal = (props: EditModalProps) => {
     return (
         <form
             class="w-full h-fit flex flex-col items-center gap-4 "
@@ -69,23 +69,23 @@ const EditCardModal = ({ title, text, onCancel, onDelete, onEdit }: EditModalPro
                 const data = new FormData(e.currentTarget);
                 const title = data.get("title")! as string;
                 const text = data.get("text")! as string;
-                onEdit()(title, text);
+                props.onEdit()(title, text);
             }}
         >
-            <Input name="title" placeholder="Title" class="w-full text-2xl" value={title()} />
+            <Input name="title" placeholder="Title" class="w-full text-2xl" value={props.title()} />
             <Textarea
                 rows={5}
                 name="text"
                 placeholder="Description"
                 class="w-full text-xl"
-                value={text()}
+                value={props.text()}
                 required
             />
             <div class="flex w-full gap-4">
-                <Button class="flex-1" variant="destructive" onClick={onDelete()}>
+                <Button class="flex-1" variant="destructive" onClick={props.onDelete()}>
                     Delete
                 </Button>
-                <Button class="flex-1" variant="primary" onClick={onCancel()}>
+                <Button class="flex-1" variant="primary" onClick={props.onCancel()}>
                     Cancel
                 </Button>
                 <Button class="flex-1" variant="primary" type="submit">

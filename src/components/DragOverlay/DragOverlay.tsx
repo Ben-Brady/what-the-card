@@ -5,17 +5,12 @@ import { useAnimate } from "@/hooks/useAnimate.ts";
 import { useScreenSize } from "@/hooks/useScreenSize.ts";
 import classNames from "@/lib/classnames.ts";
 
-export default function DragOverlay({
-    onSwipe,
-    side,
-    className,
-}: {
+export default function DragOverlay(props: {
     onSwipe: () => void;
     side: "left" | "right";
-    className: string;
+    class: string;
     icon?: string;
 }) {
-    const isRight = side === "right";
     const [stretch, setStretch] = createSignal(0);
     const [isDragging, setIsDragging] = createSignal<boolean>(false);
 
@@ -40,12 +35,12 @@ export default function DragOverlay({
         onDragStart: () => setIsDragging(true),
         onDragEnd: ({ x }) => {
             setIsDragging(false);
-            if (isRight) x = -x;
+            if (props.side === "right") x = -x;
             if (x < actiationWidth()) return;
-            setTimeout(onSwipe, 200);
+            setTimeout(props.onSwipe, 200);
         },
         onDragUpdate: ({ x }) => {
-            if (isRight) x = -x;
+            if (props.side === "right") x = -x;
             const stretch = clamp(x, 0, maxWidth());
             setStretch(stretch);
         },
@@ -56,9 +51,9 @@ export default function DragOverlay({
             <div
                 class={classNames(
                     "w-32 rounded-[100%] absolute top-[-10vh] bottom-[-10vh]",
-                    className,
-                    side === "right" && "right-0 translate-x-full",
-                    side === "left" && "left-0 -translate-x-full",
+                    props.class,
+                    props.side === "right" && "right-0 translate-x-full",
+                    props.side === "left" && "left-0 -translate-x-full",
                 )}
                 style={{ transform: `scaleX(${stretch() ** 1.15}%)` }}
             />

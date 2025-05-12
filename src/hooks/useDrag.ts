@@ -71,7 +71,7 @@ const onDragMobile = (
     };
 
     const onTouchMove = (e: TouchEvent) => {
-        let offsets: Position[] = [];
+        const offsets: Position[] = [];
 
         for (const touch of e.touches) {
             const identifier = touch.identifier;

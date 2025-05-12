@@ -6,15 +6,16 @@ import { Card } from "./Card";
 import ProgressBar from "./ProgressBar";
 import { useGame } from "@/hooks/useGame";
 
-export const Game = ({ pack }: { pack: Pack }) => {
-    const { card, progress, goBack, goNext } = useGame(pack);
+export const Game = (props: { pack: Pack }) => {
+    const pack = () => props.pack;
+    const { card, progress, goBack, goNext } = useGame(pack());
 
     useOnTap(goNext);
 
     return (
         <>
-            <DragOverlay side="left" icon={BackImage} className="bg-rose-400" onSwipe={goBack} />
-            <DragOverlay side="right" icon={BackImage} className="bg-red-400" onSwipe={goBack} />
+            <DragOverlay side="left" icon={BackImage} class="bg-rose-400" onSwipe={goBack} />
+            <DragOverlay side="right" icon={BackImage} class="bg-red-400" onSwipe={goBack} />
             <ProgressBar progress={progress} />
 
             <div class="absolute inset-0 bg-blue-300 contain-strict">

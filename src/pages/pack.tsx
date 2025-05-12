@@ -10,7 +10,8 @@ export default function GamePage() {
     const listing = getPackListing(id);
     if (!listing) {
         location.replace("/");
-        return null;
+        // eslint-disable-next-line solid/components-return-once
+        return <></>;
     }
 
     const [pack] = createResource(listing.getData);

@@ -8,13 +8,12 @@ type ModalControls = {
 };
 
 export type ModalComponent = (_: { class?: string; children: JSX.Element }) => JSX.Element;
-export function createModal({
-    noDismiss = false,
-    onDismiss,
-}: {
-    noDismiss?: boolean;
-    onDismiss?: () => void;
-} = {}): [ModalComponent, ModalControls] {
+export function createModal(
+    props: {
+        noDismiss?: boolean;
+        onDismiss?: () => void;
+    } = {},
+): [ModalComponent, ModalControls] {
     // We dynamically set this on render
 
     let openFunc = () => {};
@@ -25,13 +24,7 @@ export function createModal({
         close: () => closeFunc(),
     };
 
-    const component = ({
-        class: className,
-        children,
-    }: {
-        class?: string;
-        children: JSX.Element;
-    }) => {
+    const component = (componentProps: { class?: string; children: JSX.Element }) => {
         const [open, setIsOpen] = createSignal<boolean>(false);
 
         let elementRef: HTMLElement | undefined = undefined;
@@ -69,22 +62,22 @@ export function createModal({
                             "starting:opacity-0 opacity-100 transition-opacity duration-300",
                         )}
                         on:click={(e) => {
-                            if (noDismiss) return;
+                            if (props.noDismiss) return;
 
                             const isBackdropClick = e.currentTarget === e.target;
                             if (!isBackdropClick) return;
 
-                            onDismiss?.();
+                            props.onDismiss?.();
                             closeFunc();
                         }}
                     >
                         <div
                             class={classNames(
                                 "bg-blue-400 w-4/5 h-4/5 max-w-192 max-h-128 rounded-lg py-4 px-8",
-                                className,
+                                componentProps.class,
                             )}
                         >
-                            {children}
+                            {componentProps.children}
                         </div>
                     </div>
                 </Portal>

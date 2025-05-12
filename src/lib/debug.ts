@@ -17,7 +17,7 @@ const getElement = (): HTMLElement => {
 
 const lines: string[] = [];
 
-export const debugLog = (text: any) => {
+export const debugLog = (text: string) => {
     if (!ENABLED) return;
     lines.push(text.toString());
     if (lines.length > 5) lines.shift();

@@ -1,7 +1,9 @@
 import { Accessor, Show } from "solid-js";
 import classNames from "@/lib/classnames";
 
-export default function ProgressBar({ progress }: { progress: Accessor<number> }) {
+export default function ProgressBar(props: { progress: Accessor<number> }) {
+    const progress = () => props.progress();
+
     return (
         <div
             class={classNames(

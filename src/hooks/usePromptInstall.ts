@@ -5,7 +5,7 @@ type PromptInstallHook = {
     install: () => void;
 };
 
-let [installEvent, setInstallEvent] = createSignal<BeforeInstallPromptEvent | undefined>();
+const [installEvent, setInstallEvent] = createSignal<BeforeInstallPromptEvent | undefined>();
 
 window.addEventListener("beforeinstallprompt", (event) => {
     setInstallEvent(event as BeforeInstallPromptEvent);
