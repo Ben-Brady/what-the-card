@@ -1,4 +1,4 @@
-import { useOnTap } from "../hooks/useOnTap";
+import { useOnTap } from "../../hooks/useOnTap";
 
 const createTapElement = (props: { x: number; y: number }) => {
     const element = (

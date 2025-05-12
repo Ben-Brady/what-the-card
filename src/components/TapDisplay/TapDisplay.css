@@ -1,5 +1,5 @@
 .animate-tap-circle {
-    animation: tap-circle .3s ease-out forwards;
+    animation: tap-circle 200ms ease-out forwards;
 }
 
 @keyframes tap-circle {
