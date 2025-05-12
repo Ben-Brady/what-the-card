@@ -3,7 +3,8 @@ import { useOnTap } from "../hooks/useOnTap";
 const createTapElement = (props: { x: number; y: number }) => {
     const element = (
         <div
-            class="animate-tap-circle rounded-full bg-white z-50 fixed size-12 outline-1 outline-transparent -translate-1/2"
+            inert
+            class="animate-tap-circle rounded-full bg-white z-50 fixed size-12 outline-1 outline-transparent -translate-1/2 touch-none pointer-events-none"
             style={{
                 left: `${props.x}px`,
                 top: `${props.y}px`,
