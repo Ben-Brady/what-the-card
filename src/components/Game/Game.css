@@ -10,25 +10,15 @@
     }
 }
 
-@keyframes slide-out {
-    from {
-        transform: translateX(0);
-        rotate: 0;
-    }
-
-    to {
-        transform: translateX(-100vw);
-        rotate: -20deg;
-    }
-}
+@keyframes none {}
 
 ::view-transition-old(card) {
-    animation: slide-out 300ms ease-out forwards;
-    z-index: 9;
+    animation: none 300ms forwards;
 }
 
 ::view-transition-new(card) {
-    animation: slide-in 400ms ease-in-out forwards;
+    animation: slide-in 300ms ease-out forwards;
+    transform-origin: bottom left 1rem;
     z-index: 10;
 }
 
