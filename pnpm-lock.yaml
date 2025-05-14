@@ -24,9 +24,6 @@ importers:
       '@tw-classed/solid':
         specifier: ^1.7.1
         version: 1.7.1(solid-js@1.9.6)
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
       solid-js:
         specifier: ^1.9.4
         version: 1.9.6

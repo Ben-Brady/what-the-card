@@ -15,7 +15,6 @@
     "@solidjs/router": "^0.15.3",
     "@tailwindcss/vite": "^4.1.5",
     "@tw-classed/solid": "^1.7.1",
-    "lodash": "^4.17.21",
     "solid-js": "^1.9.4",
     "solid-transition-group": "^0.3.0",
     "tailwindcss": "^4.1.5",
