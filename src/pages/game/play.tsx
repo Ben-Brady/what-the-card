@@ -13,7 +13,6 @@ export default function GamePage() {
         }
         return true;
     });
-    console.log({ cards, filteredCards });
 
     return <Game cards={filteredCards} />;
 }
