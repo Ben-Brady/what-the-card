@@ -11,7 +11,7 @@ export default function CardElement(
         <div
             {...props}
             class={classNames(
-                "size-full text-black px-4",
+                "card size-full text-black px-4",
                 "flex items-center justify-center",
                 props.class,
             )}

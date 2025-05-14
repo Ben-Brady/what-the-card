@@ -7,7 +7,7 @@ export default function ProgressBar(props: { progress: Accessor<number> }) {
     return (
         <div
             class={classNames(
-                "h-2 bg-blue-400 absolute top-0 left-0 z-20",
+                "progress-bar h-2 bg-blue-400 absolute top-0 left-0 z-20",
                 "flex justify-center items-center text-nowrap",
             )}
             style={{

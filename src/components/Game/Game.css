@@ -1,29 +1,46 @@
-.entering-card {
-    animation: entering-card 1s ease-in forwards;
-    z-index: 10;
-}
-
-@keyframes entering-card {
+@keyframes slide-in {
     from {
-        transform: translateY(-100vh);
+        transform: translateX(100vw);
+        rotate: 20deg;
     }
 
     to {
-        transform: translateY(0);
+        transform: translateX(0);
+        rotate: 0;
     }
 }
 
-.exiting-card {
-    animation: entering-card 1s ease-in forwards;
-    z-index: 10;
-}
-
-@keyframes exiting-card {
+@keyframes slide-out {
     from {
-        transform: translateY(0);
+        transform: translateX(0);
+        rotate: 0;
     }
 
     to {
-        transform: translateY(-100vh);
+        transform: translateX(-100vw);
+        rotate: -20deg;
     }
+}
+
+::view-transition-old(card) {
+    animation: slide-out 300ms ease-out forwards;
+    z-index: 9;
+}
+
+::view-transition-new(card) {
+    animation: slide-in 400ms ease-in-out forwards;
+    z-index: 10;
+}
+
+::view-transition-old(progress),
+::view-transition-new(progress) {
+    z-index: 20;
+}
+
+.card {
+    view-transition-name: card;
+}
+
+.progress-bar {
+    view-transition-name: progress;
 }
