@@ -20,10 +20,14 @@ render(
         <Router root={Layout}>
             <Route path="*" component={HomePage} />
             <Route path="/play" component={PlayPage} />
+            <Route path="/packs" component={PacksPage} />
+            <Route path="/create" component={CreatePage} />
+
+            {/* Game Pages */}
             <Route path="/game/pack/:id" component={PackPage} />
             <Route path="/game/play" component={GamePage} />
-            <Route path="/create" component={CreatePage} />
-            <Route path="/packs" component={PacksPage} />
+
+            {/* Abort Pages */}
             <Route path="/about" component={AboutPage} />
             <Route path="/privacy" component={PrivacyPolicyPage} />
             <Route path="/tos" component={TermsOfServicePage} />
