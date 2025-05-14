@@ -24,14 +24,14 @@
     }
 }
 
-@keyframes none {}
+@keyframes blank {}
 
 ::view-transition-old(card-forward) {
-    animation: none 300ms forwards;
+    animation: blank 300ms forwards;
 }
 
 ::view-transition-new(card-backward) {
-    animation: none 300ms forwards;
+    animation: blank 300ms forwards;
 }
 
 ::view-transition-new(card-forward) {
