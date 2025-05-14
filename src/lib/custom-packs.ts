@@ -16,7 +16,6 @@ export const listCustomPacks = (): PackListing[] => {
 export const setCustomPack = (title: string, cards: Card[]) => {
     const pack: Pack = {
         id: "custom",
-        type: "normal",
         title,
         cards,
     };
@@ -25,7 +24,6 @@ export const setCustomPack = (title: string, cards: Card[]) => {
 
 const DEFAULT_PACK: Pack = {
     id: "custom",
-    type: "normal",
     title: "Custom",
     cards: [],
 };
