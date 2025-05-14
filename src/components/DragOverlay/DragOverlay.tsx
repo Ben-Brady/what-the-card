@@ -36,7 +36,7 @@ export default function DragOverlay(props: {
             setIsDragging(false);
             if (props.side === "right") x = -x;
             if (x < actiationWidth()) return;
-            setTimeout(props.onSwipe, 200);
+            setTimeout(props.onSwipe);
         },
         onDragUpdate: ({ x }) => {
             if (props.side === "right") x = -x;
