@@ -20,8 +20,8 @@ export const PackInfo = object({
 
 export type Card = InferOutput<typeof Card>;
 export const Card = object({
-    title: string(),
-    description: string(),
+    title: optional(string()),
+    text: string(),
 });
 
 export type CardTag = InferOutput<typeof CardTag>;
@@ -30,7 +30,7 @@ export const CardTag = union([literal("4-players"), literal("horny"), literal("e
 export type CustomCard = InferOutput<typeof CustomCard>;
 export const CustomCard = object({
     title: string(),
-    description: string(),
+    text: string(),
     tags: optional(array(CardTag)),
 });
 

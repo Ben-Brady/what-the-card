@@ -29,13 +29,13 @@ export const createEditModal = (): [Component, EditModalControls] => {
 
     const open = (card: Card, onEdit: (card: Card) => void, onDelete: () => void) => {
         batch(() => {
-            setTitle(card.title);
-            setText(card.description);
+            setTitle(card.title ?? "");
+            setText(card.text);
             setOnCancel(() => () => {
                 controls.close();
             });
-            setOnEdit(() => (title: string, description: string) => {
-                onEdit({ title, description });
+            setOnEdit(() => (title: string, text: string) => {
+                onEdit({ title, text });
                 controls.close();
             });
             setOnDelete(() => () => {

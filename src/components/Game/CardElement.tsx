@@ -23,12 +23,12 @@ export default function CardElement(
                         <span class="text-center text-4xl h-fit">{card().title}</span>
                     </div>
                     <span class="text-center text-2xl max-w-160 h-32 whitespace-pre-line">
-                        {card().description}
+                        {card().text}
                     </span>
                 </Show>
                 <Show when={!card().title}>
                     <span class="text-center text-2xl max-w-160 h-fit whitespace-pre-line">
-                        {card().description}
+                        {card().text}
                     </span>
                 </Show>
             </div>

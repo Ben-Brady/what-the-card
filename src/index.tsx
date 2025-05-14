@@ -2,19 +2,19 @@
 import { lazy } from "solid-js";
 import { render } from "solid-js/web";
 import { Route, Router } from "@solidjs/router";
-import Layout from "./pages/+layout.tsx";
-import HomePage from "./pages/home.tsx";
-import PackPage from "./pages/game/pack.tsx";
-import CreatePage from "./pages/create.tsx";
-import PlayPage from "./pages/play.tsx";
-import PacksPage from "./pages/packs.tsx";
-import CreditsPage from "./pages/about/credits.tsx";
+import Layout from "@/pages/+layout.tsx";
+import HomePage from "@/pages/home.tsx";
+import PackPage from "@/pages/game/pack.tsx";
+import PlayPage from "@/pages/play.tsx";
+import PacksPage from "@/pages/packs.tsx";
+import CreditsPage from "@/pages/about/credits.tsx";
 import "./styles/index.css";
 
-const AboutPage = lazy(() => import("./pages/about/about.tsx"));
-const TermsOfServicePage = lazy(() => import("./pages/about/tos.tsx"));
-const PrivacyPolicyPage = lazy(() => import("./pages/about/privacy.tsx"));
-const GamePage = lazy(() => import("./pages/game/play.tsx"));
+const CreatePage = lazy(() => import("@/pages/create.tsx"));
+const AboutPage = lazy(() => import("@/pages/about/about.tsx"));
+const TermsOfServicePage = lazy(() => import("@/pages/about/tos.tsx"));
+const PrivacyPolicyPage = lazy(() => import("@/pages/about/privacy.tsx"));
+const GamePage = lazy(() => import("@/pages/game/play.tsx"));
 
 render(
     () => (

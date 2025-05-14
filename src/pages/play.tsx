@@ -1,18 +1,17 @@
 import { Checkbox } from "@/components/Checkbox";
 import { LinkButton } from "@/components/Elements";
 import { createModal } from "@/components/Modals/Modal";
-import classNames from "@/lib/classnames";
 import { CardTag } from "@/lib/pack";
 import { Accessor, createSignal } from "solid-js";
 
 export default function PlayPage() {
-    const competitionValue = useSessionValue("tag-competition", true);
+    const fourPlayersValue = useSessionValue("tag-4player", true);
     const hornyValue = useSessionValue("tag-horny", true);
     const extremeValue = useSessionValue("tag-extreme", false);
 
     const url = () => {
         const tags: CardTag[] = [];
-        if (competitionValue.value()) tags.push("competition");
+        if (fourPlayersValue.value()) tags.push("4-players");
         if (hornyValue.value()) tags.push("horny");
         if (extremeValue.value()) tags.push("extreme");
 
@@ -29,8 +28,8 @@ export default function PlayPage() {
                 <CheckboxRow
                     text="4+ Players"
                     description="These cards require 4 or more players to play"
-                    defaultValue={competitionValue.value()}
-                    onSet={(v) => competitionValue.set(v)}
+                    defaultValue={fourPlayersValue.value()}
+                    onSet={(v) => fourPlayersValue.set(v)}
                 />
                 <CheckboxRow
                     text="Horny Cards"

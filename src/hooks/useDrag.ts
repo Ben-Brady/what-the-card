@@ -1,4 +1,4 @@
-import sum from "lodash/sum";
+import { sum } from "@/lib/utils";
 import { useAbortSignal } from "./useAbortSignal";
 
 type Position = { x: number; y: number };

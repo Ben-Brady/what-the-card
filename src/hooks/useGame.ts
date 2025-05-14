@@ -1,11 +1,10 @@
 import { Accessor, createSignal } from "solid-js";
-import shuffle from "lodash/shuffle";
-import { Card } from "../lib/pack";
-import { clamp } from "../lib/utils";
+import { Card } from "@/lib/pack";
+import { clamp, shuffle } from "@/lib/utils";
 
 export type ColoredCard = {
-    title: string;
-    description: string;
+    title: string | undefined;
+    text: string;
     color: string;
 };
 
@@ -36,16 +35,16 @@ export const useGame = (cards: Card[]) => {
             return [
                 {
                     title: "Empty Pack",
-                    description: "This pack has not cards",
+                    text: "This pack has not cards",
                     color: nextColor(),
                 },
             ];
         }
 
         const shuffledCards = shuffle(cards);
-        return shuffledCards.map(({ title, description }) => ({
+        return shuffledCards.map(({ title, text }) => ({
             title,
-            description,
+            text,
             color: nextColor(),
         }));
     };

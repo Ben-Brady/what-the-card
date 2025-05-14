@@ -11,130 +11,129 @@ import { For } from "solid-js";
 const DEFAULT_CARDS = [
     {
         title: "Staring competition",
-        description:
-            "Have a staring competition with the person in front of you, the loser must drink",
+        text: "Have a staring competition with the person in front of you, the loser must drink",
     },
     {
         title: "Only the Good Die Young",
-        description: "The youngest player must drink",
+        text: "The youngest player must drink",
     },
     {
         title: "Waht?",
-        description: "If yuo cna raed tihs tehn dinrk",
+        text: "If yuo cna raed tihs tehn dinrk",
     },
     {
         title: "Rich Kid",
-        description: "The person who's been to the most countries must drink twice",
+        text: "The person who's been to the most countries must drink twice",
     },
     {
         title: "Group Joker",
-        description: "Tell a joke and if anybody laughs, everyone must drink",
+        text: "Tell a joke and if anybody laughs, everyone must drink",
     },
     {
         title: "Rockstars",
-        description: "Anyone who has ever dyed their hair must drink",
+        text: "Anyone who has ever dyed their hair must drink",
     },
     {
         title: "Turning a Blind Eye",
-        description: "The next person who makes eye contact with you must drink",
+        text: "The next person who makes eye contact with you must drink",
     },
     {
         title: "2 Turths, 1 Lie",
-        description:
+        text:
             "You have to tell 2 truths and one lie.\nYou don't have to say which ones the lie",
     },
     {
         title: "Double Up",
-        description: "Anyone who drinks without being forced to has to drink again",
+        text: "Anyone who drinks without being forced to has to drink again",
     },
     {
         title: "Generous Lovers",
-        description: 'Anybody who has ever "given head" must drink',
+        text: 'Anybody who has ever "given head" must drink',
     },
     {
         title: "Dress to Impress",
-        description: "Whoever is dressed best, they they must drink",
+        text: "Whoever is dressed best, they they must drink",
     },
     {
         title: "BFFs forever",
-        description: "High five the player to your right, take a selfie, then both drink",
+        text: "High five the player to your right, take a selfie, then both drink",
     },
     {
         title: "How many colours?",
-        description:
+        text:
             "Go round clockwise a circle and name a colour.\nIf you can't think of a colour or repeat one, you must drink",
     },
     {
         title: "Upside Down",
-        description:
+        text:
             "Turn upside down on your seat and try your best to take a sip.\nIf you can't you have to drink twice",
     },
     {
         title: "Drink",
-        description: "Just drink, it's as simple as that",
+        text: "Just drink, it's as simple as that",
     },
     {
         title: "Job Interview",
-        description: "Pick a person and pretend to interview for a job with them",
+        text: "Pick a person and pretend to interview for a job with them",
     },
     {
         title: "Our Drink",
-        description: "Everyone is allow to contribute to a bit to your drink",
+        text: "Everyone is allow to contribute to a bit to your drink",
     },
     {
         title: "No Smoking!",
-        description: "If someone has already gone for a smoke break, they must drink",
+        text: "If someone has already gone for a smoke break, they must drink",
     },
     {
         title: "Blackjack",
-        description: "Starting with you going clockwise, every player must count up the previous?",
+        text: "Starting with you going clockwise, every player must count up the previous?",
     },
     {
         title: "Pizza or Burger",
-        description:
+        text:
             "Everyone choose which side they prefer, pizza or burgers, the smallest side must all drink",
     },
     {
         title: "Truth or Dare",
-        description: "Play one round of Truth or Dare",
+        text: "Play one round of Truth or Dare",
     },
     {
         title: "Hands Free",
-        description: "Take a tip without using your hands",
+        text: "Take a tip without using your hands",
     },
     {
         title: "Swapsies",
-        description: "Choose a player to phones with 30 seconds",
+        text: "Choose a player to phones with 30 seconds",
     },
     {
         title: "no nativo",
-        description: "You can't speak your native language for the next round",
+        text: "You can't speak your native language for the next round",
     },
     {
         title: "Cats or Dogs",
-        description:
+        text:
             "Everyone vote if they prefer dogs or cats, the side with the least votes must drink",
     },
     {
         title: "You know my name right?",
-        description:
+        text:
             "Go round clockwise pointing at every player and saying their name.\nDrink for every name you don't know",
     },
     {
         title: "Most Kinky",
-        description: "Everyone votes for the player whos is the most kinky, they have to drink",
+        text: "Everyone votes for the player whos is the most kinky, they have to drink",
     },
     {
         title: "Alcoholics",
-        description: "Anyone drinking something stronger than 10% must drink",
+        text: "Anyone drinking something stronger than 10% must drink",
     },
     {
         title: "The Floor is Lava",
-        description: "You cannot touch for floor for the until the next round",
+        text: "You cannot touch for floor for the until the next round",
     },
     {
         title: "Hungry?",
-        description: "The person who has gone the longest without eating must drink",
+        text: "The person who has gone the longest without eating must drink",
     },
 ];
 
@@ -184,11 +183,10 @@ export default function CreatePage() {
     const onAddNewCard = () => {
         const firstCard = cards[0];
 
-        const isFirstCardBlank =
-            firstCard && firstCard.title === "" && firstCard.description === "";
+        const isFirstCardBlank = firstCard && firstCard.title === "" && firstCard.text === "";
 
         if (!isFirstCardBlank) {
-            setCards((cards) => [{ title: "", description: "" }, ...cards]);
+            setCards((cards) => [{ title: "", text: "" }, ...cards]);
         }
 
         openCardModal(0);
@@ -222,11 +220,9 @@ export default function CreatePage() {
                             role="button"
                             onClick={() => openCardModal(index())}
                         >
-                            <p class="w-full text-2xl text-center underline">
-                                {card.title}
-                            </p>
+                            <p class="w-full text-2xl text-center underline">{card.title}</p>
                             <p class="w-full text-xl text-center whitespace-pre-line">
-                                {card.description}
+                                {card.text}
                             </p>
                         </div>
                     )}
