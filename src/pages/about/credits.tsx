@@ -1,14 +1,9 @@
+import HomePageLayout from "@/components/ComponentPage";
 import { LinkButton } from "@/components/Elements";
-import classNames from "@/lib/classnames.ts";
 
 export default function CreditsPage() {
     return (
-        <div
-            class={classNames(
-                "size-full p-8 overflow-y-auto",
-                "flex flex-col items-center justify-between gap-4",
-            )}
-        >
+        <HomePageLayout>
             <div class="size-full flex flex-col gap-2">
                 <h1 class="text-neutral-900 text-3xl">Credits</h1>
                 <p class="text-neutral-900 text-xl">Ben Brady - Sole Developer</p>
@@ -26,6 +21,6 @@ export default function CreditsPage() {
             <LinkButton variant="primary" href="/about" preload>
                 Back
             </LinkButton>
-        </div>
+        </HomePageLayout>
     );
 }

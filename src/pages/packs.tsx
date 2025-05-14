@@ -1,18 +1,13 @@
 import { For } from "solid-js";
 import { listPacks } from "../lib/pack.ts";
-import classNames from "@/lib/classnames.ts";
 import { LinkButton } from "@/components/Elements.tsx";
+import HomePageLayout from "@/components/ComponentPage.tsx";
 
 export default function PacksPage() {
     const packs = listPacks();
 
     return (
-        <div
-            class={classNames(
-                "size-full p-8 overflow-y-auto",
-                "flex flex-col items-center gap-4 justify-between",
-            )}
-        >
+        <HomePageLayout>
             <div class="size-full flex flex-col items-center gap-4">
                 <For each={packs}>
                     {(pack) => (
@@ -25,6 +20,6 @@ export default function PacksPage() {
             <LinkButton variant="primary" href="/" preload>
                 Back
             </LinkButton>
-        </div>
+        </HomePageLayout>
     );
 }
