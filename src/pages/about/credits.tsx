@@ -10,7 +10,7 @@ export default function CreditsPage() {
             )}
         >
             <div class="size-full flex flex-col gap-2">
-                <h1 class="text-neutral-900 text-3xl text-center">Credits</h1>
+                <h1 class="text-neutral-900 text-3xl">Credits</h1>
                 <p class="text-neutral-900 text-xl">Ben Brady - Sole Developer</p>
                 <h1 class="text-neutral-900 text-2xl">Additional Credits</h1>
                 <div class="flex flex-col">
