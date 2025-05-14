@@ -2,6 +2,7 @@
     from {
         transform: translateX(100vw);
         rotate: 20deg;
+        transform-origin: bottom right;
     }
 
     to {
@@ -10,27 +11,52 @@
     }
 }
 
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        rotate: 0;
+        transform-origin: bottom right;
+    }
+
+    to {
+        transform: translateX(100vw);
+        rotate: 20deg;
+    }
+}
+
 @keyframes none {}
 
-::view-transition-old(card) {
+::view-transition-old(card-forward) {
     animation: none 300ms forwards;
 }
 
-::view-transition-new(card) {
+::view-transition-new(card-backward) {
+    animation: none 300ms forwards;
+}
+
+::view-transition-new(card-forward) {
     animation: slide-in 300ms ease-out forwards;
-    transform-origin: bottom left 1rem;
     z-index: 10;
 }
 
-::view-transition-old(progress),
-::view-transition-new(progress) {
+::view-transition-old(card-backward) {
+    animation: slide-out 300ms ease-in forwards;
+    z-index: 10;
+}
+
+::view-transition-old(progress-bar),
+::view-transition-new(progress-bar) {
     z-index: 20;
 }
 
-.card {
-    view-transition-name: card;
+.card-forward {
+    view-transition-name: card-forward;
+}
+
+.card-backward {
+    view-transition-name: card-backward;
 }
 
 .progress-bar {
-    view-transition-name: progress;
+    view-transition-name: progress-bar;
 }

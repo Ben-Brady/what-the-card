@@ -2,6 +2,7 @@ import { Accessor, createSignal } from "solid-js";
 import shuffle from "lodash/shuffle";
 import { Card } from "../lib/pack";
 import { clamp } from "../lib/utils";
+import { transition } from "@/lib/transition";
 
 export type ColoredCard = {
     title: string;
@@ -24,12 +25,14 @@ export const defaultCardColor = "hwb(0deg 50% 0%)";
 export type GameHook = {
     card: Accessor<ColoredCard>;
     progress: Accessor<number>;
+    direction: Accessor<"backward" | "forward">;
     goBack: () => void;
     goNext: () => void;
 };
 
 export const useGame = (cards: Card[]) => {
     const nextColor = createColorGenerator();
+
     const generateShuffledDeck = (): ColoredCard[] => {
         // Prevent error on no cards
         if (cards.length === 0) {
@@ -52,23 +55,32 @@ export const useGame = (cards: Card[]) => {
 
     const [index, setIndex] = createSignal<number>(0);
     const [deck, setCards] = createSignal<ColoredCard[]>(generateShuffledDeck());
+    const [direction, setDirection] = createSignal<"backward" | "forward">("forward");
 
     const card = () => deck()[index()];
     const progress = () => clamp((1 / cards.length) * index(), 0, 1);
 
     const goNext = () => {
+        setDirection("forward");
         const newIndex = index() + 1;
-        if (newIndex >= deck().length - 1) {
-            setCards((cards) => [...cards, ...generateShuffledDeck()]);
-        }
+        const cards = deck();
 
-        setIndex(newIndex);
+        transition(() => {
+            if (newIndex >= cards.length - 1) {
+                setCards((cards) => [...cards, ...generateShuffledDeck()]);
+            }
+
+            setIndex(newIndex);
+        });
     };
 
     const goBack = () => {
         if (index() <= 0) return;
-        setIndex((v) => v - 1);
+        setDirection("backward");
+        transition(() => {
+            setIndex((v) => v - 1);
+        });
     };
 
-    return { card, progress, goBack, goNext };
+    return { card, progress, direction, goBack, goNext };
 };

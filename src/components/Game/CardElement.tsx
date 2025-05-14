@@ -1,19 +1,22 @@
-import { Accessor, ComponentProps, Show } from "solid-js";
+import { Accessor, Show } from "solid-js";
 import classNames from "@/lib/classnames";
 import { ColoredCard } from "@/hooks/useGame";
 
-export default function CardElement(
-    props: { card: Accessor<ColoredCard> } & ComponentProps<"div">,
-) {
+type CardElementProps = {
+    card: Accessor<ColoredCard>;
+    direction: Accessor<"backward" | "forward">;
+};
+
+export default function CardElement(props: CardElementProps) {
     const card = () => props.card();
 
     return (
         <div
-            {...props}
             class={classNames(
-                "card size-full text-black px-4",
+                "size-full text-black px-4",
                 "flex items-center justify-center",
-                props.class,
+                props.direction() === "forward" && "card-forward",
+                props.direction() === "backward" && "card-backward",
             )}
             style={{ background: card().color }}
         >
