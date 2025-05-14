@@ -1,29 +1,62 @@
-.entering-card {
-    animation: entering-card 1s ease-in forwards;
-    z-index: 10;
-}
-
-@keyframes entering-card {
+@keyframes slide-in {
     from {
-        transform: translateY(-100vh);
+        transform: translateX(100vw);
+        rotate: 20deg;
+        transform-origin: bottom right;
     }
 
     to {
-        transform: translateY(0);
+        transform: translateX(0);
+        rotate: 0;
     }
 }
 
-.exiting-card {
-    animation: entering-card 1s ease-in forwards;
-    z-index: 10;
-}
-
-@keyframes exiting-card {
+@keyframes slide-out {
     from {
-        transform: translateY(0);
+        transform: translateX(0);
+        rotate: 0;
+        transform-origin: bottom right;
     }
 
     to {
-        transform: translateY(-100vh);
+        transform: translateX(100vw);
+        rotate: 20deg;
     }
+}
+
+@keyframes none {}
+
+::view-transition-old(card-forward) {
+    animation: none 300ms forwards;
+}
+
+::view-transition-new(card-backward) {
+    animation: none 300ms forwards;
+}
+
+::view-transition-new(card-forward) {
+    animation: slide-in 300ms ease-out forwards;
+    z-index: 10;
+}
+
+::view-transition-old(card-backward) {
+    animation: slide-out 300ms ease-in forwards;
+    z-index: 10;
+}
+
+::view-transition-old(progress-bar),
+::view-transition-new(progress-bar) {
+    z-index: 20;
+}
+
+.card-forward {
+    view-transition-name: card-forward;
+}
+
+.card-backward {
+    view-transition-name: card-backward;
+}
+
+.progress-bar {
+    view-transition-name: progress-bar;
 }

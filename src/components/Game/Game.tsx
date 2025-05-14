@@ -1,3 +1,4 @@
+import "./Game.css";
 import { useOnTap } from "@/hooks/useOnTap";
 import { useGame } from "@/hooks/useGame";
 import { Card } from "@/lib/pack";
@@ -7,7 +8,7 @@ import ProgressBar from "./ProgressBar";
 
 export const Game = (props: { cards: Card[] }) => {
     const cards = () => props.cards;
-    const { card, progress, goBack, goNext } = useGame(cards());
+    const { card, progress, direction, goBack, goNext } = useGame(cards());
 
     useOnTap(goNext);
 
@@ -18,7 +19,7 @@ export const Game = (props: { cards: Card[] }) => {
             <ProgressBar progress={progress} />
 
             <div class="absolute inset-0 bg-blue-300 contain-strict">
-                <CardElement card={card} />
+                <CardElement card={card} direction={direction} />
             </div>
         </>
     );
