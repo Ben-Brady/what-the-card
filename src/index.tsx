@@ -25,8 +25,8 @@ render(
             <Route path="/create" component={CreatePage} />
 
             {/* Game Pages */}
-            <Route path="/game/pack/:id" component={PackPage} />
             <Route path="/game/play" component={GamePage} />
+            <Route path="/game/pack/:id" component={PackPage} />
 
             {/* Abort Pages */}
             <Route path="/about" component={AboutPage} />

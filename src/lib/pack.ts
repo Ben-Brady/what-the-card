@@ -8,7 +8,6 @@ export type Pack = InferOutput<typeof Pack>;
 export const Pack = object({
     id: string(),
     title: string(),
-    type: literal("normal"),
     cards: lazy(() => array(Card)),
 });
 
