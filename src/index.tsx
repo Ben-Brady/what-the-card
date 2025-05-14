@@ -8,6 +8,7 @@ import PackPage from "./pages/game/pack.tsx";
 import CreatePage from "./pages/create.tsx";
 import PlayPage from "./pages/play.tsx";
 import PacksPage from "./pages/packs.tsx";
+import CreditsPage from "./pages/about/credits.tsx";
 import "./styles/index.css";
 
 const AboutPage = lazy(() => import("./pages/about/about.tsx"));
@@ -32,6 +33,7 @@ render(
             <Route path="/privacy" component={PrivacyPolicyPage} />
             <Route path="/tos" component={TermsOfServicePage} />
             <Route path="/gdpr" component={TermsOfServicePage} />
+            <Route path="/credits" component={CreditsPage} />
         </Router>
     ),
     document.getElementById("root")!,

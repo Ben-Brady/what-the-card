@@ -10,6 +10,9 @@ export default function AboutPage() {
             )}
         >
             <div class="size-full flex flex-col items-center gap-4">
+                <LinkButton variant="secondary" href="/credits" preload>
+                    Credits
+                </LinkButton>
                 <LinkButton variant="secondary" href="/tos" preload>
                     Terms of Service
                 </LinkButton>
