@@ -136,12 +136,6 @@ export const cards: CustomCard[] = [
             "Go round clockwise naming porn catagory.\nIf you don't say one in 5 seconds say one said before, you must drink",
     },
     {
-        title: "I Demand a Trial",
-        description:
-            "You've been accused of murder!\nThe person on your left must defend you.\nThe person on the right convince everyone you did it.\nWhoever fails to convince the rest of the group must drink 3 times",
-        tags: ["competition"],
-    },
-    {
         title: "Oooo",
         description:
             "Everyone vote on the person most likely to have a crush on someone else playing, they have to drink twice",
@@ -170,24 +164,28 @@ export const cards: CustomCard[] = [
         title: "Fuck fuck fuck",
         description: "Drink if you have ever sent a sexual message to the wrong person",
     },
-
     {
         title: "I declare to the court",
         description:
             "Everyone takes turns tell a story and then vote on what as the most insane statement",
-        tags: ["competition"],
-    },
-    {
-        title: "Secret Santa",
-        description:
-            "The players on your left and right have one round to bring you a gift, winner is allowed to make someone drink",
-        tags: ["competition"],
     },
     {
         title: "Staring Competition",
         description:
             "Have a staring competition with the person in front of you, the loser must drink",
-        tags: ["competition"],
+    },
+
+    {
+        title: "I Demand a Trial",
+        description:
+            "You've been accused of murder!\nThe person on your left must defend you.\nThe person on the right convince everyone you did it.\nWhoever fails to convince the rest of the group must drink 3 times",
+        tags: ["4-players"],
+    },
+    {
+        title: "Secret Santa",
+        description:
+            "The players on your left and right have one round to bring you a gift, winner is allowed to make someone drink",
+        tags: ["4-players"],
     },
 
     {
@@ -215,5 +213,10 @@ export const cards: CustomCard[] = [
         title: "Trust Me Bro",
         description: "Close your eyes and kiss the object put in front of you by another player",
         tags: ["horny", "extreme"],
+    },
+    {
+        title: "Just a Whiff",
+        description: "Sniff another players feet",
+        tags: ["extreme"],
     },
 ];

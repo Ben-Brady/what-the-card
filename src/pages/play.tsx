@@ -2,6 +2,7 @@ import { Checkbox } from "@/components/Checkbox";
 import { LinkButton } from "@/components/Elements";
 import { createModal } from "@/components/Modals/Modal";
 import classNames from "@/lib/classnames";
+import { CardTag } from "@/lib/pack";
 import { Accessor, createSignal } from "solid-js";
 
 export default function PlayPage() {
@@ -10,7 +11,7 @@ export default function PlayPage() {
     const extremeValue = useSessionValue("tag-extreme", false);
 
     const url = () => {
-        const tags = [];
+        const tags: CardTag[] = [];
         if (competitionValue.value()) tags.push("competition");
         if (hornyValue.value()) tags.push("horny");
         if (extremeValue.value()) tags.push("extreme");
@@ -22,18 +23,12 @@ export default function PlayPage() {
         }
     };
     return (
-        <div
-            class={classNames("size-full p-8 overflow-y-auto", "flex flex-col items-center gap-6")}
-        >
+        <div class="size-full p-8 overflow-y-auto flex flex-col items-center gap-6">
             <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
                 <CheckboxRow
-                    text="Competition Cards"
-                    description={`
-                        These cards involve comeptitions between two or more players, usually arguing and high energy.
-
-                        Recommended for most groups, but optional.
-                    `}
+                    text="4+ Players"
+                    description="These cards require 4 or more players to play"
                     defaultValue={competitionValue.value()}
                     onSet={(v) => competitionValue.set(v)}
                 />
@@ -48,9 +43,9 @@ export default function PlayPage() {
                     onSet={(v) => hornyValue.set(v)}
                 />
                 <CheckboxRow
-                    text="Horny Extreme Cards"
+                    text="Extreme Cards"
                     description={`
-                    These cards include sex act cards, such as kissing other players.
+                    These cards include more extreme cards, such as kissing other players or sniffing feat.
 
                     Not recommend for most groups.
                     `}

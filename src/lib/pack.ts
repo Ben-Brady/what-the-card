@@ -25,7 +25,7 @@ export const Card = object({
 });
 
 export type CardTag = InferOutput<typeof CardTag>;
-export const CardTag = union([literal("competition"), literal("horny"), literal("extreme")]);
+export const CardTag = union([literal("4-players"), literal("horny"), literal("extreme")]);
 
 export type CustomCard = InferOutput<typeof CustomCard>;
 export const CustomCard = object({
