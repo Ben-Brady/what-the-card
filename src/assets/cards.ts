@@ -135,7 +135,7 @@ export const cards: CustomCard[] = [
     },
     {
         title: "Getting Around",
-        text: "The person that has sex most frequently must drink",
+        text: "The person that has sex most often must drink",
     },
     {
         title: "Shots!",
@@ -165,7 +165,56 @@ export const cards: CustomCard[] = [
         title: "Staring Competition",
         text: "Have a staring competition with the person in front of you, the loser must drink",
     },
+    {
+        title: "The Floor is Lava",
+        text: "You cannot touch the floor for the until the next round",
+    },
+    {
+        title: "Take your Pick",
+        text: "Your can take 1 sip from any player's drink",
+    },
+    {
+        title: "On a Ride",
+        text: "Give someone a piggy back or drink",
+    },
+    {
+        title: "You Must Suffer",
+        text: "Choose a player to drink 3 shots",
+    },
+    {
+        title: "Keep a Secret",
+        text: "What's the number one thing you don't want your parents to find out about?",
+    },
+    {
+        title: "Dirty Lies",
+        text: "Share with the group the biggest lie you've told your ex or current partner",
+    },
+    {
+        title: "Who am I to you",
+        text: "Everyone give a five words description of you\nYou must pick the worst description and they have to drink",
+    },
+    {
+        title: "Do it or Drink",
+        text: 'You must send to the last person in their contacts "I know what you did I\'ve spoken to the police"',
+    },
+    {
+        title: "Gotta Pay the Bills",
+        text: "Who would be the most successful pornstar?",
+    },
+    {
+        title: "TBD",
+        text: "If you're all in prison, who is most likely to become a prison bitch?",
+    },
+    {
+        title: "TBD",
+        text: "Who'd would manage the best if they became homeless?",
+    },
 
+    {
+        title: "Secret Santa",
+        text: "The players on your left and right have one round to bring you a gift, winner is allowed to make someone drink",
+        tags: ["4-players"],
+    },
     {
         title: "I Demand a Trial",
         text: "You've been accused of murder!\nThe person on your left must defend you.\nThe person on the right convince everyone you did it.\nWhoever fails to convince the rest of the group must drink 3 times",
@@ -197,15 +246,54 @@ export const cards: CustomCard[] = [
         text: "Make out with an inanimate object",
         tags: ["horny"],
     },
+    {
+        title: "Nothing bad could happen",
+        text: "Pick two players to go into a separate room for 5 minutes",
+        tags: ["horny"],
+    },
+    {
+        title: "Good Luck :)",
+        text: "Send a message to your crush",
+        tags: ["horny"],
+    },
+    {
+        title: "Red Cheeks",
+        text: "The rest of group must pick the victim.\nYou have a minute to make them blush, loser has to drink",
+        tags: ["horny"],
+    },
+    {
+        title: "It was only... um",
+        text: "Take a drink for every person you've had sex with",
+        tags: ["horny"],
+    },
+    {
+        title: "Dirty Boy",
+        text: "Drink if you’ve ever tasted yourself",
+        tags: ["horny"],
+    },
 
+    {
+        title: "TBD",
+        text: "Kiss the your favourite player.\nIf either of you refuse, you both drink",
+        tags: ["horny", "extreme"],
+    },
     {
         title: "Trust Me Bro",
         text: "Close your eyes and kiss the object put in front of you by another player",
         tags: ["horny", "extreme"],
     },
     {
+        title: "How to Pay the Bills",
+        text: "Give a person of your choice a lap dance for 60 seconds\nIf either of you refuse, you both drink",
+    },
+    {
         title: "Just a Whiff",
         text: "Sniff another players feet",
+        tags: ["extreme"],
+    },
+    {
+        title: "TBD",
+        text: "Flash your underwear to the group for at least 5 seconds",
         tags: ["extreme"],
     },
 ];
