@@ -3,7 +3,7 @@ import { ComponentProps } from "solid-js";
 
 const VERSION = "1.2.0";
 
-export default function HomePageLayout(props: ComponentProps<"div">) {
+export default function HomeLayout(props: ComponentProps<"div">) {
     return (
         <div
             {...props}

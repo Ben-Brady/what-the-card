@@ -1,5 +1,5 @@
 import { Checkbox } from "@/components/Checkbox";
-import HomePageLayout from "@/components/ComponentPage";
+import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
 import { createModal } from "@/components/Modals/Modal";
 import { CardTag } from "@/lib/pack";
@@ -24,7 +24,7 @@ export default function PlayPage() {
     };
 
     return (
-        <HomePageLayout>
+        <HomeLayout>
             <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
                 <CheckboxRow
@@ -63,7 +63,7 @@ export default function PlayPage() {
                     Back
                 </LinkButton>
             </div>
-        </HomePageLayout>
+        </HomeLayout>
     );
 }
 

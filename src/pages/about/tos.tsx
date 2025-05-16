@@ -1,15 +1,15 @@
 import { tosPolicy } from "@/assets/about/tos";
-import HomePageLayout from "@/components/ComponentPage";
+import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
 
 export default function TermsOfServicePage() {
     return (
-        <HomePageLayout>
+        <HomeLayout>
             <LinkButton variant="secondary" href="/" preload>
                 Back
             </LinkButton>
             {/* eslint-disable-next-line solid/no-innerhtml */}
             <p class="text-neutral-900" innerHTML={tosPolicy} />
-        </HomePageLayout>
+        </HomeLayout>
     );
 }

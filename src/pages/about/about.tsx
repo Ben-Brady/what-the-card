@@ -1,9 +1,9 @@
 import { LinkButton } from "@/components/Elements";
-import HomePageLayout from "@/components/ComponentPage";
+import HomeLayout from "@/components/HomeLayout";
 
 export default function AboutPage() {
     return (
-        <HomePageLayout>
+        <HomeLayout>
             <div class="size-full flex flex-col items-center gap-4">
                 <LinkButton variant="secondary" href="/about/credits" preload>
                     Credits
@@ -21,6 +21,6 @@ export default function AboutPage() {
             <LinkButton variant="primary" href="/" preload>
                 Back
             </LinkButton>
-        </HomePageLayout>
+        </HomeLayout>
     );
 }

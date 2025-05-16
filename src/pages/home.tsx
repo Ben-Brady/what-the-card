@@ -1,6 +1,6 @@
 import { Show } from "solid-js";
 import LogoSvg from "@/assets/images/logo.svg?inline";
-import HomePageLayout from "@/components/ComponentPage";
+import HomeLayout from "@/components/HomeLayout";
 import { Button, LinkButton } from "@/components/Elements";
 import { useStandalone } from "@/hooks/useStandalone";
 import { usePromptInstall } from "@/hooks/usePromptInstall";
@@ -10,7 +10,7 @@ export default function HomePage() {
     const isStandalone = useStandalone();
 
     return (
-        <HomePageLayout>
+        <HomeLayout>
             <img class="w-full max-w-80" src={LogoSvg} />
 
             <div class="flex flex-col items-center gap-4 w-full h-full">
@@ -31,6 +31,6 @@ export default function HomePage() {
                     About
                 </LinkButton>
             </div>
-        </HomePageLayout>
+        </HomeLayout>
     );
 }
