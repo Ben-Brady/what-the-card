@@ -1,5 +1,5 @@
-import { Game } from "@/components/Game/Game.tsx";
-import { cards } from "@/assets/cards.ts";
+import { Game } from "@/components/Game/Game";
+import { cards } from "@/assets/cards";
 import { useParams } from "@solidjs/router";
 
 export default function GamePage() {

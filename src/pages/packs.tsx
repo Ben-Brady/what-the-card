@@ -1,7 +1,7 @@
 import { For } from "solid-js";
-import { listPacks } from "../lib/pack.ts";
-import { LinkButton } from "@/components/Elements.tsx";
-import HomePageLayout from "@/components/ComponentPage.tsx";
+import { listPacks } from "../lib/pack";
+import { LinkButton } from "@/components/Elements";
+import HomePageLayout from "@/components/ComponentPage";
 
 export default function PacksPage() {
     const packs = listPacks();

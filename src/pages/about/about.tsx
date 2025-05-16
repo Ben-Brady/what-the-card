@@ -1,4 +1,4 @@
-import { LinkButton } from "@/components/Elements.tsx";
+import { LinkButton } from "@/components/Elements";
 import HomePageLayout from "@/components/ComponentPage";
 
 export default function AboutPage() {
