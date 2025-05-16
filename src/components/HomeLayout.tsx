@@ -1,7 +1,7 @@
 import classNames from "@/lib/classnames";
 import { ComponentProps } from "solid-js";
 
-const VERSION = "1.2.0";
+const VERSION = "1.2.1";
 
 export default function HomeLayout(props: ComponentProps<"div">) {
     return (
