@@ -19,9 +19,10 @@ export default function PlayPage() {
         if (tags.length === 0) {
             return `/game/play`;
         } else {
-            return `/game/play?${tags.join(",")}`;
+            return `/game/play?tags=${tags.join(",")}`;
         }
     };
+
     return (
         <HomePageLayout>
             <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
