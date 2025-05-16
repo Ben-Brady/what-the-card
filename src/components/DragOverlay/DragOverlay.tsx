@@ -54,7 +54,9 @@ export default function DragOverlay(props: {
                     props.side === "right" && "right-0 translate-x-full",
                     props.side === "left" && "left-0 -translate-x-full",
                 )}
-                style={{ transform: `scaleX(${stretch() ** 1.25}%)  blur(1px) ` }}
+                style={{
+                    transform: `scaleX(${stretch() ** 1.25}%)`,
+                }}
             />
             <div
                 class={classNames(
@@ -77,7 +79,7 @@ export default function DragOverlay(props: {
                 )}
                 style={{
                     transform: `scaleX(${stretch() ** 1.15}%)`,
-                    filter: "brightness(0.85)  blur(.25rem)",
+                    filter: "brightness(0.85) blur(.25rem)",
                 }}
             />
         </div>
