@@ -1,5 +1,5 @@
 import { Show } from "solid-js";
-import LogoSvg from "@/assets/logo.svg?inline";
+import LogoSvg from "@/assets/images/logo.svg?inline";
 import HomePageLayout from "@/components/ComponentPage";
 import { Button, LinkButton } from "@/components/Elements";
 import { useStandalone } from "@/hooks/useStandalone";
