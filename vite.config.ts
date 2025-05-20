@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 const manifest: Partial<ManifestOptions> = {
     name: "What the Card",
     short_name: "What the Card",
-    description: "card game bla",
+    description: "A fast-paced drinking card game for parties",
     theme_color: "#0a66c2",
 
     icons: [
