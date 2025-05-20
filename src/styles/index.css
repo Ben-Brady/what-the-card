@@ -17,6 +17,15 @@
   -moz-osx-font-smoothing: grayscale;
 
   user-select: none;
+
+  /* Disable zooming */
+  touch-action: pan-x pan-y;
+}
+
+* {
+  /* Prevent reloading */
+  overscroll-behavior-y: none;
+
 }
 
 body {
