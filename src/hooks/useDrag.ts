@@ -100,7 +100,6 @@ const onDragMobile = (
         lastAverage = { x: 0, y: 0 };
     };
 
-    document.body.addEventListener("drag", console.log, { signal });
     document.body.addEventListener("touchstart", onTouchStart, { signal });
     document.body.addEventListener("touchmove", onTouchMove, { signal });
     document.body.addEventListener("touchcancel", onTouchRemove, { signal });
