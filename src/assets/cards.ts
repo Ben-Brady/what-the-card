@@ -2,7 +2,7 @@ import type { CustomCard } from "../lib/pack";
 
 export const cards: CustomCard[] = [
     {
-        title: "Only the Good Die Young",
+        title: "Only The Good Die Young",
         text: "The youngest player must drink",
     },
     {
@@ -18,7 +18,7 @@ export const cards: CustomCard[] = [
         text: "Tell a joke and if anybody laughs, everyone must drink",
     },
     {
-        title: "Rockstars",
+        title: "Just a Phase",
         text: "Anyone who has ever dyed their hair must drink",
     },
     {
@@ -30,10 +30,6 @@ export const cards: CustomCard[] = [
         text: "You must tell 2 truths and 1 lie.\nYou don't have to say which one's the lie",
     },
     {
-        title: "Double Up",
-        text: "Anyone who drinks without being forced to has to drink again",
-    },
-    {
         title: "Generous Lovers",
         text: 'Anybody who has ever "given head" must drink',
     },
@@ -42,11 +38,11 @@ export const cards: CustomCard[] = [
         text: "Whoever is dressed best, they must drink",
     },
     {
-        title: "BFFs forever",
+        title: "BFFs Forever",
         text: "High five the player to your right, take a selfie, then both drink",
     },
     {
-        title: "How many colours?",
+        title: "How Many Colours?",
         text: "Go round clockwise a circle and name a colour.\nIf you can't think of a colour or repeat one: you must drink",
     },
     {
@@ -87,10 +83,10 @@ export const cards: CustomCard[] = [
     },
     {
         title: "Swapsies",
-        text: "Choose a player to phones with 30 seconds",
+        text: "Choose a player to swap phones with for 30 seconds",
     },
     {
-        title: "no nativo",
+        title: "No Nativo",
         text: "You can't speak your native language for the next round",
     },
     {
@@ -98,20 +94,16 @@ export const cards: CustomCard[] = [
         text: "Everyone vote if they prefer dogs or cats.\nThe side with the least votes must drink",
     },
     {
-        title: "What's my name?",
+        title: "What's My Name?",
         text: "Try to remember the name of every other player.\nDrink for every name you can't remember",
     },
     {
         title: "Most Kinky",
-        text: "Whoever is voted most kinky has to drink",
+        text: "Whoever is voted most kinky must drink",
     },
     {
         title: "Alcoholics",
         text: "Anyone drinking something stronger than 10% must drink",
-    },
-    {
-        title: "The Floor is Lava",
-        text: "You cannot touch the floor for the until the next round",
     },
     {
         title: "Hungry?",
@@ -146,20 +138,20 @@ export const cards: CustomCard[] = [
         text: "Everyone who would get back with their ex, take a shot together",
     },
     {
-        title: "A tasting",
+        title: "A Tasting",
         text: "Take a drink from every player's drink",
     },
     {
-        title: "Rekindling an Old Freindship",
+        title: "Rekindling An Old Freindship",
         text: "Send a message to someone you haven't talked to in over a year",
     },
     {
-        title: "Fuck fuck fuck",
+        title: "Fuck Fuck Fuck",
         text: "Drink if you have ever sent a sexual message to the wrong person",
     },
     {
-        title: "I declare to the court",
-        text: "Everyone takes turns tell a story and then vote on what as the most insane statement",
+        title: "I Declare to The Court",
+        text: "Everyone takes turns telling a story, then vote on the most insane story.\nWinner gets to choose someone to drink",
     },
     {
         title: "Staring Competition",
@@ -170,7 +162,7 @@ export const cards: CustomCard[] = [
         text: "You cannot touch the floor for the until the next round",
     },
     {
-        title: "Take your Pick",
+        title: "Take Your Pick",
         text: "Your can take 1 sip from any player's drink",
     },
     {
@@ -190,24 +182,32 @@ export const cards: CustomCard[] = [
         text: "Share with the group the biggest lie you've told your ex or current partner",
     },
     {
-        title: "Who am I to you",
-        text: "Everyone give a five words description of you\nYou must pick the worst description and they have to drink",
+        title: "Who am I to You?",
+        text: "Everyone give a five words description of you.\nYou must pick the worst description and they have to drink",
     },
     {
         title: "Do it or Drink",
         text: 'You must send to the last person in their contacts "I know what you did I\'ve spoken to the police"',
     },
     {
-        title: "Gotta Pay the Bills",
+        title: "Gotta Pay The Bills",
         text: "Who would be the most successful pornstar?",
     },
     {
-        title: "TBD",
+        title: "Prison Bitch",
         text: "If you're all in prison, who is most likely to become a prison bitch?",
     },
     {
-        title: "TBD",
+        title: "Street Skills",
         text: "Who'd would manage the best if they became homeless?",
+    },
+    {
+        title: "BFFs Forever",
+        text: "Get 5 high fives from different people or drink",
+    },
+    {
+        title: "A Great Conversation",
+        text: "Talk to the wall for one minute",
     },
 
     {
@@ -232,7 +232,7 @@ export const cards: CustomCard[] = [
         tags: ["horny"],
     },
     {
-        title: "Where do you stand?",
+        title: "Where do You Stand?",
         text: "Are you a top, bottom or something inbetween?",
         tags: ["horny"],
     },
@@ -242,12 +242,12 @@ export const cards: CustomCard[] = [
         tags: ["horny"],
     },
     {
-        title: "Kiss me like you love me",
+        title: "Kiss Me Like You Love Me",
         text: "Make out with an inanimate object",
         tags: ["horny"],
     },
     {
-        title: "Nothing bad could happen",
+        title: "Nothing Bad Could Happen",
         text: "Pick two players to go into a separate room for 5 minutes",
         tags: ["horny"],
     },
@@ -258,11 +258,11 @@ export const cards: CustomCard[] = [
     },
     {
         title: "Red Cheeks",
-        text: "The rest of group must pick the victim.\nYou have a minute to make them blush, loser has to drink",
+        text: "The rest of group must pick the victim.\nYou have a minute to make them blush, loser must drink",
         tags: ["horny"],
     },
     {
-        title: "It was only... um",
+        title: "It Was Only... umm",
         text: "Take a drink for every person you've had sex with",
         tags: ["horny"],
     },
@@ -273,7 +273,7 @@ export const cards: CustomCard[] = [
     },
 
     {
-        title: "TBD",
+        title: "Ooooo",
         text: "Kiss the your favourite player.\nIf either of you refuse, you both drink",
         tags: ["horny", "extreme"],
     },
@@ -283,7 +283,7 @@ export const cards: CustomCard[] = [
         tags: ["horny", "extreme"],
     },
     {
-        title: "How to Pay the Bills",
+        title: "How to Pay The Bills",
         text: "Give a person of your choice a lap dance for 60 seconds\nIf either of you refuse, you both drink",
     },
     {
@@ -292,7 +292,7 @@ export const cards: CustomCard[] = [
         tags: ["extreme"],
     },
     {
-        title: "TBD",
+        title: "Shouldn't Have Worn Pink",
         text: "Flash your underwear to the group for at least 5 seconds",
         tags: ["extreme"],
     },

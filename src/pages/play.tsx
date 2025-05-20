@@ -2,6 +2,8 @@ import { Checkbox } from "@/components/Checkbox";
 import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
 import { CardTag } from "@/lib/pack";
+import { Accessor, createSignal } from "solid-js";
+import { createModal } from "@/components/Modals/Modal";
 
 export default function PlayPage() {
     const fourPlayersValue = useSessionValue("tag-4player", true);
