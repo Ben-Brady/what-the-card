@@ -36,13 +36,9 @@ const manifest: Partial<ManifestOptions> = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    resolve: {
-        alias: {
-            "@": "/src",
-        },
-    },
+    resolve: { alias: { "@": "/src" } },
     server: {
-        allowedHosts: ["six-suns-tap.loca.lt"],
+        allowedHosts: [],
     },
     plugins: [
         tailwindcss(),
@@ -50,7 +46,6 @@ export default defineConfig({
         VitePWA({
             registerType: "autoUpdate",
             injectRegister: false,
-
             manifest: manifest,
 
             workbox: {
