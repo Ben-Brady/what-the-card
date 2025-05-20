@@ -11,7 +11,7 @@ export default function HomePage() {
 
     return (
         <HomeLayout depth="1">
-            <img class="w-full max-w-80 pb-4" src={LogoSvg} width={320} height={320} />
+            <img class="w-full max-w-80 pb-4" src={LogoSvg} width={320} height={320} alt="What the Card Logo"/>
             <div class="flex flex-col items-center gap-4 w-full h-full">
                 <LinkButton variant="primary" href="/play" preload>
                     Play
