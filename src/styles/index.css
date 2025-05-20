@@ -44,3 +44,8 @@ body,
 #root {
   height: 100%;
 }
+
+#home-layout {
+  view-transition-name: home-layout;
+}
+

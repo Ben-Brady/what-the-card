@@ -4,7 +4,7 @@ import { LinkButton } from "@/components/Elements";
 
 export default function PrivacyPolicyPage() {
     return (
-        <HomeLayout>
+        <HomeLayout depth="3">
             <LinkButton variant="secondary" href="/" preload>
                 Back
             </LinkButton>

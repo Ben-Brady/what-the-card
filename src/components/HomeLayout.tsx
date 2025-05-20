@@ -1,20 +1,30 @@
-import classNames from "@/lib/classnames";
-import { ComponentProps } from "solid-js";
+import { JSXElement } from "solid-js";
+import { useBeforeLeave } from "@solidjs/router";
+import { transition } from "@/lib/transition";
 
 const VERSION = "1.2.1";
 
-export default function HomeLayout(props: ComponentProps<"div">) {
+export default function HomeLayout(props: { children: JSXElement; depth?: "1" | "2" | "3" }) {
+    useBeforeLeave((e) => {
+        e.preventDefault();
+        transition(() => e.retry(true));
+    });
+
     return (
         <div
-            {...props}
-            class={classNames(
-                "size-full p-8 overflow-y-auto relative",
-                "flex flex-col items-center justify-between gap-4",
-                props.class,
-            )}
+            style={{
+                background:
+                    props.depth === "1" ? "#99dfff" : props.depth === "2" ? "#7ad5ff" : "#23b9ff",
+            }}
+            class="size-full flex justify-center"
         >
-            <div class="absolute top-0 right-1 text-neutral-500">{VERSION}</div>
-            {props.children}
+            <div
+                id="home-layout"
+                class="size-full max-w-160 p-8 overflow-y-auto relative flex flex-col items-center justify-between gap-4"
+            >
+                <div class="absolute top-0 right-1 text-neutral-500">{VERSION}</div>
+                {props.children}
+            </div>
         </div>
     );
 }
