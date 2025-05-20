@@ -1,12 +1,13 @@
 import { RouteSectionProps } from "@solidjs/router";
-import PWABadge from "@/components/PWABridge/PWABadge";
 import TapDisplay from "@/components/TapDisplay/TapDisplay";
+import { usePWAUpdate } from "@/hooks/usePWAUpdate";
 
 export default function Layout(props: RouteSectionProps) {
+    usePWAUpdate();
+
     return (
         <>
             <TapDisplay />
-            <PWABadge />
             {props.children}
         </>
     );
