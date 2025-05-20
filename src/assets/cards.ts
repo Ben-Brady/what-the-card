@@ -151,7 +151,7 @@ export const cards: CustomCard[] = [
     },
     {
         title: "I Declare to The Court",
-        text: "Everyone takes turns tell a story, then vote on the most insane story",
+        text: "Everyone takes turns telling a story, then vote on the most insane story.\nWinner gets to choose someone to drink",
     },
     {
         title: "Staring Competition",
