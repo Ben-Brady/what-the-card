@@ -1,7 +1,9 @@
-export const transition = (callback: () => void) => {
+export const transition = (callback: () => void): Promise<void> => {
     if ("startViewTransition" in document) {
-        document.startViewTransition(callback);
+        const transition = document.startViewTransition(callback);
+        return transition.finished;
     } else {
         callback();
+        return Promise.resolve();
     }
 };

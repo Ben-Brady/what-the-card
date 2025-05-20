@@ -56,28 +56,39 @@ export const useGame = (cards: Card[]) => {
     const [deck, setCards] = createSignal<ColoredCard[]>(generateShuffledDeck());
     const [direction, setDirection] = createSignal<"backward" | "forward">("forward");
 
+    let isAnimating = false;
     const card = () => deck()[index()];
     const progress = () => clamp((1 / cards.length) * index(), 0, 1);
 
     const goNext = () => {
+        console.log({ isAnimating });
+        if (isAnimating) return;
         setDirection("forward");
         const newIndex = index() + 1;
         const cards = deck();
 
-        transition(() => {
+        const onFinish = transition(() => {
             if (newIndex >= cards.length - 1) {
                 setCards((cards) => [...cards, ...generateShuffledDeck()]);
             }
 
             setIndex(newIndex);
         });
+
+        isAnimating = true;
+        onFinish.then(() => {
+            isAnimating = false;
+        });
     };
 
     const goBack = () => {
+        if (isAnimating) return;
         if (index() <= 0) return;
         setDirection("backward");
-        transition(() => {
-            setIndex((v) => v - 1);
+        const onFinish = transition(() => setIndex((v) => v - 1));
+        isAnimating = true;
+        onFinish.then(() => {
+            isAnimating = false;
         });
     };
 
