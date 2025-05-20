@@ -273,7 +273,7 @@ export const cards: CustomCard[] = [
     },
 
     {
-        title: "TBD",
+        title: "Ooooo",
         text: "Kiss the your favourite player.\nIf either of you refuse, you both drink",
         tags: ["horny", "extreme"],
     },
@@ -292,7 +292,7 @@ export const cards: CustomCard[] = [
         tags: ["extreme"],
     },
     {
-        title: "TBD",
+        title: "Shouldn't Have Worn Pink",
         text: "Flash your underwear to the group for at least 5 seconds",
         tags: ["extreme"],
     },
