@@ -1,15 +1,11 @@
 import { Accessor, Show } from "solid-js";
-import classNames from "@/lib/classnames";
 
 export default function ProgressBar(props: { progress: Accessor<number> }) {
     const progress = () => props.progress();
 
     return (
         <div
-            class={classNames(
-                "progress-bar h-2 bg-blue-400 absolute top-0 left-0 z-20",
-                "flex justify-center items-center text-nowrap",
-            )}
+            class="progress-bar h-2 bg-blue-400 absolute top-0 left-0 z-20 flex justify-center items-center text-nowrap"
             style={{
                 transition: "width 300ms ease-out, height 200ms ease-out 300ms",
                 width: `${progress() * 100}%`,

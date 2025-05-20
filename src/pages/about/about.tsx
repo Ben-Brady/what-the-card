@@ -3,7 +3,7 @@ import HomeLayout from "@/components/HomeLayout";
 
 export default function AboutPage() {
     return (
-        <HomeLayout>
+        <HomeLayout depth="2">
             <div class="size-full flex flex-col items-center gap-4">
                 <LinkButton variant="secondary" href="/about/credits" preload>
                     Credits

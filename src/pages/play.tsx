@@ -1,9 +1,9 @@
 import { Checkbox } from "@/components/Checkbox";
 import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
-import { createModal } from "@/components/Modals/Modal";
 import { CardTag } from "@/lib/pack";
 import { Accessor, createSignal } from "solid-js";
+import { createModal } from "@/components/Modals/Modal";
 
 export default function PlayPage() {
     const fourPlayersValue = useSessionValue("tag-4player", true);
@@ -24,7 +24,7 @@ export default function PlayPage() {
     };
 
     return (
-        <HomeLayout>
+        <HomeLayout depth="2">
             <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
                 <CheckboxRow

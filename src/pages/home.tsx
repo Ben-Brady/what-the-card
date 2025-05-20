@@ -10,9 +10,8 @@ export default function HomePage() {
     const isStandalone = useStandalone();
 
     return (
-        <HomeLayout>
-            <img class="w-full max-w-80" src={LogoSvg} />
-
+        <HomeLayout depth="1">
+            <img class="w-full max-w-80 pb-4" src={LogoSvg} width={320} height={320} />
             <div class="flex flex-col items-center gap-4 w-full h-full">
                 <LinkButton variant="primary" href="/play" preload>
                     Play
@@ -20,16 +19,14 @@ export default function HomePage() {
                 <LinkButton variant="primary" href="/packs" preload>
                     Packs
                 </LinkButton>
-            </div>
-            <div class="flex flex-col items-center gap-4 w-full">
+                <LinkButton variant="primary" href="/about" preload>
+                    About
+                </LinkButton>
                 <Show when={!isStandalone() && canInstall()}>
                     <Button variant="primary" onClick={install}>
                         Install
                     </Button>
                 </Show>
-                <LinkButton variant="primary" href="/about" preload>
-                    About
-                </LinkButton>
             </div>
         </HomeLayout>
     );
