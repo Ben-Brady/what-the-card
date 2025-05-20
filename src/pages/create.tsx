@@ -155,7 +155,6 @@ export default function CreatePage() {
             title: "Are you sure?",
             subtitle: "Are you sure you want to delete this pack?",
         });
-        console.log({ success });
         if (!success) return;
     };
 
@@ -169,10 +168,8 @@ export default function CreatePage() {
 
         const onDelete = () => {
             setChanged(true);
-            console.log(`Deleting ${cards[index].title}`);
             setCards((cards) => {
                 const newCards = cards.filter((_, i) => i !== index);
-                console.log({ newCards });
                 return newCards;
             });
         };

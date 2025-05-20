@@ -61,7 +61,6 @@ export const useGame = (cards: Card[]) => {
     const progress = () => clamp((1 / cards.length) * index(), 0, 1);
 
     const goNext = () => {
-        console.log({ isAnimating });
         if (isAnimating) return;
         setDirection("forward");
         const newIndex = index() + 1;
