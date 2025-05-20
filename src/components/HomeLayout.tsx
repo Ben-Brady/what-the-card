@@ -22,7 +22,7 @@ export default function HomeLayout(props: { children: JSXElement; depth?: "1" | 
                 id="home-layout"
                 class="size-full max-w-160 p-8 relative flex flex-col items-center justify-between gap-4"
             >
-                <div class="absolute top-0 right-1 text-neutral-500">{VERSION}</div>
+                <div class="absolute bottom-0 right-1 text-neutral-600">{VERSION}</div>
                 {props.children}
             </div>
         </div>
