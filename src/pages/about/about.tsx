@@ -1,10 +1,10 @@
-import { LinkButton } from "@/components/Elements";
+import { ButtonColumn, LinkButton } from "@/components/Elements";
 import HomeLayout from "@/components/HomeLayout";
 
 export default function AboutPage() {
     return (
         <HomeLayout depth="2">
-            <div class="size-full flex flex-col items-center gap-4">
+            <ButtonColumn>
                 <LinkButton href="/about/credits" preload>
                     Credits
                 </LinkButton>
@@ -17,7 +17,7 @@ export default function AboutPage() {
                 <LinkButton href="/about/gdpr" preload>
                     GDPR
                 </LinkButton>
-            </div>
+            </ButtonColumn>
             <LinkButton href="/" preload>
                 Back
             </LinkButton>

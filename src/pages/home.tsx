@@ -1,7 +1,7 @@
 import { Show } from "solid-js";
 import LogoSvg from "@/assets/images/logo.svg?inline";
 import HomeLayout from "@/components/HomeLayout";
-import { Button, LinkButton } from "@/components/Elements";
+import { Button, ButtonColumn, LinkButton } from "@/components/Elements";
 import { useStandalone } from "@/hooks/useStandalone";
 import { usePromptInstall } from "@/hooks/usePromptInstall";
 
@@ -18,7 +18,7 @@ export default function HomePage() {
                 height={320}
                 alt="What the Card Logo"
             />
-            <div class="flex flex-col items-center gap-4 w-full h-full">
+            <ButtonColumn class="h-full">
                 <LinkButton href="/play" preload>
                     Play
                 </LinkButton>
@@ -34,7 +34,7 @@ export default function HomePage() {
                 <Show when={!isStandalone() && canInstall()}>
                     <Button onClick={install}>Install</Button>
                 </Show>
-            </div>
+            </ButtonColumn>
         </HomeLayout>
     );
 }
