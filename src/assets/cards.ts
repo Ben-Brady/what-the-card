@@ -1,6 +1,6 @@
-import type { CustomCard } from "../lib/pack";
+import type { Card } from "../lib/pack";
 
-export const cards: CustomCard[] = [
+export const cards: Card[] = [
     {
         title: "Only The Good Die Young",
         text: "The youngest player must drink",
