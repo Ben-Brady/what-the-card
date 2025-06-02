@@ -7,11 +7,11 @@ import HomePage from "@/pages/home";
 import PlayPage from "@/pages/play";
 import PacksPage from "@/pages/packs";
 import PackPage from "@/pages/game/pack";
-import GamePage from "@/pages/game/play";
 import AboutPage from "@/pages/about/about";
 import CreditsPage from "@/pages/about/credits";
 import "./styles/index.css";
 
+const GamePage = lazy(() => import("@/pages/game/play"));
 const CustomCardsPage = lazy(() => import("@/pages/custom"));
 const TermsOfServicePage = lazy(() => import("@/pages/about/tos"));
 const PrivacyPolicyPage = lazy(() => import("@/pages/about/privacy"));
