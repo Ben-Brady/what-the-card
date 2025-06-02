@@ -1,6 +1,5 @@
 import classNames from "@/lib/classnames";
-import { Accessor, createSignal, Show } from "solid-js";
-import { effect } from "solid-js/web";
+import { Accessor, Show } from "solid-js";
 
 type CheckboxProps = {
     name?: string;
@@ -19,7 +18,7 @@ export const Checkbox = (props: CheckboxProps) => {
                 />
             </Show>
             <button
-                class="size-10 border-4 border-blue-500 rounded-lg cursor-pointer bg-white overflow-clip flex items-center justify-center"
+                class="size-10 aspect-square border-4 border-blue-500 rounded-lg cursor-pointer bg-white overflow-clip flex items-center justify-center"
                 onClick={(e) => {
                     e.preventDefault();
 

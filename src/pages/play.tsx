@@ -56,10 +56,10 @@ export default function PlayPage() {
             </div>
 
             <div class="w-full flex flex-col items-center gap-4">
-                <LinkButton variant="primary" href={url()}>
+                <LinkButton href={url()}>
                     Start
                 </LinkButton>
-                <LinkButton variant="primary" href="/" preload>
+                <LinkButton href="/" preload>
                     Back
                 </LinkButton>
             </div>

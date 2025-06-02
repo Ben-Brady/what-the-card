@@ -5,7 +5,7 @@ import { LinkButton } from "@/components/Elements";
 export default function PrivacyPolicyPage() {
     return (
         <HomeLayout depth="3">
-            <LinkButton variant="secondary" href="/about" preload>
+            <LinkButton href="/about" preload>
                 Back
             </LinkButton>
             {/* eslint-disable-next-line solid/no-innerhtml */}

@@ -1,9 +1,8 @@
-import { Accessor, batch, Component, createSignal } from "solid-js";
+import { Accessor, batch, Component, createEffect, createSignal } from "solid-js";
 import { Card, CardTag } from "@/lib/pack";
 import { Button, Input, Textarea } from "../Elements";
 import { createModal } from "./Modal";
 import { Checkbox } from "../Checkbox";
-import { effect } from "solid-js/web";
 
 type EditModalControls = {
     open: (card: Card, onEdit: (card: Card) => void, onDelete: () => void) => void;
@@ -67,16 +66,12 @@ type EditModalProps = {
     onDelete: () => void;
 };
 
-const NAME_4PLAYER = "tag-4player";
-const NAME_HORNY = "tag-horny";
-const NAME_EXTREME = "tag-extreme";
-
 const EditCardModal = (props: EditModalProps) => {
     const [tag4Player, setTag4Player] = createSignal<boolean>(false);
     const [tagHorny, setTagHorny] = createSignal<boolean>(false);
     const [tagExtreme, setTagExtreme] = createSignal<boolean>(false);
 
-    effect(() => {
+    createEffect(() => {
         const tags = props.tags();
         setTag4Player(tags.includes("4-players"));
         setTagHorny(tags.includes("horny"));
@@ -115,18 +110,24 @@ const EditCardModal = (props: EditModalProps) => {
                 value={props.text()}
                 required
             />
-            <div class="grid grid-cols-2 place-items-center gap-y-2">
-                <span class="text-right w-full text-xl">4+ Players</span>
-                <Checkbox value={tag4Player} onChange={(v) => setTag4Player(v)} />
-                <span class="text-right w-full text-xl">Horny</span>
-                <Checkbox value={tagHorny} onChange={(v) => setTagHorny(v)} />
-                <span class="text-right w-full text-xl">Extreme</span>
-                <Checkbox value={tagExtreme} onChange={(v) => setTagExtreme(v)} />
+            <div class="flex flex-wrap gap-4 justify-center">
+                <div class="flex items-center gap-2 w-fit">
+                    <span class="text-right w-full text-xl">4+ Players</span>
+                    <Checkbox value={tag4Player} onChange={(v) => setTag4Player(v)} />
+                </div>
+                <div class="flex items-center gap-2 w-fit">
+                    <span class="text-right w-full text-xl">Horny</span>
+                    <Checkbox value={tagHorny} onChange={(v) => setTagHorny(v)} />
+                </div>
+                <div class="flex items-center justify-start gap-2 w-fit">
+                    <span class="text-right w-full text-xl">Extreme</span>
+                    <Checkbox value={tagExtreme} onChange={(v) => setTagExtreme(v)} />
+                </div>
             </div>
-            <Button class="flex-1" variant="primary" width="full" type="submit">
+            <Button class="flex-1" width="full" type="submit">
                 Save
             </Button>
-            <Button class="flex-1" variant="primary" width="full" onClick={() => props.onCancel()}>
+            <Button class="flex-1" width="full" onClick={() => props.onCancel()}>
                 Cancel
             </Button>
             <Button

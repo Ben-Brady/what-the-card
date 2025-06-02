@@ -39,7 +39,7 @@ export function createConfirmationModal(): [Component, PromptFunction] {
                     <span class="text-xl text-center mb-8">{subtitle()}</span>
 
                     <div class="w-full flex gap-4">
-                        <Button variant="primary" class="flex-1" onClick={() => onClick(false)}>
+                        <Button class="flex-1" onClick={() => onClick(false)}>
                             Cancel
                         </Button>
                         <Button variant="destructive" class="flex-1" onClick={() => onClick(true)}>

@@ -5,20 +5,20 @@ export default function AboutPage() {
     return (
         <HomeLayout depth="2">
             <div class="size-full flex flex-col items-center gap-4">
-                <LinkButton variant="secondary" href="/about/credits" preload>
+                <LinkButton href="/about/credits" preload>
                     Credits
                 </LinkButton>
-                <LinkButton variant="secondary" href="/about/tos" preload>
+                <LinkButton href="/about/tos" preload>
                     Terms of Service
                 </LinkButton>
-                <LinkButton variant="secondary" href="/about/privacy" preload>
+                <LinkButton href="/about/privacy" preload>
                     Privacy Policy
                 </LinkButton>
-                <LinkButton variant="secondary" href="/about/gdpr" preload>
+                <LinkButton href="/about/gdpr" preload>
                     GDPR
                 </LinkButton>
             </div>
-            <LinkButton variant="primary" href="/" preload>
+            <LinkButton href="/" preload>
                 Back
             </LinkButton>
         </HomeLayout>

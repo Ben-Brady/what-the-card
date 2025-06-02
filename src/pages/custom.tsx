@@ -70,7 +70,7 @@ export default function CustomCardsPage() {
     return (
         <>
             <EditModal />
-            
+
             <HomeLayout depth="2">
                 <span class="text-2xl">{customCards().length} Custom Cards</span>
 
@@ -102,12 +102,8 @@ export default function CustomCardsPage() {
                 </div>
 
                 <ButtonColumn>
-                    <Button variant="primary" onClick={onAddNewCard}>
-                        Create New Card
-                    </Button>
-                    <LinkButton href="/" variant="primary">
-                        Back
-                    </LinkButton>
+                    <Button onClick={onAddNewCard}>Create New Card</Button>
+                    <LinkButton href="/">Back</LinkButton>
                 </ButtonColumn>
             </HomeLayout>
         </>
@@ -121,7 +117,7 @@ const CardComponent = (props: { card: CustomCard; onClick: () => void }) => (
         class={
             "w-full h-fit px-2 py-4 " +
             "flex flex-col justify-center " +
-            "bg-sky-600 rounded-md cursor-pointer"
+            "bg-blue-600 rounded-md cursor-pointer"
         }
     >
         <p class="w-full text-2xl text-center underline">{props.card.title}</p>

@@ -11,13 +11,13 @@ export default function PacksPage() {
             <div class="size-full flex flex-col items-center gap-4">
                 <For each={packs}>
                     {(pack) => (
-                        <LinkButton variant="secondary" href={`/game/pack/${pack.id}`} preload>
+                        <LinkButton href={`/game/pack/${pack.id}`} preload>
                             {pack.title}
                         </LinkButton>
                     )}
                 </For>
             </div>
-            <LinkButton variant="primary" href="/" preload>
+            <LinkButton href="/" preload>
                 Back
             </LinkButton>
         </HomeLayout>
