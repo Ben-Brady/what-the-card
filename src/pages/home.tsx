@@ -19,6 +19,9 @@ export default function HomePage() {
                 <LinkButton variant="primary" href="/packs" preload>
                     Packs
                 </LinkButton>
+                <LinkButton variant="primary" href="/custom" preload>
+                    Custom Cards
+                </LinkButton>
                 <LinkButton variant="primary" href="/about" preload>
                     About
                 </LinkButton>

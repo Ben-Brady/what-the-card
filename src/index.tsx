@@ -12,7 +12,7 @@ import AboutPage from "@/pages/about/about";
 import CreditsPage from "@/pages/about/credits";
 import "./styles/index.css";
 
-const CreatePage = lazy(() => import("@/pages/create"));
+const CustomCardsPage = lazy(() => import("@/pages/custom"));
 const TermsOfServicePage = lazy(() => import("@/pages/about/tos"));
 const PrivacyPolicyPage = lazy(() => import("@/pages/about/privacy"));
 
@@ -22,7 +22,7 @@ render(
             <Route path="*" component={HomePage} />
             <Route path="/play" component={PlayPage} />
             <Route path="/packs" component={PacksPage} />
-            <Route path="/create" component={CreatePage} />
+            <Route path="/custom" component={CustomCardsPage} />
 
             {/* Game Pages */}
             <Route path="/game/play" component={GamePage} />
