@@ -9,7 +9,7 @@ export default function GamePage() {
     const tags = () => (tagParam() === "" ? [] : tagParam().split(","));
 
     const filteredCards = () => {
-        return customCards().filter((card) => {
+        return cards.concat(customCards()).filter((card) => {
             if (!card.tags) return true;
             if (tags().length === 0) return true;
             for (const tag of card.tags) {
