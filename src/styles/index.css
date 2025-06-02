@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
+@theme {
+  --breakpoint-xs: 30rem;
+}
+
 :root {
   font-family: "Sour Gummy", sans-serif;
   font-weight: 500;

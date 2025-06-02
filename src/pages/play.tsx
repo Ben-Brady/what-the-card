@@ -56,10 +56,10 @@ export default function PlayPage() {
             </div>
 
             <div class="w-full flex flex-col items-center gap-4">
-                <LinkButton variant="primary" href={url()}>
+                <LinkButton href={url()}>
                     Start
                 </LinkButton>
-                <LinkButton variant="primary" href="/" preload>
+                <LinkButton href="/" preload>
                     Back
                 </LinkButton>
             </div>
@@ -79,7 +79,7 @@ const CheckboxRow = (props: CheckboxRowProps) => {
 
     return (
         <div class="w-full flex items-center justify-between gap-2">
-            <Checkbox defaultValue={props.defaultValue} onChange={(value) => props.onSet(value)} />
+            <Checkbox value={() => props.defaultValue} onChange={(value) => props.onSet(value)} />
             <span class="text-neutral-900 text-xl flex-1">{props.text}</span>
             <button onClick={() => controls.open()}>
                 <svg

@@ -17,18 +17,12 @@ export const PackInfo = object({
     title: string(),
 });
 
-export type Card = InferOutput<typeof Card>;
-export const Card = object({
-    title: optional(string()),
-    text: string(),
-});
-
 export type CardTag = InferOutput<typeof CardTag>;
 export const CardTag = union([literal("4-players"), literal("horny"), literal("extreme")]);
 
-export type CustomCard = InferOutput<typeof CustomCard>;
-export const CustomCard = object({
-    title: string(),
+export type Card = InferOutput<typeof Card>;
+export const Card = object({
+    title: optional(string()),
     text: string(),
     tags: optional(array(CardTag)),
 });
