@@ -2,7 +2,7 @@ import { Checkbox } from "@/components/Checkbox";
 import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
 import { CardTag } from "@/lib/pack";
-import { Accessor, createSignal } from "solid-js";
+import { Accessor, createSignal, Show } from "solid-js";
 import { createModal } from "@/components/Modals/Modal";
 import { customCards } from "@/lib/custom";
 import classNames from "@/lib/classnames";
@@ -17,13 +17,17 @@ export default function PlayPage() {
     const tagHorny = useSessionValue("tag-horny", true);
     const tagExtreme = useSessionValue("tag-extreme", false);
 
+    const hasCustomCards = () => customCards().length !== 0;
+    const cards = () => filterCards(tags(), customCards());
+    const hasEmptyDeck = () => cards().length === 0;
+
     const tags = () => {
         const tags: CardTag[] = [];
         if (tagFourPlayers.value()) tags.push("4-players");
         if (tagHorny.value()) tags.push("horny");
         if (tagExtreme.value()) tags.push("extreme");
-        if (tagCustom.value()) tags.push("custom");
-        if (tagDefault.value()) tags.push("default");
+        if (tagCustom.value() || !hasCustomCards()) tags.push("custom");
+        if (tagDefault.value() || !hasCustomCards()) tags.push("default");
 
         return tags;
     };
@@ -36,34 +40,33 @@ export default function PlayPage() {
         }
     };
 
-    const cards = () => filterCards(tags(), customCards());
-    const hasEmptyDeck = () => cards().length === 0;
-
     return (
         <HomeLayout depth="2">
             <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
-                <CheckboxRow
-                    text="Built-in Cards"
-                    description={`
+                <Show when={hasCustomCards()}>
+                    <CheckboxRow
+                        text="Built-in Cards"
+                        description={`
                         The Built-in cards included with the game
 
                         Toggle this off to only use your custom cards
-                    `}
-                    defaultValue={tagDefault.value()}
-                    onSet={(v) => tagDefault.set(v)}
-                />
-                <CheckboxRow
-                    text="Custom Cards"
-                    description={`
-                        The custom cards included with the game
+                        `}
+                        defaultValue={tagDefault.value()}
+                        onSet={(v) => tagDefault.set(v)}
+                    />
+                    <CheckboxRow
+                        text="Custom Cards"
+                        description={`
+                            The custom cards included with the game
 
-                        Toggle this off to only use your the Built-in cards
-                    `}
-                    defaultValue={tagCustom.value()}
-                    onSet={(v) => tagCustom.set(v)}
-                />
-                <div class="mb-2" />
+                            Toggle this off to only use your the Built-in cards
+                            `}
+                        defaultValue={tagCustom.value()}
+                        onSet={(v) => tagCustom.set(v)}
+                    />
+                    <div class="mb-2" />
+                </Show>
                 <CheckboxRow
                     text="4+ Players"
                     description="These cards require 4 or more players to play"
@@ -115,7 +118,7 @@ export default function PlayPage() {
                 <p class="whitespace-pre-line">
                     {"The settings you've selected created a deck with no cards" +
                         "\n\n" +
-                        "Turn on the default cards to fix this or create some custom cards"}
+                        "Turn on the built-in cards to fix this or create some custom cards"}
                 </p>
             </Modal>
         </HomeLayout>
