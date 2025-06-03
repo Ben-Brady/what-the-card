@@ -13,6 +13,7 @@ const versions: Version[] = [
         changes: [
             "Added transitions between screens",
             "Improved loading for GDPR/Privacy/ToS pages",
+            "Fixed text for custom cards modal",
         ],
     },
     {
