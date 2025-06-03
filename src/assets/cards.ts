@@ -26,7 +26,7 @@ export const cards: Card[] = [
         text: "The next person who makes eye contact with you must drink",
     },
     {
-        title: "2 Turths, 1 Lie",
+        title: "2 Truths, 1 Lie",
         text: "You must tell 2 truths and 1 lie.\nYou don't have to say which one's the lie",
     },
     {
