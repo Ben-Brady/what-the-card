@@ -18,7 +18,13 @@ export const PackInfo = object({
 });
 
 export type CardTag = InferOutput<typeof CardTag>;
-export const CardTag = union([literal("4-players"), literal("horny"), literal("extreme")]);
+export const CardTag = union([
+    literal("4-players"),
+    literal("horny"),
+    literal("extreme"),
+    literal("default"),
+    literal("custom"),
+]);
 
 export type Card = InferOutput<typeof Card>;
 export const Card = object({

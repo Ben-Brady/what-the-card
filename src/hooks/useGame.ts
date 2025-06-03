@@ -30,7 +30,6 @@ export type GameHook = {
 };
 
 export const useGame = (cards: Card[]) => {
-    cards = cards.filter((v) => v.text); // remove blank cards
     const nextColor = createColorGenerator();
 
     const generateShuffledDeck = (): ColoredCard[] => {
@@ -54,12 +53,12 @@ export const useGame = (cards: Card[]) => {
     };
 
     const [index, setIndex] = createSignal<number>(0);
-    const [deck, setCards] = createSignal<ColoredCard[]>(generateShuffledDeck());
+    const [deck, setDeck] = createSignal<ColoredCard[]>(generateShuffledDeck());
     const [direction, setDirection] = createSignal<"backward" | "forward">("forward");
 
     let isAnimating = false;
     const card = () => deck()[index()];
-    const progress = () => clamp((1 / cards.length) * index(), 0, 1);
+    const progress = () => (cards.length === 0 ? 0 : clamp((1 / cards.length) * index(), 0, 1));
 
     const goNext = () => {
         if (isAnimating) return;
@@ -69,7 +68,7 @@ export const useGame = (cards: Card[]) => {
 
         const onFinish = transition(() => {
             if (newIndex >= cards.length - 1) {
-                setCards((cards) => [...cards, ...generateShuffledDeck()]);
+                setDeck((cards) => [...cards, ...generateShuffledDeck()]);
             }
 
             setIndex(newIndex);

@@ -4,34 +4,72 @@ import { LinkButton } from "@/components/Elements";
 import { CardTag } from "@/lib/pack";
 import { Accessor, createSignal } from "solid-js";
 import { createModal } from "@/components/Modals/Modal";
+import { customCards } from "@/lib/custom";
+import { className } from "solid-js/web";
+import classNames from "@/lib/classnames";
+import { filterCards } from "@/lib/filter-cards";
 
 export default function PlayPage() {
-    const fourPlayersValue = useSessionValue("tag-4player", true);
-    const hornyValue = useSessionValue("tag-horny", true);
-    const extremeValue = useSessionValue("tag-extreme", false);
+    const [Modal, modalControls] = createModal();
+
+    const tagDefault = useSessionValue("tag-default", true);
+    const tagCustom = useSessionValue("tag-custom", true);
+    const tagFourPlayers = useSessionValue("tag-4player", true);
+    const tagHorny = useSessionValue("tag-horny", true);
+    const tagExtreme = useSessionValue("tag-extreme", false);
+
+    const tags = () => {
+        const tags: CardTag[] = [];
+        if (tagFourPlayers.value()) tags.push("4-players");
+        if (tagHorny.value()) tags.push("horny");
+        if (tagExtreme.value()) tags.push("extreme");
+        if (tagCustom.value()) tags.push("custom");
+        if (tagDefault.value()) tags.push("default");
+
+        return tags;
+    };
 
     const url = () => {
-        const tags: CardTag[] = [];
-        if (fourPlayersValue.value()) tags.push("4-players");
-        if (hornyValue.value()) tags.push("horny");
-        if (extremeValue.value()) tags.push("extreme");
-
-        if (tags.length === 0) {
+        if (tags().length === 0) {
             return `/game/play`;
         } else {
-            return `/game/play?tags=${tags.join(",")}`;
+            return `/game/play?tags=${tags().join(",")}`;
         }
     };
+
+    const cards = () => filterCards(tags(), customCards());
+    const hasEmptyDeck = () => cards().length === 0;
 
     return (
         <HomeLayout depth="2">
             <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
                 <CheckboxRow
+                    text="Built-in Cards"
+                    description={`
+                        The Built-in cards included with the game
+
+                        Toggle this off to only use your custom cards
+                    `}
+                    defaultValue={tagDefault.value()}
+                    onSet={(v) => tagDefault.set(v)}
+                />
+                <CheckboxRow
+                    text="Custom Cards"
+                    description={`
+                        The custom cards included with the game
+
+                        Toggle this off to only use your the Built-in cards
+                    `}
+                    defaultValue={tagCustom.value()}
+                    onSet={(v) => tagCustom.set(v)}
+                />
+                <div class="mb-2" />
+                <CheckboxRow
                     text="4+ Players"
                     description="These cards require 4 or more players to play"
-                    defaultValue={fourPlayersValue.value()}
-                    onSet={(v) => fourPlayersValue.set(v)}
+                    defaultValue={tagFourPlayers.value()}
+                    onSet={(v) => tagFourPlayers.set(v)}
                 />
                 <CheckboxRow
                     text="Horny Cards"
@@ -40,8 +78,8 @@ export default function PlayPage() {
 
                     Great for parties, but not recommended for friend groups where relationships would be awkward.
                     `}
-                    defaultValue={hornyValue.value()}
-                    onSet={(v) => hornyValue.set(v)}
+                    defaultValue={tagHorny.value()}
+                    onSet={(v) => tagHorny.set(v)}
                 />
                 <CheckboxRow
                     text="Extreme Cards"
@@ -50,19 +88,37 @@ export default function PlayPage() {
 
                     Not recommend for most groups.
                     `}
-                    defaultValue={extremeValue.value()}
-                    onSet={(v) => extremeValue.set(v)}
+                    defaultValue={tagExtreme.value()}
+                    onSet={(v) => tagExtreme.set(v)}
                 />
             </div>
 
             <div class="w-full flex flex-col items-center gap-4">
-                <LinkButton href={url()}>
-                    Start
+                <LinkButton
+                    href={url()}
+                    onClick={(e) => {
+                        if (hasEmptyDeck()) {
+                            e.preventDefault();
+                            modalControls.open();
+                        }
+                    }}
+                    class={classNames(hasEmptyDeck() && "opacity-70")}
+                >
+                    Start ({cards().length} Cards)
                 </LinkButton>
                 <LinkButton href="/" preload>
                     Back
                 </LinkButton>
             </div>
+
+            <Modal class="h-fit text-center flex flex-col gap-2">
+                <h2 class="text-3xl">Empty Deck!</h2>
+                <p class="whitespace-pre-line">
+                    {"The settings you've selected created a deck with no cards" +
+                        "\n\n" +
+                        "Turn on the default cards to fix this or create some custom cards"}
+                </p>
+            </Modal>
         </HomeLayout>
     );
 }

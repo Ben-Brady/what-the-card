@@ -10,23 +10,27 @@ export const CustomCard = v.intersect([
 ]);
 export type CustomCard = v.InferOutput<typeof CustomCard>;
 
-export const [customCards, setCustomCards] = createSavedStore({
+const [storedCards, setStoredCards] = createSavedStore({
     key: "custom-cards",
     schema: v.array(CustomCard),
     defaultValue: [],
 });
 
+export const customCards = () => {
+    return storedCards().filter((v) => v.text);
+};
+
 export const addCustomCard = (card: CustomCard) => {
     const newCards = [...customCards(), card];
-    setCustomCards(newCards);
+    setStoredCards(newCards);
 };
 
 export const deleteCustomCard = (id: string) => {
     const newCards = customCards().filter((v) => v.id !== id);
-    setCustomCards(newCards);
+    setStoredCards(newCards);
 };
 
 export const updateCustomCard = (newCard: CustomCard) => {
     const newCards = customCards().map((v) => (v.id === newCard.id ? newCard : v));
-    setCustomCards(newCards);
+    setStoredCards(newCards);
 };
