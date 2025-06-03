@@ -63,7 +63,7 @@ export default function CustomCardsPage() {
         <>
             <EditModal />
 
-            <HomeLayout depth="2">
+            <HomeLayout>
                 <span class="text-2xl text-neutral-900">
                     {count() === 0
                         ? "No Custom Cards"

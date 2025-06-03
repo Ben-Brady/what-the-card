@@ -59,7 +59,7 @@ const versions: Version[] = [
 
 export default function CreditsPage() {
     return (
-        <HomeLayout depth="3">
+        <HomeLayout>
             <h1 class="text-3xl text-neutral-900">Change Log</h1>
             <div class="size-full overflow-y-auto flex flex-col gap-2 text-neutral-900">
                 <For each={versions}>

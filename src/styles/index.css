@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./fonts.css";
+@import "./transition.css";
 @config "../../tailwind.config.ts";
 
 @theme {
@@ -56,8 +57,4 @@ html,
 body,
 #root {
   height: 100%;
-}
-
-#home-layout {
-  view-transition-name: home-layout;
 }

@@ -1,15 +1,16 @@
-import { gdprPolicy } from "@/assets/about/gdpr";
 import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
+import { lazy } from "solid-js";
+
+const GDPR = lazy(() => import("@/components/InfoBlocks/GDPR"));
 
 export default function GDPRPage() {
     return (
-        <HomeLayout depth="3">
+        <HomeLayout>
             <LinkButton href="/about" preload>
                 Back
             </LinkButton>
-            {/* eslint-disable-next-line solid/no-innerhtml */}
-            <p class="text-neutral-900" innerHTML={gdprPolicy} />
+            <GDPR />
         </HomeLayout>
     );
 }

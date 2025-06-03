@@ -41,7 +41,7 @@ export default function PlayPage() {
     };
 
     return (
-        <HomeLayout depth="2">
+        <HomeLayout>
             <h3 class="text-3xl text-neutral-900">Select Your Cards</h3>
             <div class="size-full flex flex-col items-center gap-2 max-w-80">
                 <Show when={hasCustomCards()}>

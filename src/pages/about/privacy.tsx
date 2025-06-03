@@ -1,15 +1,16 @@
-import { privacyPolicy } from "@/assets/about/privacy";
 import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
+import { lazy } from "solid-js";
+
+const PrivacyPolicy = lazy(() => import("@/components/InfoBlocks/PrivacyPolicy"));
 
 export default function PrivacyPolicyPage() {
     return (
-        <HomeLayout depth="3">
+        <HomeLayout>
             <LinkButton href="/about" preload>
                 Back
             </LinkButton>
-            {/* eslint-disable-next-line solid/no-innerhtml */}
-            <p class="text-neutral-900" innerHTML={privacyPolicy} />
+            <PrivacyPolicy />
         </HomeLayout>
     );
 }

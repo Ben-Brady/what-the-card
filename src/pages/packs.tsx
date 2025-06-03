@@ -7,7 +7,7 @@ export default function PacksPage() {
     const packs = listPacks();
 
     return (
-        <HomeLayout depth="2">
+        <HomeLayout>
             <div class="size-full flex flex-col items-center gap-4">
                 <For each={packs}>
                     {(pack) => (

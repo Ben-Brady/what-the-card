@@ -10,7 +10,7 @@ export default function HomePage() {
     const isStandalone = useStandalone();
 
     return (
-        <HomeLayout depth="1">
+        <HomeLayout>
             <img
                 class="w-full max-w-80 pb-4"
                 src={LogoSvg}

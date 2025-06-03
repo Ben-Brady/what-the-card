@@ -3,7 +3,7 @@ import { LinkButton } from "@/components/Elements";
 
 export default function CreditsPage() {
     return (
-        <HomeLayout depth="3">
+        <HomeLayout>
             <div class="size-full flex flex-col gap-2 text-neutral-900 text-center">
                 <h1 class="text-3xl">Credits</h1>
                 <p class="text-xl">Ben Brady - Sole Developer</p>

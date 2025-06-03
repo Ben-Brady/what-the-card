@@ -1,0 +1,131 @@
+/* Up/Down */
+@keyframes slide-in-up {
+  from {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes slide-out-up {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes slide-out-down {
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+/* Left/Right */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes slide-out-left {
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes slide-out-right {
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+
+::view-transition-old(home-left) {
+  animation: slide-out-left 250ms forwards ease-out;
+}
+
+::view-transition-new(home-left) {
+  animation: slide-in-left 250ms forwards ease-out;
+}
+
+::view-transition-old(home-right) {
+  animation: slide-out-right 250ms forwards ease-out;
+}
+
+::view-transition-new(home-right) {
+  animation: slide-in-right 250ms forwards ease-out;
+}
+
+::view-transition-old(home-up) {
+  animation: slide-out-up 250ms forwards ease-out;
+}
+
+::view-transition-new(home-up) {
+  animation: slide-in-up 250ms forwards ease-out;
+}
+
+::view-transition-old(home-down) {
+  animation: slide-out-down 250ms forwards ease-out;
+}
+
+::view-transition-new(home-down) {
+  animation: slide-in-down 250ms forwards ease-out;
+}
+
+
+#home-layout {
+  view-transition-name: home-layout;
+}
+
+#home-layout.transition-down {
+  view-transition-name: home-down;
+}
+
+#home-layout.transition-up {
+  view-transition-name: home-up;
+}
+
+
+#home-layout.depth-1 {
+  background: linear-gradient(to down, #99dfff, #75d3ff);
+}
+
+#home-layout.depth-2 {
+  background: linear-gradient(to down, #75d3ff, #5eccff);
+}
+
+#home-layout.depth-3 {
+  background: linear-gradient(to down, #5eccff, #4ac6ff);
+}
+
+@media (orientation: portrait) {
+  #home-layout.transition-down {
+    view-transition-name: home-right;
+  }
+
+  #home-layout.transition-up {
+    view-transition-name: home-left;
+  }
+
+
+  #home-layout.depth-1 {
+    background: linear-gradient(to down, #99dfff, #75d3ff);
+  }
+
+  #home-layout.depth-2 {
+    background: linear-gradient(to down, #75d3ff, #5eccff);
+  }
+
+  #home-layout.depth-3 {
+    background: linear-gradient(to down, #5eccff, #4ac6ff);
+  }
+}
