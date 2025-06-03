@@ -9,6 +9,13 @@ type Version = {
 
 const versions: Version[] = [
     {
+        version: "1.5.0",
+        changes: [
+            "Added transitions between screens",
+            "Improved loading for GDPR/Privacy/ToS pages",
+        ],
+    },
+    {
         version: "1.4.5",
         changes: ["Hide built-in/default cards selectors until you've created some custom cards"],
     },
@@ -20,10 +27,22 @@ const versions: Version[] = [
             "Added warning when you create an empty deck",
         ],
     },
-    { version: "1.4.3", changes: ["Added changelog", "Updated custom card colours"] },
-    { version: "1.4.2", changes: ["Minor tweaks and performance improvements"] },
-    { version: "1.4.1", changes: ["Minor tweaks and performance improvements"] },
-    { version: "1.4.0", changes: ["Added custom cards", "Moved version number to bottom right"] },
+    {
+        version: "1.4.3",
+        changes: ["Added changelog", "Updated custom card colours"],
+    },
+    {
+        version: "1.4.2",
+        changes: ["Minor tweaks and performance improvements"],
+    },
+    {
+        version: "1.4.1",
+        changes: ["Minor tweaks and performance improvements"],
+    },
+    {
+        version: "1.4.0",
+        changes: ["Added custom cards", "Moved version number to bottom right"],
+    },
     {
         version: "1.3.1",
         changes: ["Performance improvements", "Updated Description", "Misc tweaks"],
@@ -37,9 +56,18 @@ const versions: Version[] = [
             "Removed leftover logging",
         ],
     },
-    { version: "1.2.2", changes: ["Removed reloading and zoom on mobile"] },
-    { version: "1.2.1", changes: ["Fixed tag filters not being used"] },
-    { version: "1.2.0", changes: ["Updated Drag Overlay", "Added more cards to regular play"] },
+    {
+        version: "1.2.2",
+        changes: ["Removed reloading and zoom on mobile"],
+    },
+    {
+        version: "1.2.1",
+        changes: ["Fixed tag filters not being used"],
+    },
+    {
+        version: "1.2.0",
+        changes: ["Updated Drag Overlay", "Added more cards to regular play"],
+    },
     {
         version: "1.1.2",
         changes: [

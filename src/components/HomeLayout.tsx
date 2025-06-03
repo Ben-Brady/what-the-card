@@ -3,7 +3,7 @@ import { useBeforeLeave, useLocation } from "@solidjs/router";
 import { transition } from "@/lib/transition";
 import classNames from "@/lib/classnames";
 
-const VERSION = "1.4.5";
+const VERSION = "1.5.0";
 
 const [direction, setDirection] = createSignal<"up" | "down" | "none">("none");
 
