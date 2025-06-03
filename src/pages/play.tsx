@@ -5,7 +5,6 @@ import { CardTag } from "@/lib/pack";
 import { Accessor, createSignal } from "solid-js";
 import { createModal } from "@/components/Modals/Modal";
 import { customCards } from "@/lib/custom";
-import { className } from "solid-js/web";
 import classNames from "@/lib/classnames";
 import { filterCards } from "@/lib/filter-cards";
 
