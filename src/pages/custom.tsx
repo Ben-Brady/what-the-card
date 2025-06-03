@@ -8,9 +8,10 @@ import {
     deleteCustomCard,
     updateCustomCard,
 } from "../lib/custom";
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 import { uuidv4 } from "@/lib/uuid";
 import HomeLayout from "@/components/HomeLayout";
+import { calculateMasonryColumns } from "@/lib/masonary";
 
 export default function CustomCardsPage() {
     const [EditModal, modalControls] = createEditModal();
@@ -27,8 +28,11 @@ export default function CustomCardsPage() {
         modalControls.open(card, onEdit, onDelete);
     };
 
+    const cards = () => customCards();
+    // const cards = () => builtinCards.map((v) => ({ ...v, id: v.text }));
+
     const onAddNewCard = () => {
-        const blankCard = customCards().find((card) => !card.title && !card.text);
+        const blankCard = cards().find((card) => !card.title && !card.text);
 
         if (blankCard) {
             openCardModal(blankCard);
@@ -39,33 +43,19 @@ export default function CustomCardsPage() {
         }
     };
 
-    const columns = () => {
-        type Column = {
-            height: number;
-            cards: CustomCard[];
-        };
+    const columns = () =>
+        calculateMasonryColumns({
+            columnCount: 2,
+            items: cards(),
+            calculateHeight: (card) => {
+                const GAP = 16;
+                const LINE_WIDTH = 28;
+                const LINE_HEIGHT = 16;
 
-        const COLUMN_COUNT = 2;
-        const columns: Column[] = Array.from({ length: COLUMN_COUNT }, () => ({
-            height: 0,
-            cards: [],
-        }));
-
-        for (const card of customCards()) {
-            const shortestColumn = columns.sort((a, b) => a.height - b.height)[0];
-
-            const GAP = 16;
-            shortestColumn.height += GAP;
-
-            const LINE_WIDTH = 28;
-            const LINE_HEIGHT = 16;
-            shortestColumn.height += Math.floor(card.text.length / LINE_WIDTH) * LINE_HEIGHT;
-
-            shortestColumn.cards.push(card);
-        }
-
-        return columns.map((v) => v.cards);
-    };
+                const lineCount = Math.floor(card.text.length / LINE_WIDTH);
+                return lineCount * LINE_HEIGHT + GAP;
+            },
+        });
 
     return (
         <>
@@ -76,7 +66,7 @@ export default function CustomCardsPage() {
 
                 {/* Single column */}
                 <div class="size-full xs:hidden flex flex-col gap-4 h-full overflow-y-auto">
-                    <For each={customCards()}>
+                    <For each={cards()}>
                         {(card) => (
                             <CardComponent card={card} onClick={() => openCardModal(card)} />
                         )}
@@ -110,19 +100,34 @@ export default function CustomCardsPage() {
     );
 }
 
-const CardComponent = (props: { card: CustomCard; onClick: () => void }) => (
-    <button
-        id={props.card.id}
-        onClick={() => props.onClick()}
-        class={
-            "w-full h-fit px-2 py-4 " +
-            "flex flex-col justify-center " +
-            "bg-blue-600 rounded-md cursor-pointer"
-        }
-    >
-        <p class="w-full text-2xl text-center underline">{props.card.title}</p>
-        <p class="w-full text-xl text-center overflow-ellipsis wrap-anywhere overflow-hidden">
-            {props.card.text}
-        </p>
-    </button>
-);
+const CardComponent = (props: { card: CustomCard; onClick: () => void }) => {
+    const tags = () => (props.card.tags ? props.card.tags : []);
+
+    return (
+        <button
+            id={props.card.id}
+            onClick={() => props.onClick()}
+            class={
+                "w-full h-fit px-2 py-4 " +
+                "flex flex-col justify-center " +
+                "bg-blue-600 rounded-md cursor-pointer"
+            }
+        >
+            <p class="w-full text-2xl text-center underline">{props.card.title}</p>
+            <div class="flex gap-2 w-full justify-center italic">
+                <Show when={tags().includes("4-players")}>
+                    <span class="italic">4+ Players</span>
+                </Show>
+                <Show when={tags().includes("horny")}>
+                    <span class="italic">Horny</span>
+                </Show>
+                <Show when={tags().includes("extreme")}>
+                    <span class="italic">Extreme</span>
+                </Show>
+            </div>
+            <p class="w-full text-xl text-center overflow-ellipsis wrap-anywhere overflow-hidden">
+                {props.card.text}
+            </p>
+        </button>
+    );
+};
