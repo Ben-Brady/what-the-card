@@ -57,12 +57,20 @@ export default function CustomCardsPage() {
             },
         });
 
+    const count = () => customCards().length;
+
     return (
         <>
             <EditModal />
 
             <HomeLayout depth="2">
-                <span class="text-2xl">{customCards().length} Custom Cards</span>
+                <span class="text-2xl text-neutral-900">
+                    {count() === 0
+                        ? "No Custom Card"
+                        : count() === 1
+                        ? "1 Custom Card"
+                        : `${count()} Custom Cards`}
+                </span>
 
                 {/* Single column */}
                 <div class="size-full xs:hidden flex flex-col gap-4 h-full overflow-y-auto">
