@@ -9,6 +9,10 @@ type Version = {
 
 const versions: Version[] = [
     {
+        version: "1.4.5",
+        changes: ["Hide built-in/default cards selectors until you've created some custom cards"],
+    },
+    {
         version: "1.4.4",
         changes: [
             "Added the ability to filter on default and custom cards",
