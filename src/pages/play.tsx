@@ -58,7 +58,7 @@ export default function PlayPage() {
                     <CheckboxRow
                         text="Custom Cards"
                         description={`
-                            The custom cards included with the game
+                            The custom cards you've made yourself
 
                             Toggle this off to only use your the Built-in cards
                             `}
