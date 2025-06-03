@@ -66,7 +66,7 @@ export default function CustomCardsPage() {
             <HomeLayout depth="2">
                 <span class="text-2xl text-neutral-900">
                     {count() === 0
-                        ? "No Custom Card"
+                        ? "No Custom Cards"
                         : count() === 1
                         ? "1 Custom Card"
                         : `${count()} Custom Cards`}
