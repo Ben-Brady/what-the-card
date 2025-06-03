@@ -1,5 +1,4 @@
 /* @refresh reload */
-import { lazy } from "solid-js";
 import { render } from "solid-js/web";
 import { Route, Router } from "@solidjs/router";
 import Layout from "@/pages/+layout";
@@ -11,11 +10,11 @@ import PackPage from "@/pages/game/pack";
 import GamePage from "@/pages/game/play";
 import AboutPage from "@/pages/about/about";
 import ChangelogPage from "@/pages/about/changelog";
+import TermsOfServicePage from "@/pages/about/tos";
+import GDPRPage from "./pages/about/gdpr";
+import PrivacyPolicyPage from "@/pages/about/privacy";
 import CreditsPage from "@/pages/about/credits";
 import "./styles/index.css";
-
-const TermsOfServicePage = lazy(() => import("@/pages/about/tos"));
-const PrivacyPolicyPage = lazy(() => import("@/pages/about/privacy"));
 
 render(
     () => (
@@ -35,7 +34,7 @@ render(
             <Route path="/about/credits" component={CreditsPage} />
             <Route path="/about/privacy" component={PrivacyPolicyPage} />
             <Route path="/about/tos" component={TermsOfServicePage} />
-            <Route path="/about/gdpr" component={TermsOfServicePage} />
+            <Route path="/about/gdpr" component={GDPRPage} />
         </Router>
     ),
     document.getElementById("root")!,
