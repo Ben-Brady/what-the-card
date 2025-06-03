@@ -2,7 +2,7 @@ import { JSXElement } from "solid-js";
 import { useBeforeLeave } from "@solidjs/router";
 import { transition } from "@/lib/transition";
 
-const VERSION = "1.4.1";
+const VERSION = "1.4.2";
 
 export default function HomeLayout(props: { children: JSXElement; depth: "1" | "2" | "3" }) {
     useBeforeLeave((e) => {
