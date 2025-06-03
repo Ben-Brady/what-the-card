@@ -21,16 +21,16 @@ export const customCards = () => {
 };
 
 export const addCustomCard = (card: CustomCard) => {
-    const newCards = [...customCards(), card];
+    const newCards = [...storedCards(), card];
     setStoredCards(newCards);
 };
 
 export const deleteCustomCard = (id: string) => {
-    const newCards = customCards().filter((v) => v.id !== id);
+    const newCards = storedCards().filter((v) => v.id !== id);
     setStoredCards(newCards);
 };
 
 export const updateCustomCard = (newCard: CustomCard) => {
-    const newCards = customCards().map((v) => (v.id === newCard.id ? newCard : v));
+    const newCards = storedCards().map((v) => (v.id === newCard.id ? newCard : v));
     setStoredCards(newCards);
 };
