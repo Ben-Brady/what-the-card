@@ -8,6 +8,14 @@ type Version = {
 };
 
 const versions: Version[] = [
+    {
+        version: "1.4.4",
+        changes: [
+            "Added the ability to filter on default and custom cards",
+            "Added preview to the number of cards in a deck",
+            "Added warning when you create an empty deck",
+        ],
+    },
     { version: "1.4.3", changes: ["Added changelog", "Updated custom card colours", "a"] },
     { version: "1.4.2", changes: ["Minor tweaks and performance improvements"] },
     { version: "1.4.1", changes: ["Minor tweaks and performance improvements"] },
