@@ -9,12 +9,18 @@ export default function GamePage() {
     const tags = () => (tagParam() === "" ? [] : tagParam().split(","));
 
     const filteredCards = () => {
-        return cards.concat(customCards()).filter((card) => {
-            if (!card.tags) return true;
-            if (tags().length === 0) return true;
+        const allCards = cards.concat(customCards());
+
+        const allowedTags = tags();
+        if (allowedTags.length === 0) return allCards;
+
+        return allCards.filter((card) => {
+            if (!card.tags || card.tags.length === 0) return true;
+
             for (const tag of card.tags) {
-                if (!tags().includes(tag)) return false;
+                if (!allowedTags.includes(tag)) return false;
             }
+
             return true;
         });
     };
