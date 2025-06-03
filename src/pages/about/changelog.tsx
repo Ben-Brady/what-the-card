@@ -16,7 +16,7 @@ const versions: Version[] = [
             "Added warning when you create an empty deck",
         ],
     },
-    { version: "1.4.3", changes: ["Added changelog", "Updated custom card colours", "a"] },
+    { version: "1.4.3", changes: ["Added changelog", "Updated custom card colours"] },
     { version: "1.4.2", changes: ["Minor tweaks and performance improvements"] },
     { version: "1.4.1", changes: ["Minor tweaks and performance improvements"] },
     { version: "1.4.0", changes: ["Added custom cards", "Moved version number to bottom right"] },
