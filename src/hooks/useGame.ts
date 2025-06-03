@@ -30,6 +30,7 @@ export type GameHook = {
 };
 
 export const useGame = (cards: Card[]) => {
+    cards = cards.filter((v) => v.text); // remove blank cards
     const nextColor = createColorGenerator();
 
     const generateShuffledDeck = (): ColoredCard[] => {

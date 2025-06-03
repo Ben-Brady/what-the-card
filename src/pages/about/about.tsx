@@ -8,6 +8,9 @@ export default function AboutPage() {
                 <LinkButton href="/about/credits" preload>
                     Credits
                 </LinkButton>
+                <LinkButton href="/about/changelog" preload>
+                    Change Log
+                </LinkButton>
                 <LinkButton href="/about/tos" preload>
                     Terms of Service
                 </LinkButton>

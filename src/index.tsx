@@ -10,6 +10,7 @@ import CustomCardsPage from "@/pages/custom";
 import PackPage from "@/pages/game/pack";
 import GamePage from "@/pages/game/play";
 import AboutPage from "@/pages/about/about";
+import ChangelogPage from "@/pages/about/changelog";
 import CreditsPage from "@/pages/about/credits";
 import "./styles/index.css";
 
@@ -30,6 +31,7 @@ render(
 
             {/* Abort Pages */}
             <Route path="/about" component={AboutPage} />
+            <Route path="/about/changelog" component={ChangelogPage} />
             <Route path="/about/credits" component={CreditsPage} />
             <Route path="/about/privacy" component={PrivacyPolicyPage} />
             <Route path="/about/tos" component={TermsOfServicePage} />
