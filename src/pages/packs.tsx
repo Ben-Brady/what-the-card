@@ -1,5 +1,5 @@
 import { For } from "solid-js";
-import { listPacks } from "../lib/pack";
+import { listPacks } from "@/lib/pack";
 import { LinkButton } from "@/components/Elements";
 import HomeLayout from "@/components/HomeLayout";
 
@@ -11,13 +11,13 @@ export default function PacksPage() {
             <div class="size-full flex flex-col items-center gap-4">
                 <For each={packs}>
                     {(pack) => (
-                        <LinkButton href={`/game/pack/${pack.id}`} preload>
+                        <LinkButton href={`/game/pack/${pack.id}`}>
                             {pack.title}
                         </LinkButton>
                     )}
                 </For>
             </div>
-            <LinkButton href="/" preload>
+            <LinkButton href="/">
                 Back
             </LinkButton>
         </HomeLayout>

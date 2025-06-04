@@ -108,9 +108,7 @@ export default function PlayPage() {
                 >
                     Start ({cards().length} Cards)
                 </LinkButton>
-                <LinkButton href="/" preload>
-                    Back
-                </LinkButton>
+                <LinkButton href="/">Back</LinkButton>
             </div>
 
             <Modal class="h-fit text-center flex flex-col gap-2">
