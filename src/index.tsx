@@ -5,7 +5,7 @@ import Layout from "@/pages/+layout";
 import HomePage from "@/pages/home";
 import PlayPage from "@/pages/play";
 import PacksPage from "@/pages/packs";
-import CustomCardsPage from "@/pages/custom";
+import CardsPage from "@/pages/cards";
 import PackPage from "@/pages/game/pack";
 import GamePage from "@/pages/game/play";
 import AboutPage from "@/pages/about/about";
@@ -22,7 +22,7 @@ render(
             <Route path="*" component={HomePage} />
             <Route path="/play" component={PlayPage} />
             <Route path="/packs" component={PacksPage} />
-            <Route path="/custom" component={CustomCardsPage} />
+            <Route path="/cards" component={CardsPage} />
 
             {/* Game Pages */}
             <Route path="/game/play" component={GamePage} />

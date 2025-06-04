@@ -1,8 +1,8 @@
 import { Accessor, batch, Component, createEffect, createSignal } from "solid-js";
 import { Card, CardTag } from "@/lib/pack";
-import { Button, Input, Textarea } from "../Elements";
-import { createModal } from "./Modal";
-import { Checkbox } from "../Checkbox";
+import { Button, Input, Textarea } from "@/components/Elements";
+import { createModal } from "@/components/Modals/Modal";
+import { Checkbox } from "@/components/Checkbox";
 
 type EditModalControls = {
     open: (card: Card, onEdit: (card: Card) => void, onDelete: () => void) => void;

@@ -1,6 +1,6 @@
 import { Component, createSignal } from "solid-js";
 import { createModal } from "./Modal";
-import { Button } from "../Elements";
+import { Button } from "@/components/Elements";
 
 type PromptOptions = {
     title?: string;

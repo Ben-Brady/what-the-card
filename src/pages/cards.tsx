@@ -1,19 +1,19 @@
-import { Card } from "../lib/pack";
+import { For, Show } from "solid-js";
+import { Card } from "@/lib/pack";
 import { Button, ButtonColumn, LinkButton } from "@/components/Elements";
 import { createEditModal } from "@/components/Modals/EditCardModal";
+import { uuidv4 } from "@/lib/uuid";
+import HomeLayout from "@/components/HomeLayout";
 import {
     CustomCard,
     customCards,
     addCustomCard,
     deleteCustomCard,
     updateCustomCard,
-} from "../lib/custom";
-import { For, Show } from "solid-js";
-import { uuidv4 } from "@/lib/uuid";
-import HomeLayout from "@/components/HomeLayout";
+} from "@/lib/custom";
 import { calculateMasonryColumns } from "@/lib/masonary";
 
-export default function CustomCardsPage() {
+export default function CardsPage() {
     const [EditModal, modalControls] = createEditModal();
 
     const openCardModal = (card: CustomCard) => {
