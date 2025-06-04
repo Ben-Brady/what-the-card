@@ -9,6 +9,14 @@ type Version = {
 
 const versions: Version[] = [
     {
+        version: "1.5.1",
+        changes: [
+            "Fixed gradient on background",
+            "Changed /custom to /cards and repositioned it on the home page",
+            "Misc technical changes",
+        ],
+    },
+    {
         version: "1.5.0",
         changes: [
             "Added transitions between screens",

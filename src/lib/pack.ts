@@ -1,8 +1,8 @@
 import { string, object, literal, union, lazy, array, InferOutput, optional } from "valibot";
-import WhatTheCardURL from "../assets/packs/what-the-card.json?url";
-import BrutalHandoverURL from "../assets/packs/brutal-hangover.json?url";
-import DrunkPirateURL from "../assets/packs/drunk-pirates.json?url";
-import NeverendingTrashURL from "../assets/packs/neverending-trash.json?url";
+import WhatTheCardURL from "@/assets/packs/what-the-card.json?url";
+import BrutalHandoverURL from "@/assets/packs/brutal-hangover.json?url";
+import DrunkPirateURL from "@/assets/packs/drunk-pirates.json?url";
+import NeverendingTrashURL from "@/assets/packs/neverending-trash.json?url";
 
 export type Pack = InferOutput<typeof Pack>;
 export const Pack = object({
