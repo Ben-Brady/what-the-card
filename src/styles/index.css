@@ -28,9 +28,8 @@
 }
 
 * {
-  /* Prevent reloading */
-  overscroll-behavior-y: none;
-
+  /* Prevent reloading/navigation */
+  overscroll-behavior: none;
 }
 
 body {
