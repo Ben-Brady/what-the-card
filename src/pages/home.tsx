@@ -23,7 +23,7 @@ export default function HomePage() {
                     Play
                 </LinkButton>
                 <LinkButton href="/cards">
-                    Cards
+                    Custom Cards
                 </LinkButton>
                 <LinkButton href="/packs">
                     Packs
