@@ -5,25 +5,13 @@ export default function AboutPage() {
     return (
         <HomeLayout>
             <ButtonColumn>
-                <LinkButton href="/about/credits" preload>
-                    Credits
-                </LinkButton>
-                <LinkButton href="/about/changelog" preload>
-                    Change Log
-                </LinkButton>
-                <LinkButton href="/about/tos" preload>
-                    Terms of Service
-                </LinkButton>
-                <LinkButton href="/about/privacy" preload>
-                    Privacy Policy
-                </LinkButton>
-                <LinkButton href="/about/gdpr" preload>
-                    GDPR
-                </LinkButton>
+                <LinkButton href="/about/credits">Credits</LinkButton>
+                <LinkButton href="/about/changelog">Change Log</LinkButton>
+                <LinkButton href="/about/tos">Terms of Service</LinkButton>
+                <LinkButton href="/about/privacy">Privacy Policy</LinkButton>
+                <LinkButton href="/about/gdpr">GDPR</LinkButton>
             </ButtonColumn>
-            <LinkButton href="/" preload>
-                Back
-            </LinkButton>
+            <LinkButton href="/">Back</LinkButton>
         </HomeLayout>
     );
 }
