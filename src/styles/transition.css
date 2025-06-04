@@ -96,15 +96,15 @@
 
 
 #home-layout.depth-1 {
-  background: linear-gradient(to down, #99dfff, #75d3ff);
+  background: linear-gradient(to bottom, #99dfff, #75d3ff);
 }
 
 #home-layout.depth-2 {
-  background: linear-gradient(to down, #75d3ff, #5eccff);
+  background: linear-gradient(to bottom, #75d3ff, #5eccff);
 }
 
 #home-layout.depth-3 {
-  background: linear-gradient(to down, #5eccff, #4ac6ff);
+  background: linear-gradient(to bottom, #5eccff, #4ac6ff);
 }
 
 @media (orientation: portrait) {
@@ -118,14 +118,14 @@
 
 
   #home-layout.depth-1 {
-    background: linear-gradient(to down, #99dfff, #75d3ff);
+    background: linear-gradient(to right, #99dfff, #75d3ff);
   }
 
   #home-layout.depth-2 {
-    background: linear-gradient(to down, #75d3ff, #5eccff);
+    background: linear-gradient(to right, #75d3ff, #5eccff);
   }
 
   #home-layout.depth-3 {
-    background: linear-gradient(to down, #5eccff, #4ac6ff);
+    background: linear-gradient(to right, #5eccff, #4ac6ff);
   }
 }
