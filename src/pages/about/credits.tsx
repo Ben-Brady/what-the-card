@@ -18,7 +18,7 @@ export default function CreditsPage() {
                     <p>Theo Hall - Original Version</p>
                 </div>
             </div>
-            <LinkButton href="/about" preload>
+            <LinkButton href="/about">
                 Back
             </LinkButton>
         </HomeLayout>

@@ -7,7 +7,7 @@ const TosPolicy = lazy(() => import("@/components/InfoBlocks/Tos"));
 export default function TermsOfServicePage() {
     return (
         <HomeLayout>
-            <LinkButton href="/about" preload>
+            <LinkButton href="/about">
                 Back
             </LinkButton>
 

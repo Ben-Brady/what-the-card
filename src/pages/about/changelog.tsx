@@ -104,7 +104,7 @@ export default function CreditsPage() {
                     )}
                 </For>
             </div>
-            <LinkButton href="/about" preload>
+            <LinkButton href="/about">
                 Back
             </LinkButton>
         </HomeLayout>

@@ -7,7 +7,7 @@ const PrivacyPolicy = lazy(() => import("@/components/InfoBlocks/PrivacyPolicy")
 export default function PrivacyPolicyPage() {
     return (
         <HomeLayout>
-            <LinkButton href="/about" preload>
+            <LinkButton href="/about">
                 Back
             </LinkButton>
             <PrivacyPolicy />

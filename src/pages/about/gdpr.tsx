@@ -7,7 +7,7 @@ const GDPR = lazy(() => import("@/components/InfoBlocks/GDPR"));
 export default function GDPRPage() {
     return (
         <HomeLayout>
-            <LinkButton href="/about" preload>
+            <LinkButton href="/about">
                 Back
             </LinkButton>
             <GDPR />
