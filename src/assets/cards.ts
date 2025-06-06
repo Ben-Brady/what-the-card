@@ -209,6 +209,18 @@ export const cards: CustomCard[] = [
         title: "A Great Conversation",
         text: "Talk to the wall for one minute",
     },
+    {
+        title: "Get Outta Here",
+        text: "Drink if you've ever kicked someone out to have sex",
+    },
+    {
+        title: "Vampire Skin",
+        text: "The person who has the whitest skin must drink",
+    },
+    {
+        title: "Gooners",
+        text: "On average, how many times do you masturbate a day, if you don't wanna say drink twice",
+    },
 
     {
         title: "Secret Santa",
@@ -283,8 +295,14 @@ export const cards: CustomCard[] = [
         tags: ["horny", "extreme"],
     },
     {
-        title: "How to Pay The Bills",
+        title: "Close Your Eyes And Imagine",
+        text: "Suck on the finger of a voluneteer for 30 seconds. If nobody volunteers, you must drink",
+        tags: ["horny", "extreme"],
+    },
+    {
+        title: "Gotta Pay The Bills",
         text: "Give a person of your choice a lap dance for 60 seconds\nIf either of you refuse, you both drink",
+        tags: ["horny", "extreme"],
     },
     {
         title: "Just a Whiff",
