@@ -7,6 +7,7 @@ export const Button = classed.button(
             variant: {
                 normal: "bg-blue-600",
                 destructive: "bg-red-500",
+                save: "bg-emerald-500",
             },
             width: {
                 constrained: "max-w-80",

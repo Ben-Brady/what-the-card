@@ -21,7 +21,7 @@ export const createEditModal = (): [Component, EditModalControls] => {
 
     const element = () => (
         <Modal class="h-fit w-128">
-            <EditCardModal
+            <EditCardModalBody
                 title={title}
                 text={text}
                 tags={tags}
@@ -66,7 +66,7 @@ type EditModalProps = {
     onDelete: () => void;
 };
 
-const EditCardModal = (props: EditModalProps) => {
+const EditCardModalBody = (props: EditModalProps) => {
     const [tag4Player, setTag4Player] = createSignal<boolean>(false);
     const [tagHorny, setTagHorny] = createSignal<boolean>(false);
     const [tagExtreme, setTagExtreme] = createSignal<boolean>(false);
@@ -110,33 +110,40 @@ const EditCardModal = (props: EditModalProps) => {
                 value={props.text()}
                 required
             />
-            <div class="flex flex-wrap gap-4 justify-center">
+            <div
+                class={
+                    "w-full flex items-center justify-center flex-wrap " +
+                    "gap-4 max-xs:gap-2 max-xs:flex-col"
+                }
+            >
                 <div class="flex items-center gap-2 w-fit">
-                    <span class="text-right w-full text-xl">4+ Players</span>
+                    <span class="text-right w-full text-xl max-xs:min-w-24">4+ Players</span>
                     <Checkbox value={tag4Player} onChange={(v) => setTag4Player(v)} />
                 </div>
                 <div class="flex items-center gap-2 w-fit">
-                    <span class="text-right w-full text-xl">Horny</span>
+                    <span class="text-right w-full text-xl max-xs:min-w-24">Horny</span>
                     <Checkbox value={tagHorny} onChange={(v) => setTagHorny(v)} />
                 </div>
                 <div class="flex items-center justify-start gap-2 w-fit">
-                    <span class="text-right w-full text-xl">Extreme</span>
+                    <span class="text-right w-full text-xl max-xs:min-w-24">Extreme</span>
                     <Checkbox value={tagExtreme} onChange={(v) => setTagExtreme(v)} />
                 </div>
             </div>
-            <Button class="flex-1" width="full" type="submit">
-                Save
-            </Button>
+            <div class="flex w-full gap-4">
+                <Button class="flex-1" width="full" type="submit" variant="save">
+                    Save
+                </Button>
+                <Button
+                    class="flex-1"
+                    variant="destructive"
+                    width="full"
+                    onClick={() => props.onDelete()}
+                >
+                    Delete
+                </Button>
+            </div>
             <Button class="flex-1" width="full" onClick={() => props.onCancel()}>
                 Cancel
-            </Button>
-            <Button
-                class="flex-1"
-                variant="destructive"
-                width="full"
-                onClick={() => props.onDelete()}
-            >
-                Delete
             </Button>
         </form>
     );
