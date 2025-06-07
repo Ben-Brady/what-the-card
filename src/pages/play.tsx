@@ -9,7 +9,7 @@ import classNames from "@/lib/classnames";
 import { filterCards } from "@/lib/filter-cards";
 
 export default function PlayPage() {
-    const [Modal, modalControls] = createModal();
+    const [Modal, modal] = createModal();
 
     const tagDefault = useSessionValue("tag-default", true);
     const tagCustom = useSessionValue("tag-custom", true);
@@ -98,20 +98,20 @@ export default function PlayPage() {
             <div class="w-full flex flex-col items-center gap-4">
                 <LinkButton
                     href={url()}
+                    class={classNames(hasEmptyDeck() && "opacity-70")}
                     onClick={(e) => {
                         if (hasEmptyDeck()) {
                             e.preventDefault();
-                            modalControls.open();
+                            modal.open();
                         }
                     }}
-                    class={classNames(hasEmptyDeck() && "opacity-70")}
                 >
                     Start ({cards().length} Cards)
                 </LinkButton>
                 <LinkButton href="/">Back</LinkButton>
-            </div>
+             </div>
 
-            <Modal class="h-fit text-center flex flex-col gap-2">
+            <Modal class="h-fit text-center flex flex-col items-center gap-2">
                 <h2 class="text-3xl">Empty Deck!</h2>
                 <p class="whitespace-pre-line">
                     {"The settings you've selected created a deck with no cards" +
@@ -131,13 +131,13 @@ type CheckboxRowProps = {
 };
 
 const CheckboxRow = (props: CheckboxRowProps) => {
-    const [Modal, controls] = createModal();
+    const [Modal, modal] = createModal();
 
     return (
         <div class="w-full flex items-center justify-between gap-2">
             <Checkbox value={() => props.defaultValue} onChange={(value) => props.onSet(value)} />
             <span class="text-neutral-900 text-xl flex-1">{props.text}</span>
-            <button onClick={() => controls.open()}>
+            <button onClick={() => modal.open()}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -149,7 +149,7 @@ const CheckboxRow = (props: CheckboxRowProps) => {
                     />
                 </svg>
             </button>
-            <Modal class="h-fit text-center flex flex-col gap-2">
+            <Modal class="h-fit text-center flex flex-col items-center gap-2">
                 <h2 class="text-3xl">{props.text}</h2>
                 <p class="whitespace-pre-line">{props.description.trim()}</p>
             </Modal>
