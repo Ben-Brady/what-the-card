@@ -1,5 +1,11 @@
 @import "tailwindcss";
+@import "./fonts.css";
+@import "./transition.css";
 @config "../../tailwind.config.ts";
+
+@theme {
+  --breakpoint-xs: 30rem;
+}
 
 :root {
   font-family: "Sour Gummy", sans-serif;
@@ -22,9 +28,8 @@
 }
 
 * {
-  /* Prevent reloading */
-  overscroll-behavior-y: none;
-
+  /* Prevent reloading/navigation */
+  overscroll-behavior: none;
 }
 
 body {
@@ -51,8 +56,4 @@ html,
 body,
 #root {
   height: 100%;
-}
-
-#home-layout {
-  view-transition-name: home-layout;
 }

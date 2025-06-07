@@ -1,15 +1,17 @@
-import { tosPolicy } from "@/assets/about/tos";
 import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
+import { lazy } from "solid-js";
+
+const TosPolicy = lazy(() => import("@/components/InfoBlocks/Tos"));
 
 export default function TermsOfServicePage() {
     return (
-        <HomeLayout depth="3">
-            <LinkButton variant="secondary" href="/about" preload>
+        <HomeLayout>
+            <LinkButton href="/about">
                 Back
             </LinkButton>
-            {/* eslint-disable-next-line solid/no-innerhtml */}
-            <p class="text-neutral-900" innerHTML={tosPolicy} />
+
+            <TosPolicy />
         </HomeLayout>
     );
 }

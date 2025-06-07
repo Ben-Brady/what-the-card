@@ -55,12 +55,12 @@ export function createModal(
                         ref={(element) => {
                             elementRef = element;
                         }}
-                        class={classNames(
-                            "fixed left-0 top-0 z-40 p-4",
-                            "h-full w-full bg-black/80",
-                            "flex justify-center items-center",
-                            "starting:opacity-0 opacity-100 transition-opacity duration-300",
-                        )}
+                        class={
+                            "fixed left-0 top-0 z-40 p-4 " +
+                            "h-full w-full bg-black/80 " +
+                            "flex justify-center items-center " +
+                            "starting:opacity-0 opacity-100 transition-opacity duration-300"
+                        }
                         on:click={(e) => {
                             if (props.noDismiss) return;
 
@@ -73,7 +73,7 @@ export function createModal(
                     >
                         <div
                             class={classNames(
-                                "size-full max-w-192 max-h-128 p-4 bg-blue-500 rounded-lg",
+                                "p-4 max-h-full max-w-full bg-blue-500 rounded-lg",
                                 componentProps.class,
                             )}
                         >

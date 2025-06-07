@@ -1,6 +1,6 @@
-import type { CustomCard } from "../lib/pack";
+import type { Card } from "@/lib/pack";
 
-export const cards: CustomCard[] = [
+export const cards: Card[] = [
     {
         title: "Only The Good Die Young",
         text: "The youngest player must drink",
@@ -26,7 +26,7 @@ export const cards: CustomCard[] = [
         text: "The next person who makes eye contact with you must drink",
     },
     {
-        title: "2 Turths, 1 Lie",
+        title: "2 Truths, 1 Lie",
         text: "You must tell 2 truths and 1 lie.\nYou don't have to say which one's the lie",
     },
     {

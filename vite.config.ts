@@ -38,7 +38,7 @@ const manifest: Partial<ManifestOptions> = {
 export default defineConfig({
     resolve: { alias: { "@": "/src" } },
     server: {
-        allowedHosts: [],
+        allowedHosts: ["six-suns-tap.loca.lt"],
     },
     plugins: [
         tailwindcss(),
