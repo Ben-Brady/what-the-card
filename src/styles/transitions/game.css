@@ -1,4 +1,4 @@
-@keyframes slide-in {
+@keyframes card-slide-in {
     from {
         transform: translateX(100vw);
         rotate: 20deg;
@@ -11,7 +11,7 @@
     }
 }
 
-@keyframes slide-out {
+@keyframes card-slide-out {
     from {
         transform: translateX(0);
         rotate: 0;
@@ -35,12 +35,12 @@
 }
 
 ::view-transition-new(card-forward) {
-    animation: slide-in 300ms ease-out forwards;
+    animation: card-slide-in 300ms ease-out forwards;
     z-index: 10;
 }
 
 ::view-transition-old(card-backward) {
-    animation: slide-out 300ms ease-in forwards;
+    animation: card-slide-out 300ms ease-in forwards;
     z-index: 10;
 }
 
