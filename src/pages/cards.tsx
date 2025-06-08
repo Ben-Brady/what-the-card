@@ -1,4 +1,4 @@
-import { createEffect, createSignal, Show } from "solid-js";
+import { createSignal, Show } from "solid-js";
 import HomeLayout from "@/components/HomeLayout";
 import TabSelect from "@/components/TabSelect";
 import BuiltinCards from "@/components/CardsPage/BuiltInCards";
