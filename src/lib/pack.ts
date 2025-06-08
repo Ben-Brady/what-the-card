@@ -28,6 +28,7 @@ export const CardTag = union([
 
 export type Card = InferOutput<typeof Card>;
 export const Card = object({
+    id: string(),
     title: optional(string()),
     text: string(),
     tags: optional(array(CardTag)),
