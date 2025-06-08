@@ -1,12 +1,20 @@
 import { cards } from "@/assets/cards";
 import { Card } from "@/lib/pack";
 
-const taggedDefaultCards: Card[] = cards.map((v) => ({
-    ...v,
-    tags: v.tags ? [...v.tags, "default"] : ["default"],
-}));
-
-export const filterCards = (tags: string[], customCards: Card[]) => {
+export const generateCardsList = ({
+    tags,
+    customCards,
+    disabledIds,
+}: {
+    tags: string[];
+    disabledIds: string[];
+    customCards: Card[];
+}) => {
+    const filteredCards = cards.filter((card) => !disabledIds.includes(card.id));
+    const taggedDefaultCards: Card[] = filteredCards.map((v) => ({
+        ...v,
+        tags: v.tags ? [...v.tags, "default"] : ["default"],
+    }));
     const taggedCustomCards: Card[] = customCards.map((v) => ({
         ...v,
         tags: v.tags ? [...v.tags, "custom"] : ["custom"],

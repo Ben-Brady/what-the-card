@@ -1,7 +1,7 @@
 import { Accessor, createSignal } from "solid-js";
 import * as v from "valibot";
 
-export function createSavedStore<
+export function createSchemaStore<
     TSchema extends v.BaseSchema<unknown, unknown, v.BaseIssue<unknown>>,
 >({
     key,

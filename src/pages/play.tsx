@@ -6,7 +6,8 @@ import { Accessor, createSignal, Show } from "solid-js";
 import { createModal } from "@/components/Modals/Modal";
 import { customCards } from "@/lib/custom";
 import classNames from "@/lib/classnames";
-import { filterCards } from "@/lib/filter-cards";
+import { generateCardsList } from "@/lib/filter-cards";
+import { disabledIds } from "@/lib/enabled";
 
 export default function PlayPage() {
     const [Modal, modal] = createModal();
@@ -18,7 +19,13 @@ export default function PlayPage() {
     const tagExtreme = useSessionValue("tag-extreme", false);
 
     const hasCustomCards = () => customCards().length !== 0;
-    const cards = () => filterCards(tags(), customCards());
+    const cards = () =>
+        generateCardsList({
+            tags: tags(),
+            disabledIds: disabledIds(),
+            customCards: customCards(),
+        });
+
     const hasEmptyDeck = () => cards().length === 0;
 
     const tags = () => {
@@ -109,7 +116,7 @@ export default function PlayPage() {
                     Start ({cards().length} Cards)
                 </LinkButton>
                 <LinkButton href="/">Back</LinkButton>
-             </div>
+            </div>
 
             <Modal class="h-fit text-center flex flex-col items-center gap-2">
                 <h2 class="text-3xl">Empty Deck!</h2>
