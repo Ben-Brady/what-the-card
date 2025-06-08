@@ -41,7 +41,7 @@ export const createEditModal = (): [Component, EditModalControls] => {
                 controls.close();
             });
             setOnEdit(() => (title: string, text: string, tags: CardTag[]) => {
-                onEdit({ id: card.title, title, text, tags });
+                onEdit({ id: card.id, title, text, tags });
                 controls.close();
             });
             setOnDelete(() => () => {
