@@ -6,13 +6,14 @@ export default function ProgressBar(props: { progress: Accessor<number> }) {
     return (
         <div
             class={
-                "progress-bar bg-blue-400 text-nowrap " +
+                "bg-blue-400 text-nowrap " +
                 "h-8 w-full absolute top-0 z-20 " +
                 "flex justify-center items-center origin-top-left"
             }
             style={{
-                transition: "scale 300ms ease-out",
-                transform: `
+                "view-transition-name": "progress-bar",
+                "transition": "scale 300ms ease-out",
+                "transform": `
                 scaleX(${progress() * 100}%)
                 scaleY(${progress() === 1 ? "100%" : "25%"})
                 `,
