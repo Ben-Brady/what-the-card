@@ -366,19 +366,19 @@ export const cards: Card[] = [
     {
         id: "builtin:71",
         title: "Gotta Pay The Bills",
-        text: "Give a person of your choice a lap dance for 60 seconds\nIf either of you refuse, you both drink",
+        text: "Spin a bottle, and give the person it lands on a lap dance for 60 seconds\nIf either of you refuse, you both drink twice",
         tags: ["horny", "extreme"],
     },
     {
         id: "builtin:72",
         title: "Just a Whiff",
-        text: "Sniff another players feet",
+        text: "Spin a bottle and sniff the player it lands on's feet, spin a bottile to decide who",
         tags: ["extreme"],
     },
     {
         id: "builtin:73",
         title: "Shouldn't Have Worn Pink",
-        text: "Flash your underwear to the group for at least 5 seconds",
-        tags: ["extreme"],
+        text: "Flash your underwear to the group for 5 seconds",
+        tags: ["horny", "extreme"],
     },
 ];
