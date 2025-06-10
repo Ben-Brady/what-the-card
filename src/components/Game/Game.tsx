@@ -1,4 +1,3 @@
-import "./Game.css";
 import { useGame } from "@/hooks/useGame";
 import { Card } from "@/lib/pack";
 import CardElement from "./CardElement";

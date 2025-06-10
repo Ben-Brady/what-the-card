@@ -1,6 +1,12 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "./reset.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
 @import "./fonts.css";
-@import "./transition.css";
+@import "./home.css";
+@import "./transitions/game.css";
+@import "./transitions/slide.css";
 @config "../../tailwind.config.ts";
 
 @theme {
@@ -34,7 +40,6 @@
 
 body {
   width: 100%;
-  overscroll-behavior-x: none;
   margin: 0;
   padding: 0;
 }
@@ -49,7 +54,6 @@ body:has(.prevent-scrolling) {
   place-items: center;
 
   overflow: hidden;
-  overscroll-behavior-x: none;
 }
 
 html,

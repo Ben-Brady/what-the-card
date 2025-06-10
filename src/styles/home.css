@@ -1,0 +1,45 @@
+#home-layout {
+  view-transition-name: home-layout;
+}
+
+#home-layout.transition-up {
+  view-transition-name: slide-up;
+}
+
+#home-layout.transition-down {
+  view-transition-name: slide-down;
+}
+
+.depth-1 {
+  background: linear-gradient(to bottom, #99dfff, #75d3ff);
+}
+
+.depth-2 {
+  background: linear-gradient(to bottom, #75d3ff, #5eccff);
+}
+
+.depth-3 {
+  background: linear-gradient(to bottom, #5eccff, #4ac6ff);
+}
+
+@media (orientation: portrait) {
+  #home-layout.transition-up {
+    view-transition-name: slide-left;
+  }
+
+  #home-layout.transition-down {
+    view-transition-name: slide-right;
+  }
+
+  .depth-1 {
+    background: linear-gradient(to right, #99dfff, #75d3ff);
+  }
+
+  .depth-2 {
+    background: linear-gradient(to right, #75d3ff, #5eccff);
+  }
+
+  .depth-3 {
+    background: linear-gradient(to right, #5eccff, #4ac6ff);
+  }
+}

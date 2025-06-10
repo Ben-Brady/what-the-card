@@ -59,7 +59,7 @@ export function createModal(
                             "fixed left-0 top-0 z-40 p-4 " +
                             "h-full w-full bg-black/80 " +
                             "flex justify-center items-center " +
-                            "starting:opacity-0 opacity-100 transition-opacity duration-300"
+                            "starting:opacity-0 opacity-100 transition-all duration-300"
                         }
                         on:click={(e) => {
                             if (props.noDismiss) return;

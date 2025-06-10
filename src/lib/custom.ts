@@ -1,18 +1,10 @@
 import * as v from "valibot";
 import { Card } from "./pack";
-import { createSavedStore } from "./store";
+import { createSchemaStore } from "./store";
 
-export const CustomCard = v.intersect([
-    Card,
-    v.object({
-        id: v.string(),
-    }),
-]);
-export type CustomCard = v.InferOutput<typeof CustomCard>;
-
-const [storedCards, setStoredCards] = createSavedStore({
+const [storedCards, setStoredCards] = createSchemaStore({
     key: "custom-cards",
-    schema: v.array(CustomCard),
+    schema: v.array(Card),
     defaultValue: [],
 });
 
@@ -20,7 +12,7 @@ export const customCards = () => {
     return storedCards().filter((v) => v.text);
 };
 
-export const addCustomCard = (card: CustomCard) => {
+export const addCustomCard = (card: Card) => {
     const newCards = [...storedCards(), card];
     setStoredCards(newCards);
 };
@@ -30,7 +22,7 @@ export const deleteCustomCard = (id: string) => {
     setStoredCards(newCards);
 };
 
-export const updateCustomCard = (newCard: CustomCard) => {
+export const updateCustomCard = (newCard: Card) => {
     const newCards = storedCards().map((v) => (v.id === newCard.id ? newCard : v));
     setStoredCards(newCards);
 };

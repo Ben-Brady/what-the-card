@@ -3,7 +3,7 @@ import { useBeforeLeave, useLocation } from "@solidjs/router";
 import { transition } from "@/lib/transition";
 import classNames from "@/lib/classnames";
 
-const VERSION = "1.5.0";
+const VERSION = "1.6.0";
 
 const [direction, setDirection] = createSignal<"up" | "down" | "none">("none");
 
@@ -31,18 +31,23 @@ export default function HomeLayout(props: { children: JSXElement }) {
     });
 
     return (
-        <div
-            id="home-layout"
-            class={classNames("size-full flex justify-center overflow-y-auto", `depth-${depth()}`, {
-                "transition-up": direction() === "up",
-                "transition-down": direction() === "down",
-            })}
-        >
-            <div class="absolute bottom-0 right-1 text-neutral-600">{VERSION}</div>
-            <div class="size-full max-w-160 p-8 relative flex flex-col items-center justify-between gap-4">
-                {props.children}
+        <>
+            <div class={`size-full flex justify-center overflow-y-auto depth-${depth()}`}>
+                <div class="absolute bottom-0 left-0 px-2  text-neutral-600">Ben Brady</div>
+                <div class="absolute bottom-0 right-0 px-2 text-neutral-600">{VERSION}</div>
+                <div
+                    id="home-layout"
+                    class={classNames(
+                        "size-full max-w-160 p-8 relative",
+                        "flex flex-col items-center justify-between gap-4",
+                        direction() === "up" && "transition-up",
+                        direction() === "down" && "transition-down",
+                    )}
+                >
+                    {props.children}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
