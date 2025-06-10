@@ -3,11 +3,11 @@
 }
 
 #home-layout.transition-up {
-  view-transition-name: slide-up;
+  view-transition-class: slide-up;
 }
 
 #home-layout.transition-down {
-  view-transition-name: slide-down;
+  view-transition-class: slide-down;
 }
 
 .depth-1 {
@@ -24,11 +24,11 @@
 
 @media (orientation: portrait) {
   #home-layout.transition-up {
-    view-transition-name: slide-left;
+    view-transition-class: slide-left;
   }
 
   #home-layout.transition-down {
-    view-transition-name: slide-right;
+    view-transition-class: slide-right;
   }
 
   .depth-1 {

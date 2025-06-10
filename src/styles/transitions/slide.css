@@ -1,32 +1,32 @@
-::view-transition-old(slide-left) {
+::view-transition-old(.slide-left) {
   animation: slide-out-left 250ms forwards ease-out;
 }
 
-::view-transition-new(slide-left) {
+::view-transition-new(.slide-left) {
   animation: slide-in-left 250ms forwards ease-out;
 }
 
-::view-transition-old(slide-right) {
+::view-transition-old(.slide-right) {
   animation: slide-out-right 250ms forwards ease-out;
 }
 
-::view-transition-new(slide-right) {
+::view-transition-new(.slide-right) {
   animation: slide-in-right 250ms forwards ease-out;
 }
 
-::view-transition-old(slide-up) {
+::view-transition-old(.slide-up) {
   animation: slide-out-up 250ms forwards ease-out;
 }
 
-::view-transition-new(slide-up) {
+::view-transition-new(.slide-up) {
   animation: slide-in-up 250ms forwards ease-out;
 }
 
-::view-transition-old(slide-down) {
+::view-transition-old(.slide-down) {
   animation: slide-out-down 250ms forwards ease-out;
 }
 
-::view-transition-new(slide-down) {
+::view-transition-new(.slide-down) {
   animation: slide-in-down 250ms forwards ease-out;
 }
 
@@ -80,17 +80,17 @@
 }
 
 .transition-slide-up {
-  view-transition-name: slide-up;
+  view-transition-class: slide-up;
 }
 
 .transition-slide-down {
-  view-transition-name: slide-up;
+  view-transition-class: slide-up;
 }
 
 .transition-slide-right {
-  view-transition-name: slide-right;
+  view-transition-class: slide-right;
 }
 
 .transition-slide-left {
-  view-transition-name: slide-left;
+  view-transition-class: slide-left;
 }
