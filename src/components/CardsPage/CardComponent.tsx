@@ -1,5 +1,5 @@
 import classNames from "@/lib/classnames";
-import { Card } from "@/lib/pack";
+import { Card } from "@/lib/schema";
 
 const CardComponent = (props: { class?: string; card: Card; onClick: () => void }) => {
     const tags = () => (props.card.tags ? props.card.tags : []);

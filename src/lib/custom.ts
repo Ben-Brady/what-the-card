@@ -1,5 +1,5 @@
 import * as v from "valibot";
-import { Card } from "./pack";
+import { Card } from "./schema";
 import { createSchemaStore } from "./store";
 
 const [storedCards, setStoredCards] = createSchemaStore({

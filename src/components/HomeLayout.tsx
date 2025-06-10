@@ -1,6 +1,6 @@
 import { createSignal, JSXElement } from "solid-js";
 import { useBeforeLeave, useLocation } from "@solidjs/router";
-import { transition } from "@/lib/transition";
+import { transition } from "@/lib/utils";
 import classNames from "@/lib/classnames";
 import { VERSION } from "@/pages/about/changelog";
 

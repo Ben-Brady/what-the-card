@@ -1,7 +1,6 @@
 import { Accessor, createSignal } from "solid-js";
-import { Card } from "@/lib/pack";
-import { clamp, shuffle } from "@/lib/utils";
-import { transition } from "@/lib/transition";
+import { Card } from "@/lib/schema";
+import { clamp, shuffle, transition } from "@/lib/utils";
 
 export type ColoredCard = {
     title: string | undefined;

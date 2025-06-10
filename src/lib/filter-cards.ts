@@ -1,5 +1,5 @@
 import { cards } from "@/assets/cards";
-import { Card } from "@/lib/pack";
+import { Card } from "@/lib/schema";
 
 export const generateCardsList = ({
     tags,

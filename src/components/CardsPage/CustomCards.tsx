@@ -1,8 +1,8 @@
-import { Card } from "@/lib/pack";
+import { Card } from "@/lib/schema";
 import { Button, ButtonColumn, LinkButton } from "@/components/Elements";
 import { createEditModal } from "../Modals/EditCardModal";
 import { addCustomCard, customCards, deleteCustomCard, updateCustomCard } from "@/lib/custom";
-import { uuidv4 } from "@/lib/uuid";
+import { uuidv4 } from "@/lib/utils";
 import CardsColumm from "./CardColumns";
 import CardComponent from "./CardComponent";
 

@@ -1,5 +1,5 @@
 import { useGame } from "@/hooks/useGame";
-import { Card } from "@/lib/pack";
+import { Card } from "@/lib/schema";
 import CardElement from "./CardElement";
 import ProgressBar from "./ProgressBar";
 
