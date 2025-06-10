@@ -2,7 +2,6 @@
     from {
         transform: translateX(100vw);
         rotate: 20deg;
-        transform-origin: bottom right;
     }
 
     to {
@@ -15,7 +14,6 @@
     from {
         transform: translateX(0);
         rotate: 0;
-        transform-origin: bottom right;
     }
 
     to {
@@ -36,11 +34,13 @@
 
 ::view-transition-new(card-forward) {
     animation: card-slide-in 300ms ease-out forwards;
+    transform-origin: bottom right;
     z-index: 10;
 }
 
 ::view-transition-old(card-backward) {
     animation: card-slide-out 300ms ease-in forwards;
+    transform-origin: bottom right;
     z-index: 10;
 }
 
