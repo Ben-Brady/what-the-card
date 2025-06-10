@@ -7,7 +7,7 @@ export const useOnTap = (callback: (_: { x: number; y: number }) => void) => {
 
     let startingPos: [number, number] | undefined;
 
-    const onPointerUp = (e: PointerEvent) => {
+    const onPointerUp = (e: MouseEvent) => {
         if (!startingPos) return;
         const [startX, startY] = startingPos;
         const [endX, endY] = [e.clientX, e.clientY];
@@ -20,10 +20,10 @@ export const useOnTap = (callback: (_: { x: number; y: number }) => void) => {
         callback(position);
     };
 
-    const onPointerDown = (e: PointerEvent) => {
+    const onPointerDown = (e: MouseEvent) => {
         startingPos = [e.clientX, e.clientY];
     };
 
-    document.addEventListener("pointerup", onPointerUp, { signal });
-    document.addEventListener("pointerdown", onPointerDown, { signal });
+    document.addEventListener("mouseup", onPointerUp, { signal });
+    document.addEventListener("mousedown", onPointerDown, { signal });
 };
