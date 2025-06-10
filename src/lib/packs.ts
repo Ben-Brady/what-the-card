@@ -1,38 +1,9 @@
-import { string, object, literal, union, lazy, array, InferOutput, optional } from "valibot";
 import WhatTheCardURL from "@/assets/packs/what-the-card.json?url";
 import BrutalHandoverURL from "@/assets/packs/brutal-hangover.json?url";
 import DrunkPirateURL from "@/assets/packs/drunk-pirates.json?url";
 import NeverendingTrashURL from "@/assets/packs/neverending-trash.json?url";
+import { Pack } from "./schema";
 
-export type Pack = InferOutput<typeof Pack>;
-export const Pack = object({
-    id: string(),
-    title: string(),
-    cards: lazy(() => array(Card)),
-});
-
-export type PackInfo = InferOutput<typeof PackInfo>;
-export const PackInfo = object({
-    id: string(),
-    title: string(),
-});
-
-export type CardTag = InferOutput<typeof CardTag>;
-export const CardTag = union([
-    literal("4-players"),
-    literal("horny"),
-    literal("extreme"),
-    literal("default"),
-    literal("custom"),
-]);
-
-export type Card = InferOutput<typeof Card>;
-export const Card = object({
-    id: string(),
-    title: optional(string()),
-    text: string(),
-    tags: optional(array(CardTag)),
-});
 
 export type PackListing = {
     id: string;

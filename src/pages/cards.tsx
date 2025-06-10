@@ -3,9 +3,9 @@ import HomeLayout from "@/components/HomeLayout";
 import TabSelect from "@/components/TabSelect";
 import BuiltinCards from "@/components/CardsPage/BuiltInCards";
 import CustomCards from "@/components/CardsPage/CustomCards";
-import { transition } from "@/lib/transition";
 import classNames from "@/lib/classnames";
 import { useBeforeLeave } from "@solidjs/router";
+import { transition } from "@/lib/utils";
 
 export default function CardsPage() {
     type Tab = "Built-in" | "Custom";

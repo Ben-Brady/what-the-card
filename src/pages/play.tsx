@@ -1,13 +1,13 @@
 import { Checkbox } from "@/components/Checkbox";
 import HomeLayout from "@/components/HomeLayout";
 import { LinkButton } from "@/components/Elements";
-import { CardTag } from "@/lib/pack";
 import { Accessor, createSignal, Show } from "solid-js";
 import { createModal } from "@/components/Modals/Modal";
 import { customCards } from "@/lib/custom";
 import classNames from "@/lib/classnames";
 import { generateCardsList } from "@/lib/filter-cards";
 import { disabledIds } from "@/lib/enabled";
+import { CardTag } from "@/lib/schema";
 
 export default function PlayPage() {
     const [Modal, modal] = createModal();

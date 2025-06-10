@@ -1,4 +1,4 @@
-import type { Card } from "@/lib/pack";
+import type { Card } from "@/lib/schema";
 
 export const cards: Card[] = [
     {
