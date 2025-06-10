@@ -1,4 +1,4 @@
-import { Accessor, For, JSX } from "solid-js";
+import { Accessor, createMemo, For, JSX } from "solid-js";
 
 const toPercent = (v: number) => `${v * 100}%`;
 
@@ -9,6 +9,7 @@ export default function TabSelect<T extends string>(props: {
     setTab: (tab: T) => void;
 }) {
     const currentTabIndex = () => props.tabs.findIndex((v) => v === props.currentTab()) ?? 0;
+    const translateX = createMemo(() => (1 / (props.tabs.length - 1)) * currentTabIndex());
 
     return (
         <div
@@ -19,7 +20,7 @@ export default function TabSelect<T extends string>(props: {
                 class="absolute top-0 bottom-0 z-10 bg-blue-600 duration-250 ease-out"
                 style={{
                     width: toPercent(1 / props.tabs.length),
-                    left: toPercent((1 / props.tabs.length) * currentTabIndex()),
+                    transform: `translateX(${toPercent(translateX())})`,
                 }}
             />
             <div class="absolute inset-0 flex z-20">
