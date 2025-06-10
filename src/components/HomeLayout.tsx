@@ -2,8 +2,7 @@ import { createSignal, JSXElement } from "solid-js";
 import { useBeforeLeave, useLocation } from "@solidjs/router";
 import { transition } from "@/lib/transition";
 import classNames from "@/lib/classnames";
-
-const VERSION = "1.6.0";
+import { VERSION } from "@/pages/about/changelog";
 
 const [direction, setDirection] = createSignal<"up" | "down" | "none">("none");
 
@@ -13,21 +12,15 @@ export default function HomeLayout(props: { children: JSXElement }) {
 
     useBeforeLeave((e) => {
         if (typeof e.to !== "string") {
-            e.preventDefault();
-            transition(() => e.retry(true));
-            return;
+            setDirection("none");
+        } else {
+            const fromDepth = getDepth(e.from.pathname);
+            const toDepth = getDepth(e.to);
+            setDirection(fromDepth < toDepth ? "down" : "up");
         }
 
-        const fromDepth = getDepth(e.from.pathname);
-        const toDepth = getDepth(e.to);
-
-        if (fromDepth < toDepth) setDirection("down");
-        if (fromDepth > toDepth) setDirection("up");
-
         e.preventDefault();
-        transition(() => {
-            e.retry(true);
-        });
+        transition(() => e.retry(true));
     });
 
     return (

@@ -114,7 +114,7 @@ export const cards: Card[] = [
     {
         id: "builtin:24",
         title: "Cats or Dogs",
-        text: "Everyone vote if they prefer dogs or cats.\nThe side with the least votes must drink",
+        text: "Everyone votes if they prefer dogs or cats.\nThe side with the least votes must drink",
     },
     {
         id: "builtin:25",
@@ -149,7 +149,7 @@ export const cards: Card[] = [
     {
         id: "builtin:31",
         title: "Try Not to Blush",
-        text: "Go round clockwise naming porn catagory.\nIf you don't say one in 5 seconds say one said before, you must drink",
+        text: "Go round clockwise naming porn categories.\nIf you don't say one in 5 seconds say one said before, you must drink",
     },
     {
         id: "builtin:32",
@@ -178,7 +178,7 @@ export const cards: Card[] = [
     },
     {
         id: "builtin:36",
-        title: "Rekindling An Old Freindship",
+        title: "Rekindling An Old Friendship",
         text: "Send a message to someone you haven't talked to in over a year",
     },
     {
@@ -209,7 +209,7 @@ export const cards: Card[] = [
     {
         id: "builtin:42",
         title: "On a Ride",
-        text: "Give someone a piggy back or drink",
+        text: "Give someone a piggyback or drink",
     },
     {
         id: "builtin:43",
@@ -229,7 +229,7 @@ export const cards: Card[] = [
     {
         id: "builtin:46",
         title: "Who am I to You?",
-        text: "Everyone give a five words description of you.\nYou must pick the worst description and they have to drink",
+        text: "Everyone given a five word description of you.\nYou must pick the worst description and they have to drink",
     },
     {
         id: "builtin:47",
@@ -249,7 +249,7 @@ export const cards: Card[] = [
     {
         id: "builtin:50",
         title: "Street Skills",
-        text: "Who'd would manage the best if they became homeless?",
+        text: "Who would manage the best if they became homeless?",
     },
     {
         id: "builtin:51",
@@ -286,7 +286,7 @@ export const cards: Card[] = [
     {
         id: "builtin:57",
         title: "I Demand a Trial",
-        text: "You've been accused of murder!\nThe person on your left must defend you.\nThe person on the right convince everyone you did it.\nWhoever fails to convince the rest of the group must drink 3 times",
+        text: "You've been accused of murder!\nThe person on your left must defend you.\nThe person on the right must convince everyone you did it.\nWhoever fails to convince the rest of the group must drink 3 times",
         tags: ["4-players"],
     },
 
@@ -299,13 +299,13 @@ export const cards: Card[] = [
     {
         id: "builtin:60",
         title: "Where do You Stand?",
-        text: "Are you a top, bottom or something inbetween?",
+        text: "Are you a top, bottom or something in between?",
         tags: ["horny"],
     },
     {
         id: "builtin:61",
         title: "Professional Seductress",
-        text: "Attempt to suduce another player",
+        text: "Attempt to seduce another player",
         tags: ["horny"],
     },
     {
@@ -329,7 +329,7 @@ export const cards: Card[] = [
     {
         id: "builtin:65",
         title: "Red Cheeks",
-        text: "The rest of group must pick the victim.\nYou have a minute to make them blush, loser must drink",
+        text: "The rest of the group must pick the victim.\nYou have a minute to make them blush, loser must drink",
         tags: ["horny"],
     },
     {
@@ -348,7 +348,7 @@ export const cards: Card[] = [
     {
         id: "builtin:68",
         title: "Ooooo",
-        text: "Kiss the your favourite player.\nIf either of you refuse, you both drink",
+        text: "Kiss your favourite player.\nIf either of you refuse, you both drink",
         tags: ["horny", "extreme"],
     },
     {
@@ -360,25 +360,25 @@ export const cards: Card[] = [
     {
         id: "builtin:70",
         title: "Close Your Eyes And Imagine",
-        text: "Suck on the finger of a voluneteer for 30 seconds. If nobody volunteers, you must drink",
+        text: "Suck on the finger of a voluneter for 30 seconds. If nobody volunteers, you must drink",
         tags: ["horny", "extreme"],
     },
     {
         id: "builtin:71",
         title: "Gotta Pay The Bills",
-        text: "Give a person of your choice a lap dance for 60 seconds\nIf either of you refuse, you both drink",
+        text: "Spin a bottle, and give the person it lands on a lap dance for 60 seconds\nIf either of you refuse, you both drink twice",
         tags: ["horny", "extreme"],
     },
     {
         id: "builtin:72",
         title: "Just a Whiff",
-        text: "Sniff another players feet",
+        text: "Spin a bottle and sniff the player it lands on's feet, spin a bottle to decide who",
         tags: ["extreme"],
     },
     {
         id: "builtin:73",
         title: "Shouldn't Have Worn Pink",
-        text: "Flash your underwear to the group for at least 5 seconds",
-        tags: ["extreme"],
+        text: "Flash your underwear to the group for 5 seconds",
+        tags: ["horny", "extreme"],
     },
 ];

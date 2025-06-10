@@ -27,7 +27,10 @@ export default function CardsPage() {
                         transition(() => setCurrentTab(v));
                     }}
                     tabs={tabs}
-                    style={{ "view-transition-name": "cards-tab-select" }}
+                    style={{
+                        "view-transition-name":
+                            animation() === "none" ? undefined : "cards-tab-select",
+                    }}
                 />
 
                 <div
@@ -38,6 +41,10 @@ export default function CardsPage() {
                         animation() === "right" && "transition-slide-right",
                         animation() === "left" && "transition-slide-left",
                     )}
+                    style={{
+                        "view-transition-name":
+                            animation() === "none" ? undefined : "cards-content",
+                    }}
                 >
                     <Show when={currentTab() === "Built-in"}>
                         <BuiltinCards />
