@@ -9,6 +9,16 @@ type Version = {
 
 const versions: Version[] = [
     {
+        version: "1.6.0",
+        changes: [
+            "Added ability to preview and disable built-in cards",
+            "Improved animation performance",
+            "Fixed tap display not working on mobile",
+            "Improved fonts loading",
+            "Reduced download size to improve load performance",
+        ],
+    },
+    {
         version: "1.5.1",
         changes: [
             "Fixed gradient on background",
