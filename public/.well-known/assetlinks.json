@@ -1,0 +1,10 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "xyz.whatthecard.twa",
+            "sha256_cert_fingerprints": ["B3:6C:52:A9:60:17:0B:14:B4:72:5F:FB:26:9B:2F:FA:74:B0:EC:B0:B2:67:8E:32:2B:FE:2E:2F:E2:92:F5:AC"]
+        }
+}
+]

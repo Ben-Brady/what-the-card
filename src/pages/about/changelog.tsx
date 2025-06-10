@@ -7,9 +7,13 @@ type Version = {
     changes: string[];
 };
 
-export const VERSION = "1.6.1";
+export const VERSION = "1.6.2";
 
 const versions: Version[] = [
+    {
+        version: "1.6.2",
+        changes: ["Reduced app size", "Added support for APK install"],
+    },
     {
         version: "1.6.1",
         changes: ["Fixed animations on cards screen", "Adjusted a few cards to be less intense"],
