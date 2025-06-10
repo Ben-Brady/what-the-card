@@ -5,11 +5,17 @@ export default function ProgressBar(props: { progress: Accessor<number> }) {
 
     return (
         <div
-            class="progress-bar h-2 bg-blue-400 absolute top-0 left-0 z-20 flex justify-center items-center text-nowrap"
+            class={
+                "progress-bar bg-blue-400 text-nowrap " +
+                "h-8 w-full absolute top-0 z-20 " +
+                "flex justify-center items-center origin-top-left"
+            }
             style={{
-                transition: "width 300ms ease-out, height 200ms ease-out 300ms",
-                width: `${progress() * 100}%`,
-                height: progress() === 1 ? "2rem" : undefined,
+                transition: "scale 300ms ease-out",
+                transform: `
+                scaleX(${progress() * 100}%)
+                scaleY(${progress() === 1 ? "100%" : "25%"})
+                `,
             }}
         >
             <Show when={progress() === 1}>
