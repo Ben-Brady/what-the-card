@@ -7,7 +7,13 @@ type Version = {
     changes: string[];
 };
 
+export const VERSION = "1.6.1";
+
 const versions: Version[] = [
+    {
+        version: "1.6.1",
+        changes: ["Fixed animations on cards screen", "Adjusted a few cards to be less intense"],
+    },
     {
         version: "1.6.0",
         changes: [
@@ -122,9 +128,7 @@ export default function CreditsPage() {
                     )}
                 </For>
             </div>
-            <LinkButton href="/about">
-                Back
-            </LinkButton>
+            <LinkButton href="/about">Back</LinkButton>
         </HomeLayout>
     );
 }
