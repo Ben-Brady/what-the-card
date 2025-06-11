@@ -11,6 +11,11 @@ const manifest: Partial<ManifestOptions> = {
 
     icons: [
         {
+            src: "pwa.svg",
+            sizes: "64x64",
+            type: "image/svg+xml",
+        },
+        {
             src: "pwa-64x64.png",
             sizes: "64x64",
             type: "image/png",
