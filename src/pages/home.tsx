@@ -19,18 +19,10 @@ export default function HomePage() {
                 alt="What the Card Logo"
             />
             <ButtonColumn class="h-full">
-                <LinkButton href="/play">
-                    Play
-                </LinkButton>
-                <LinkButton href="/cards">
-                    Cards
-                </LinkButton>
-                <LinkButton href="/packs">
-                    Packs
-                </LinkButton>
-                <LinkButton href="/about">
-                    About
-                </LinkButton>
+                <LinkButton href="/play">Play</LinkButton>
+                <LinkButton href="/cards">Cards</LinkButton>
+                <LinkButton href="/packs">Packs</LinkButton>
+                <LinkButton href="/about">About</LinkButton>
                 <Show when={!isStandalone() && canInstall()}>
                     <Button onClick={install}>Install</Button>
                 </Show>
