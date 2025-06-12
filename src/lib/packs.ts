@@ -25,7 +25,7 @@ const BUILTIN_PACKS: PackListing[] = [
     },
     {
         id: "brutal-hangover",
-        title: "Brutal Hangover",
+        title: "Terrible Morning",
         getData: createDownloadFunc(BrutalHandoverURL),
     },
     {
@@ -35,7 +35,7 @@ const BUILTIN_PACKS: PackListing[] = [
     },
     {
         id: "neverending-trash",
-        title: "Neverending Trash",
+        title: "The Neverending Pile",
         getData: createDownloadFunc(NeverendingTrashURL),
     },
 ];

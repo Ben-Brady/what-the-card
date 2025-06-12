@@ -7,6 +7,7 @@
             "namespace": "android_app",
             "package_name": "xyz.whatthecard.twa",
             "sha256_cert_fingerprints": [
+                "FA:F9:45:92:97:7F:D6:71:85:5E:68:61:84:73:FE:E8:20:8F:4D:45:D3:A6:00:B3:04:88:E9:64:52:63:8C:D0",
                 "B3:6C:52:A9:60:17:0B:14:B4:72:5F:FB:26:9B:2F:FA:74:B0:EC:B0:B2:67:8E:32:2B:FE:2E:2F:E2:92:F5:AC"
             ]
         }
