@@ -7,9 +7,13 @@ type Version = {
     changes: string[];
 };
 
-export const VERSION = "1.6.3";
+export const VERSION = "1.6.4";
 
 const versions: Version[] = [
+    {
+        version: "1.6.4",
+        changes: ["Added more built-in cards", "Removed some cards from The Neverending Pile"],
+    },
     {
         version: "1.6.3",
         changes: ["Updated Logo"],
