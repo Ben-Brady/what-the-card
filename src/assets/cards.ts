@@ -276,6 +276,76 @@ export const cards: Card[] = [
         title: "Gooners",
         text: "On average, how many times do you masturbate a day, if you don't wanna say drink twice",
     },
+    {
+        id: "fc96d9b8-3c25-468a-9fa6-ff30ed539bd0",
+        title: "Fuck Marry Kill",
+        text: "Do fuck, marry, kill with the people in the room",
+    },
+    {
+        id: "242712b4-772e-4c87-8183-3b921db83589",
+        title: "Tell Me a Joke",
+        text: "You have to make someone laugh or drink",
+    },
+    {
+        id: "a471be99-1119-4031-b753-2035fb95827b",
+        title: "The One That Got Away",
+        text: "If you've ever had a one night stand, drink and tell the story",
+    },
+    {
+        id: "a709f568-e722-44f6-9ca3-dcb265891aa1",
+        title: "Extremist",
+        text: "What's the most extreme thing you've done",
+    },
+    {
+        id: "c5476e73-fb38-4560-a6b9-1d66c094f158",
+        title: "Arm Wrestle",
+        text: "Choose either the player to your left or right.\nHave an arm wrestle with them, loser has to drink",
+    },
+    {
+        id: "f9988c75-dd62-411a-a089-ba8c18327f5d",
+        title: "Waterfall",
+        text: "Everyone starts drinking\nWhen you stop drinking, the person to your left can stop\nWhen they stop, the person to their left can stop and so on",
+    },
+    {
+        id: "b0f1d2c3-8a4e-4c5b-9f6d-7c8e9f0a1b2c",
+        title: "Liars",
+        text: "Someone must say a fact about themselves, if you don't believe them, you can call them a liar.\nIf they are lying, they must drink, if they aren't, you must drink",
+    },
+    {
+        id: "d0c8f5b2-1e3a-4f6c-9b7d-8c1e2f3a4b5c",
+        title: "Terrible Photos",
+        text: "You must show the worst picture of you or drink three times",
+    },
+    {
+        id: "8a809730-f472-4c3c-a9f6-080150d635f2",
+        title: "White Girl Wasted",
+        text: "Anyone drinking wine must drink twice as much until the next round",
+    },
+    {
+        id: "fe970bcc-af6f-4742-8646-cd39d0614264",
+        title: "The Full Load",
+        text: "The person with the fullest glass must finish it",
+    },
+    {
+        id: "4ecd66d3-8ee6-4ace-b1fc-47e70ce04b4f",
+        title: "Wacky Faces",
+        text: "Everyone close their eyes and make the most contorted face you can.\nEveryone opens them and votes on the most extreme face.\nThe best one gets to pick the person to drink.",
+    },
+    {
+        id: "8c82f1e5-688d-4b51-a31a-39a947a5ee9e",
+        title: "Our Eyes Met",
+        text: "Everyone closes their eyes and then look at another person.\nOpen them and if your anybody is looking at each other drink",
+    },
+    {
+        id: "4e81d1f4-b698-4e12-af9e-f2d8e838e0cb",
+        title: "Double Down",
+        text: "The drunkest person must drink again",
+    },
+    {
+        id: "ebc99ff4-50a9-43e7-9da9-14ac014db791",
+        title: "Devious Cocktail",
+        text: "Make a drink from 4 different drinks, everyone must take a sip",
+    },
 
     {
         id: "dba86e00-1549-469a-87de-0082a267d069",
@@ -342,6 +412,12 @@ export const cards: Card[] = [
         id: "6a1b7d40-0475-49a4-8ee6-ca1aeee8986e",
         title: "Dirty Boy",
         text: "Drink if you’ve ever tasted yourself",
+        tags: ["horny"],
+    },
+    {
+        id: "d8914f02-b06a-471c-900f-d1bc8c859f76",
+        title: "OOooohh",
+        text: "Moan out someone in the room's name",
         tags: ["horny"],
     },
 
