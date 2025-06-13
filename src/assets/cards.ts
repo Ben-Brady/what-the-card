@@ -319,7 +319,32 @@ export const cards: Card[] = [
     {
         id: "8a809730-f472-4c3c-a9f6-080150d635f2",
         title: "White Girl Wasted",
-        text: "Anyone drinking wine must drink twice",
+        text: "Anyone drinking wine must drink twice as much until the next round",
+    },
+    {
+        id: "fe970bcc-af6f-4742-8646-cd39d0614264",
+        title: "The Full Load",
+        text: "The person with the fullest glass must finish it",
+    },
+    {
+        id: "4ecd66d3-8ee6-4ace-b1fc-47e70ce04b4f",
+        title: "Wacky Faces",
+        text: "Everyone close their eyes and make the most contorted face you can.\nEveryone opens them and votes on the most extreme face.\nThe best one gets to pick the person to drink.",
+    },
+    {
+        id: "8c82f1e5-688d-4b51-a31a-39a947a5ee9e",
+        title: "Our Eyes Met",
+        text: "Everyone closes their eyes and then look at another person.\nOpen them and if your anybody is looking at each other drink",
+    },
+    {
+        id: "4e81d1f4-b698-4e12-af9e-f2d8e838e0cb",
+        title: "Double Down",
+        text: "The drunkest person must drink again",
+    },
+    {
+        id: "ebc99ff4-50a9-43e7-9da9-14ac014db791",
+        title: "Devious Cocktail",
+        text: "Make a drink from 4 different drinks, everyone must take a sip",
     },
 
     {
@@ -393,7 +418,7 @@ export const cards: Card[] = [
         id: "d8914f02-b06a-471c-900f-d1bc8c859f76",
         title: "OOooohh",
         text: "Moan out someone in the room's name",
-        tags: ["horny"]
+        tags: ["horny"],
     },
 
     {
