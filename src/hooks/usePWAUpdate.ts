@@ -1,38 +1,35 @@
 import { useRegisterSW } from "virtual:pwa-register/solid";
+import { RegisterSWOptions } from "vite-plugin-pwa/types";
 
-const MINUTE = 60 * 1000;
-const UPDATE_PERIODS = 1 * MINUTE;
+const UPDATE_PERIOD = 60 * 1000;
 
 export const usePWAUpdate = () => {
-    useRegisterSW({
-        onRegisteredSW(swUrl, r) {
-            if (UPDATE_PERIODS <= 0) return;
-            if (r?.active?.state === "activated") {
-                registerPeriodicSync(UPDATE_PERIODS, swUrl, r);
-            } else if (r?.installing) {
-                r.installing.addEventListener("statechange", (e) => {
-                    const sw = e.target as ServiceWorker;
-                    if (sw.state === "activated") registerPeriodicSync(UPDATE_PERIODS, swUrl, r);
-                });
+    useRegisterSW({ onRegisteredSW });
+};
+
+const onRegisteredSW: RegisterSWOptions["onRegisteredSW"] = (swUrl, reg) => {
+    if (!reg) return;
+    if (navigator.onLine === false) return;
+
+    const register = async () => {
+        const r = await fetch(swUrl, {
+            cache: "no-store",
+            headers: {
+                "cache": "no-store",
+                "cache-control": "no-cache",
+            },
+        });
+        if (r.status === 200) await reg.update();
+    };
+
+    if (reg.active?.state === "activated") {
+        setInterval(register, UPDATE_PERIOD);
+    } else if (reg.installing) {
+        reg.installing.addEventListener("statechange", (e) => {
+            const sw = e.target as ServiceWorker;
+            if (sw.state === "activated") {
+                setInterval(register, UPDATE_PERIOD);
             }
-        },
-    });
-
-    function registerPeriodicSync(period: number, swUrl: string, r: ServiceWorkerRegistration) {
-        if (period <= 0) return;
-
-        setInterval(async () => {
-            if ("onLine" in navigator && !navigator.onLine) return;
-
-            const resp = await fetch(swUrl, {
-                cache: "no-store",
-                headers: {
-                    "cache": "no-store",
-                    "cache-control": "no-cache",
-                },
-            });
-
-            if (resp?.status === 200) await r.update();
-        }, period);
+        });
     }
 };
