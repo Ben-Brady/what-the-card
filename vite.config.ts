@@ -16,6 +16,11 @@ const manifest: Partial<ManifestOptions> = {
             type: "image/svg+xml",
         },
         {
+            src: "pwa.svg",
+            sizes: "512x512",
+            type: "image/svg+xml",
+        },
+        {
             src: "pwa-64x64.png",
             sizes: "64x64",
             type: "image/png",
