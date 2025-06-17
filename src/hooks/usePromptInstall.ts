@@ -1,27 +1,4 @@
-import { Accessor, createSignal } from "solid-js";
-
-type PromptInstallHook = {
-    canInstall: Accessor<boolean>;
-    install: () => void;
-};
-
-const [installEvent, setInstallEvent] = createSignal<BeforeInstallPromptEvent | undefined>();
-
-window.addEventListener("beforeinstallprompt", (event) => {
-    setInstallEvent(event as BeforeInstallPromptEvent);
-});
-
-export const usePromptInstall = (): PromptInstallHook => {
-    const canInstall = () => installEvent() !== undefined;
-
-    const install = () => {
-        const event = installEvent();
-        if (!event) return;
-        event.prompt();
-    };
-
-    return { canInstall, install };
-};
+import { Accessor, createMemo, createSignal } from "solid-js";
 
 // TS doesn't have this included
 interface BeforeInstallPromptEvent extends Event {
@@ -33,3 +10,23 @@ interface BeforeInstallPromptEvent extends Event {
     }>;
     prompt(): Promise<void>;
 }
+
+type PromptInstallHook = {
+    canInstall: Accessor<boolean>;
+    install: () => void;
+};
+
+const [installEvent, setInstallEvent] = createSignal<BeforeInstallPromptEvent | undefined>();
+window.addEventListener("beforeinstallprompt", (event) => {
+    setInstallEvent(event as BeforeInstallPromptEvent);
+});
+
+export const usePromptInstall = (): PromptInstallHook => {
+    const canInstall = createMemo(() => installEvent() !== undefined);
+    const install = () => {
+        const event = installEvent();
+        if (event) event.prompt();
+    };
+
+    return { canInstall, install };
+};
